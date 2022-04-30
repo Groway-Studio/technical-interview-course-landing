@@ -1,0 +1,210 @@
+@import "./../base/_base.scss";
+
+.heroComponent {
+  width: $container;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+  margin-top: 82px;
+  @include tablet {
+    width: $container-tablet;
+    flex-direction: column;
+    margin-top: 140px;
+  }
+  @include phone {
+    width: $container-phone;
+    flex-direction: column;
+
+  }
+}
+.contentHero {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @include tablet {
+    width: 100%;
+    padding-right: 0%;
+  }
+  @include phone {
+    width: 100%;
+    padding-right: 0%;
+    margin-bottom: 2rem;
+  }
+  h1 {
+    font-weight: bold;
+    color: $neutral-color-1000
+  }
+
+  .cover-text{
+    font-size: var(--cover-text);
+    color: $neutral-color-1000;
+    font-weight: 700;
+    line-height: 70px;
+    margin-top: 4px;
+    @include phone {
+      width: 100%;
+      padding-right: 0%;
+      font-size: $size*8!important;
+      font-weight: 700!important;
+    }
+  }
+  
+
+  p {
+
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #031d44;
+    margin: 24px 0 40px;
+    @include phone{
+        font-size: 18px; 
+    }
+    b {
+
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 21px;
+      color: #084887;
+      @include phone{
+        font-size: 18px; 
+      }
+    }
+  }
+}
+.ilusHero {
+  width: 459px;
+  @include tablet {
+    margin-top: 60px;
+  }
+  @include phone {
+    width: 257px;
+    margin-top: 24px;
+  }
+}
+
+.presitions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #FFD875;
+  border-radius: 10px;
+  padding: 26px 45px;
+
+  @include phone {
+    display: flex;
+    flex: 1;
+    padding: 16px 24px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  img {
+    margin-left: 36px;
+    width: 36px;
+    height: 36px;
+    @include phone {
+      margin-left: 24px;
+    }
+  }
+ figure{
+  display: flex;
+  flex-direction: row;
+  margin-right: 28px;
+  height: 48px;
+  @include phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    text-align: center;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+  img{
+    margin-right: 8px;
+  }
+  figcaption{
+    display: flex;
+    flex-direction: column;
+    strong{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      color: #AF9247;
+      @include phone{
+        font-size: 20px;
+      }
+    }
+    span{
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 0px;
+      color: #AF9247;
+      @include phone{
+        font-weight: 300;
+        font-size: 12px!important;
+        line-height: 18px!important;
+        color: #AF9247;
+      }
+    }
+  }
+ }
+}
+
+
+.imgPy{
+  margin-right: 16px;
+  @include phone{
+    width: 73px;
+  }
+}
+
+
+.formInfo-hero{
+  width: 414px;
+  background-color: #3774A6;
+  border-radius: 10px;
+  padding: 32px;
+  @include phone{
+    padding: 24px;
+    width: 90%;
+  }
+  h2{
+    font-size: $size*5;
+    color: $neutral-color-0;
+    @include phone{
+      font-size: $size*4;
+    }
+  }
+}
+
+
+.btnDownload {
+  // width: $container;
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-around;
+  // align-items: center;
+  // margin: 0 auto;
+  position: relative;
+  z-index: 100;
+  margin-top: 40px;
+  @include tablet {
+    width: $container-tablet;
+    flex-direction: column;
+    margin-top: 140px;
+  }
+  @include phone {
+    width: $container-phone;
+    flex-direction: column;
+
+  }
+}
+

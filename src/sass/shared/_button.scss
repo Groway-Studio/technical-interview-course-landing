@@ -1,0 +1,27 @@
+@import "./../base/_base.scss";
+
+.btn-cta{
+    background: #084887;
+    width: 525px;
+    height: 70px;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 6px 30px;
+    border-style: none;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    @include phone{
+        width: 100%;
+        font-size: 18px;
+        padding: 6px 15px;
+        justify-content: center;
+    }
+    img{
+        margin-left: 12px;
+    }
+}

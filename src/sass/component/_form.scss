@@ -1,0 +1,89 @@
+@import "./../base/_base.scss";
+
+.formComponent {
+  margin-top: 40px;
+  @include tablet {
+    margin-top: 412px;
+  }
+  @include phone{
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  section {
+    width: $container;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tablet {
+      width: $container-tablet;
+      flex-direction: column-reverse;
+    }
+    @include phone{
+      width: 100%;
+      flex-direction: column;
+      box-sizing: border-box;
+      margin: 0;
+    }
+    .talkto{
+      width: 70%;
+      margin: 56px auto;
+      background: #3774A6;
+      border-radius: 10px;
+      padding: 32px 56px;
+  
+      display: flex;
+      flex-direction: row;
+      color: $neutral-color-0;
+      @include phone{
+        padding: 32px 24px;
+        width: 90%;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+
+
+      aside{
+        width: 50%;
+              @include phone{
+                width: 100%;
+              }
+        .logo{
+          margin-top: 67px;
+          width: 150px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        &:last-child{
+          width: 50%;
+          padding-left: 45px;
+          @include phone{
+            width: 100%;
+            padding-left: 0px;
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.formInfo{
+  background-color: #3774A6;
+  border-radius: 10px;
+  padding: 32px 32px 0;
+
+  h2{
+    font-size: $size*5;
+    color: $neutral-color-0;
+  }
+}
+
+.hrLine{
+  @include phone{
+    display: none;
+  }
+}

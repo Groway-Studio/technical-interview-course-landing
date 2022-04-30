@@ -1,0 +1,45 @@
+@import "./../base/_base.scss";
+.imageCover{
+    position: relative;
+
+}
+
+.brochureComponent {
+    background-image: url('./../../assets/blob-section.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 80px 0;
+    .contain{
+        width: $container;
+        margin: 0 auto;
+        text-align: center;
+        @include phone{
+            width: $container-phone;
+        }
+    }
+    .ctasection{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 60px;
+        padding-top: 60px;
+        @include phone{
+            width: $container-phone;
+            margin-top: 40px;
+            padding-top: 60px;
+            margin: 40px auto 0px;
+        }
+    }
+    
+}
+
+
+
+.imageCover{
+    @include phone{
+        width: 334px;
+        position: relative;
+    }
+}
