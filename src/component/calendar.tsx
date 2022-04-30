@@ -1,9 +1,5 @@
 import * as React from "react";
 import "./../sass/component/_calendar.scss";
-import icWifi from "./../assets/ic-wifi.svg";
-import icPlay from "./../assets/ic-play.svg";
-import icTutor from "./../assets/ic-tutor.svg";
-import icMaterial from "./../assets/ic-material.svg";
 
 export default function Calendar() {
   return (
