@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@material-ui/core";
-import LogoGroway from "./../../assets/logo-groway.png";
+import LogoFajesa from "./../../assets/fajesa-b.png";
 import "./../../sass/shared/_header.scss";
 import headerBg from "./../../assets/blob-header.svg";
 import {  animateScroll as scroll } from "react-scroll";
@@ -22,7 +22,7 @@ class Header extends React.Component {
             alignItems: "center",
           }}
         >
-          <img src={LogoGroway} alt="logo" />
+          <img src={LogoFajesa} alt="logo" />
           
         </Box>
       </React.Fragment>

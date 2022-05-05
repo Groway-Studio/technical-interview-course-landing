@@ -19,19 +19,78 @@
       flex-direction: column;
     }
     .logoSection {
+      width: 35%;
       margin-right: 32px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-self: center;
+      @include phone {
+        width: $container-phone;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 0px;
+        margin-bottom: 40px;
+      }
+   
+      .brandOne{
+        width: 126px;
+        margin-right: 14px;
+        @include phone {
+          width: 126px;
+          margin-bottom: 24px;
+          margin-right: 0px;
+        }
+      }
+      .brandTwo{
+        width: 93px;
+        margin-left: 14px;
+        @include phone {
+          margin-top: 24px;
+          width: 126px;
+          margin-left: 0px;
+        }
+      }
+      strong{
+        color: #fff;
+        font-size: 12px;
+        @include phone {
+          font-size: 16px;
+          font-weight: 200;
+        }
+      }
     }
     .ctaSection {
+      width: 20%;
       display: flex;
       flex-direction: column;
       color: $neutral-color-0;
       margin-right: 40px;
+      span{
+        @include phone {
+          font-size: 16px!important;
+        }
+      }
+      @include phone {
+        width: $container-phone;
+        flex-direction: column;
+        margin-right: 0px;
+        margin-bottom: 40px;
+      }
+      a{
+        color: #fff;
+        text-decoration: none;
+      }
       @include phone{
         margin-top: 40px;
         width: 100%;
       }
+     
+    }
+    .sectionRight{
+      width: 45%;
       .socials {
-        width: 100%;
+        width: 25%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
