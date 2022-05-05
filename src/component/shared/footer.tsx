@@ -18,10 +18,10 @@ export default function Footer() {
             <img className="brandTwo" src={LogoGrowayWhite} alt="" />
           </aside>
           <aside className="ctaSection">
-            <span><a href="#">Curso de Python</a></span>
-            <span><a href="#">Sistema de Cursado</a></span>
-            <span><a href="#">Más información</a></span>
-            <span><a href="#">Brochure</a></span>
+            <span><a href="/#">Curso de Python</a></span>
+            <span><a href="/#">Sistema de Cursado</a></span>
+            <span><a href="/#">Más información</a></span>
+            <span><a href="/#">Brochure</a></span>
           </aside>
           <aside className="sectionRight">
             <aside className="ubication">
