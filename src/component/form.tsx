@@ -11,7 +11,7 @@ export default function FormContact() {
           <aside className="dflex fd-col jc-sb ">
             <div className="talkto__title">
               <h2>Inscríbete</h2>
-              <p>Sólo necesitas completar tus datos</p>
+              <p>Sólo necesitas completar tus datos:</p>
             </div>
             <div className="logo">
               <img src={logoWhite} alt="Logo White" />

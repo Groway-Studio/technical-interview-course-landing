@@ -33,7 +33,6 @@
 body {
   box-sizing: border-box;
   background-color: #f9f7f8;
-  // overflow-x: hidden;
 }
 
 h1 {
@@ -49,6 +48,9 @@ h1 {
 h2 {
   font-size: var(--title-h2);
   color: $neutral-color-400;
+
+  margin-top: 0;
+  margin-bottom: 0;
   @include tablet {
     font-size: var(--title-h3);
   }
@@ -56,6 +58,7 @@ h2 {
     font-size: var(--size-3);
   }
 }
+
 h3 {
   font-size: var(--title-h3);
   color: $neutral-color-400;
@@ -78,14 +81,6 @@ h5 {
     font-size: var(--size-3);
   }
 }
-
-// span {
-//   @include phone {
-//     font-size: var(--size-4) !important;
-//     line-height: 42px !important;
-//     font-weight: normal !important;
-//   }
-// }
 
 p {
   font-size: var(--paragraph-1);

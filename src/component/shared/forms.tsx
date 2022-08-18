@@ -18,6 +18,8 @@ export const FormGroup = styled.div`
 export const Label = styled.label`
   color: #ffffff;
   font-size: 14px;
+  margin-left: 3px;
+  margin-bottom: 1px;
 `;
 
 export const Input = styled.input`

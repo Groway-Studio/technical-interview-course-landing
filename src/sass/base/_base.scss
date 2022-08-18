@@ -14,7 +14,7 @@ $neutral-color-0: #ffffff;
 $size: 8px;
 $spacing: 4px;
 $grid: 1440px;
-$container: 1280px;
+$container: 1024px;
 $container-tablet: 674px;
 $container-phone: 334px;
 
@@ -72,18 +72,18 @@ $desktop_xl: 1920px;
       &:nth-child(4) {
         position: relative;
         input {
-          padding-left: 2.1rem;
+          padding-left: 2.3rem;
         }
 
         label {
           &:first-child {
             position: absolute;
-            bottom: 15px;
+            bottom: 12px;
             font-size: 14px;
             color: #4a81ae;
             font-weight: 500;
             z-index: 100;
-            left: 3px;
+            left: 0px;
           }
         }
       }
