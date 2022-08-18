@@ -2,7 +2,8 @@
 
 .navMenu {
   padding-top: var(--spacing-5);
-  width: $container;
+  max-width: $container;
+  width: 100%;
   margin: 0 auto;
   z-index: 100;
   position: relative;
@@ -17,17 +18,15 @@
 .navMenuItems {
   color: $primary-color;
   @include phone {
-    display: none!important;
+    display: none !important;
   }
-  a{
+  a {
     text-decoration: none;
     margin-right: $size * 7;
     font-size: var(--size-2);
-    color: $primary-color;;
+    color: $primary-color;
     cursor: pointer;
-
   }
-
 
   p {
     margin-right: $size * 7;

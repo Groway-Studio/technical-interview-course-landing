@@ -1,33 +1,44 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import { animateScroll as scroll } from "react-scroll";
 import { Box } from "@material-ui/core";
-import LogoFajesa from "./../../assets/fajesa-b.png";
-import "./../../sass/shared/_header.scss";
+
 import headerBg from "./../../assets/blob-header.svg";
-import {  animateScroll as scroll } from "react-scroll";
+import headerMobile from "../../assets/blo-header-mobile.svg";
+import groway from "../../assets/groway-black.svg";
+import "./../../sass/shared/_header.scss";
 
-class Header extends React.Component {
-  scrollToSection = () => {
-    scroll.scrollToTop();
-  };
+const Header = () => {
+  const [width, setWidth] = useState(0);
+  scroll.scrollToTop();
 
-  render() {
-    return (
-      <React.Fragment>
-        <img src={headerBg} className="headerBg" alt="" />
-        <Box
-          className="navMenu"
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <img src={LogoFajesa} alt="logo" />
-          
-        </Box>
-      </React.Fragment>
-    );
-  }
-}
+  useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+    return () => window.removeEventListener("resize", () => {});
+  }, []);
 
-export default Header
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
+
+  return (
+    <>
+      <img
+        src={width < 700 ? headerMobile : headerBg}
+        className="headerBg"
+        alt="headerBg"
+      />
+      <Box
+        className="navMenu"
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <img src={groway} alt="Groway.Education" />
+      </Box>
+    </>
+  );
+};
+
+export default Header;

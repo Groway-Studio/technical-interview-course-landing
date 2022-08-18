@@ -4,19 +4,24 @@
   background-color: $neutral-color-1000;
   position: relative;
   z-index: 1000;
+
   section {
-    width: $container;
+    max-width: $container;
+    width: 100%;
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 30px 0;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     @include tablet {
-      width: $container-tablet;
+      max-width: $container-tablet;
+      width: 100%;
     }
     @include phone {
-      width: $container-phone;
-      flex-direction: column;
+      max-width: $container-phone;
+      padding: 70px 0;
+      width: 100%;
+      display: grid;
     }
     .logoSection {
       width: 35%;
@@ -25,15 +30,20 @@
       flex-direction: row;
       align-items: center;
       align-self: center;
+
       @include phone {
-        width: $container-phone;
+        max-width: $container-phone;
+        width: 100%;
         flex-direction: column;
         align-items: flex-start;
-        margin-right: 0px;
-        margin-bottom: 40px;
+        margin: 0 0 20px 0;
       }
-   
-      .brandOne{
+
+      @include tablet {
+        margin: 0;
+      }
+
+      .brandOne {
         width: 126px;
         margin-right: 14px;
         @include phone {
@@ -42,16 +52,21 @@
           margin-right: 0px;
         }
       }
-      .brandTwo{
-        width: 93px;
+      .brandTwo {
+        width: 45%;
         margin-left: 14px;
+        max-width: 200px;
         @include phone {
-          margin-top: 24px;
+          margin: 0;
           width: 126px;
-          margin-left: 0px;
+        }
+
+        @include tablet {
+          margin: 0;
+          width: 70%;
         }
       }
-      strong{
+      strong {
         color: #fff;
         font-size: 12px;
         @include phone {
@@ -66,39 +81,60 @@
       flex-direction: column;
       color: $neutral-color-0;
       margin-right: 40px;
-      span{
-        @include phone {
-          font-size: 16px!important;
-        }
-      }
+      gap: 5px;
+
       @include phone {
         width: $container-phone;
         flex-direction: column;
-        margin-right: 0px;
-        margin-bottom: 40px;
+        margin: 0;
+        width: 100%;
       }
-      a{
+
+      @include tablet {
+        width: 30%;
+      }
+
+      span {
+        @include phone {
+          display: none;
+        }
+      }
+
+      a {
         color: #fff;
         text-decoration: none;
       }
-      @include phone{
-        margin-top: 40px;
+    }
+    .sectionRight {
+      width: 45%;
+
+      @include phone {
         width: 100%;
       }
-     
-    }
-    .sectionRight{
-      width: 45%;
+
+      @include tablet {
+        position: relative;
+      }
+
       .socials {
         width: 25%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding-top: 12px;
-        @include phone{
-          margin-top: 24px;
-          margin-bottom: 40px;
+        gap: 2.5rem;
+
+        @include phone {
           width: 100%;
+          justify-content: center;
+          gap: 2rem;
+        }
+
+        @include tablet {
+          position: absolute;
+          top: 50%;
+          left: 55%;
+          gap: 1rem;
         }
       }
     }
@@ -106,40 +142,59 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+
       @include tablet {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        gap: 10px;
       }
+
       @include phone {
-        flex-direction: column;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: calc(60% - 0.5rem) calc(40% - 0.5rem);
       }
       article {
+        &:first-child {
+          display: none;
+        }
+
+        @include phone {
+          &:first-child {
+            display: block;
+          }
+        }
+
         color: $neutral-color-0;
         padding-right: 32px;
+
         @include tablet {
-          padding-bottom: 16px;
           padding-right: 0;
-          &:last-child{
+
+          &:last-child {
             display: flex;
             flex-direction: column;
           }
         }
-        @include phone{
+
+        @include phone {
           width: 100%;
           padding: 0;
           margin-bottom: 24px;
         }
+
         &:first-child {
           width: 36%;
           @include tablet {
             width: 100%;
           }
-          @include phone{
+          @include phone {
             width: 100%;
             padding: 0;
             margin-bottom: 24px;
           }
         }
-       
+
         strong {
           font-weight: bold;
         }

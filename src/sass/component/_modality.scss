@@ -1,25 +1,37 @@
 @import "./../base/_base.scss";
 
 .modalityComponent {
-  width: $container;
+  &::after,
+  &::before {
+    content: "";
+    width: 85%;
+    height: 2px;
+    background: #cccccc;
+  }
+
+  &__list {
+    margin-bottom: 70px;
+  }
+
+  max-width: $container;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
-  position: relative;
+  margin: 82px auto 0 auto;
   z-index: 100;
-  margin-top: 82px;
 
   @include tablet {
     width: $container-tablet;
     flex-direction: column;
-    margin-top: 140px;
+    margin: 5rem auto;
   }
 
   @include phone {
     width: $container-phone;
     flex-direction: column;
+    margin-top: 140px;
   }
 
   aside {
@@ -34,7 +46,7 @@
       font-size: 40px;
       line-height: 70px;
       color: #084887;
-      margin-top: 80px;
+      margin-top: 50px;
     }
 
     &:last-child {
@@ -43,28 +55,35 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
+      margin-bottom: 70px;
 
       @include phone {
         flex-direction: row;
         flex-wrap: wrap;
- 
+        margin-bottom: 40px;
       }
 
       article {
         display: flex;
         flex-direction: column;
         align-items: center;
-        @include phone{
-            margin-bottom: 40px;
-            width: 160px;
+        @include phone {
+          margin-bottom: 40px;
+          width: 160px;
         }
         img {
           margin-bottom: 16px;
         }
 
         span {
-          font-size: 20px!important;
-          line-height: 30px!important;
+          color: $primary-color;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 30px;
+
+          @include phone {
+            font-size: 20px;
+          }
         }
       }
     }

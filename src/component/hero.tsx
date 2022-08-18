@@ -1,19 +1,17 @@
-import * as React from "react";
-import "./../sass/component/_hero.scss";
+import { Form, FormGroup, Label, Input, Button } from "./shared/forms";
 
 import python from "./../assets/python.png";
-
 import duration from "./../assets/duration.svg";
 import hours from "./../assets/hours.svg";
 import price from "./../assets/price.svg";
-
 import ButtonComponent from "./shared/button";
-import { Form, FormGroup, Label, Input, TextArea, Button } from "./shared/forms";
-import downloadIcon from "./../assets/download.svg"
+import downloadIcon from "./../assets/download.svg";
+
+import "./../sass/component/_hero.scss";
 
 export default function Hero() {
   return (
-    <React.Fragment>
+    <div>
       <div className={"heroComponent"}>
         <div className="contentHero">
           <div>
@@ -35,7 +33,6 @@ export default function Hero() {
           </div>
 
           <article className="presitions">
-
             <figure className="item">
               <img src={duration} alt="" />
               <figcaption>
@@ -60,42 +57,40 @@ export default function Hero() {
               </figcaption>
             </figure>
           </article>
-          <div className="btnDownload">
-            <ButtonComponent label="Descargar Brochure" icon={downloadIcon} />
-          </div>
-        </div>  
-        
+        </div>
+
         <aside className="formInfo-hero">
+          <h2>Inscríbete</h2>
+          <p>Sólo necesitas completar tus datos</p>
           <Form>
             <FormGroup>
-              <h2>Más información</h2>
-              <Label htmlFor="label">
-                Dejanos tus datos y nuestro equipo se pondrá en contacto contigo
-                para asesorarte sobre el curso
-              </Label>
-            </FormGroup>
-
-            <FormGroup>
-              <Label htmlFor="label">¿Cuál es tu nombre?*</Label>
+              <Label htmlFor="label">Nombre</Label>
               <Input id="label" />
             </FormGroup>
             <FormGroup>
-              <Label>¿Cuál es tu el sitio web de tu empresa?</Label>
-              <Input />
+              <Label htmlFor="lastname">Apellido</Label>
+              <Input type="text" id="lastname" />
             </FormGroup>
             <FormGroup>
-              <Label>Tu mensaje</Label>
-              <TextArea />
+              <Label htmlFor="email">E-mail</Label>
+              <Input type="email" id="email" />
             </FormGroup>
             <FormGroup>
-              <Label>¿Cómo nos contactamos contigo?*</Label>
-              <Input />
+              <Label htmlFor="prefijo">+54</Label>
+              <Label htmlFor="prefijo">Teléfono</Label>
+              <Input type="tel" id="prefijo" />
             </FormGroup>
-            <Button>Enviar</Button>
+            <FormGroup>
+              <Label>&nbsp;</Label>
+              <Input type="tel" />
+            </FormGroup>
+            <Button>Último paso</Button>
           </Form>
         </aside>
+        <div className="btnDownload">
+          <ButtonComponent label="Descargar Brochure" icon={downloadIcon} />
+        </div>
       </div>
-   
-    </React.Fragment>
+    </div>
   );
 }
