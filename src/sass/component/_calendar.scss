@@ -1,7 +1,8 @@
 @import "./../base/_base.scss";
 
 .calendarComponent {
-  width: $container;
+  max-width: $container;
+  width: 90%;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -9,16 +10,15 @@
   z-index: 100;
   margin-top: 82px;
 
-  @include tablet {
-    width: $container-tablet;
-    flex-direction: column;
-    margin-top: 140px;
+  @include phone {
+    width: 92%;
+    overflow-x: scroll;
   }
 
-  @include phone {
-    width: 85%;
+  @include tablet {
+    max-width: $container-tablet;
     overflow-x: scroll;
-    margin-left: 2rem;
+    width: 100%;
   }
 
   .weekDays {
@@ -28,6 +28,11 @@
     @include phone {
       width: 281px;
     }
+
+    @include tablet {
+      width: 100%;
+    }
+
     h3 {
       font-style: normal;
       font-weight: 700;
@@ -37,12 +42,11 @@
       color: #084887;
       margin-bottom: 24px;
 
-        @include phone{
-          font-size: $size*4!important;
-          line-height: $size*5!important;
-          font-weight: 700!important;
-        }
-
+      @include phone {
+        font-size: $size * 4 !important;
+        line-height: $size * 5 !important;
+        font-weight: 700 !important;
+      }
     }
     article {
       border-radius: 10px;
@@ -59,7 +63,6 @@
           }
           .days {
             border-bottom: 0;
-           
           }
         }
         .week {
@@ -73,9 +76,9 @@
           font-weight: 500;
           font-size: 24px;
           line-height: 36px;
-          @include phone{
-           text-align: center;
-           padding: 16px;
+          @include phone {
+            text-align: center;
+            padding: 16px;
           }
         }
 
@@ -94,9 +97,8 @@
             font-weight: 500;
             font-size: 24px;
             line-height: 36px;
-            @include phone{
-              font-size: $size*3!important;
-             
+            @include phone {
+              font-size: $size * 3 !important;
             }
             &:last-child {
               border-bottom: 0;
@@ -109,99 +111,109 @@
 
   .classHours {
     width: 75%;
-  
+
     display: flex;
     flex-direction: column;
     margin: 24px 20px;
+
     @include phone {
       width: 848px;
       margin: 8px 20px 24px;
     }
-    .hours{
-        background-color: #fff;
-        padding: 24px;
-        border-radius: 10px;
-        margin-bottom: 24px;
+
+    .hours {
+      background-color: #fff;
+      padding: 24px 0;
+      border-radius: 10px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @include tablet {
+        width: 800px;
+      }
+
+      .item {
+        display: flex;
+        flex: 1;
+        border-right: 1px solid #ccc;
+        justify-content: center;
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+    .courses {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 24px;
+
+      @include tablet {
+        width: 800px;
+      }
+
+      .week-days {
+        box-sizing: border-box;
+        height: 168px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      .dayOne {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        .item{
-            display: flex;
-            flex: 1;
-            border-right: 1px solid #ccc;
-            justify-content: center;
-            &:last-child{
-                border-right: 0;
-            }
+        .item-1 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 25%;
+          height: 68px;
+          background-color: #fff;
+          padding: 16px;
+          border-radius: 10px;
+          margin-right: 20px;
+          font-weight: 300;
+          box-sizing: border-box;
+          font-size: 14px;
+          line-height: 20px;
+          text-align: center;
+          color: #031d44;
+          @include phone {
+            width: 200px;
+          }
+          &:last-child {
+            margin-right: 0px;
+          }
         }
-    }
-    .courses{
-        margin-bottom: 24px;
-        display: flex;
-        flex-direction: column;
-        .week-days{
-            box-sizing: border-box;
-            height: 168px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-        
+        .item-2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 50%;
+          height: 68px;
+          padding: 16px;
+          border-radius: 10px;
+          margin-right: 20px;
+          box-sizing: border-box;
+          font-size: 14px;
+          line-height: 20px;
+          color: #031d44;
+          background-color: #fff;
+          @include phone {
+            width: 416px;
+          }
+          &:last-child {
+            margin-right: 0px;
+          }
         }
-        .dayOne{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            .item-1{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 25%;
-                height: 68px;
-                background-color: #fff;
-                padding: 16px;
-                border-radius: 10px;
-                margin-right: 20px;
-                font-weight: 300;
-                box-sizing: border-box;
-                font-size: 14px;
-                line-height: 20px;
-                text-align: center;
-                color: #031D44;
-              @include phone{
-                width: 200px;
-              }
-                &:last-child{
-                    margin-right: 0px; 
-                }
-            }
-            .item-2{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                width: 50%;
-                height: 68px;
-                padding: 16px;
-                border-radius: 10px;
-                margin-right: 20px;
-                box-sizing: border-box;
-                font-size: 14px;
-                line-height: 20px;
-                color: #031D44;
-                background-color: #fff;
-                @include phone{
-                  width: 416px;
-                }
-                &:last-child{
-                    margin-right: 0px; 
-                }
-            }
-        }
-      
+      }
     }
   }
 }
 
-.highlights{
-    background-color:  rgba(255, 216, 117, 0.38)!important;
+.highlights {
+  background-color: rgba(255, 216, 117, 0.38) !important;
 }

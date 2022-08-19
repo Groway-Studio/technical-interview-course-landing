@@ -1,78 +1,92 @@
 @import "./../base/_base.scss";
 
 .heroComponent {
-  width: $container;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  max-width: $container;
+  width: 90%;
+  display: grid;
+  grid-template-columns: calc(60% - 2rem) calc(40% - 2rem);
   margin: 0 auto;
   position: relative;
+  align-items: flex-start;
+  gap: 0 4rem;
   z-index: 100;
   margin-top: 82px;
+
   @include tablet {
-    width: $container-tablet;
-    flex-direction: column;
-    margin-top: 140px;
+    max-width: $container-tablet;
+    margin-top: 90px;
+    grid-template-columns: 100%;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
   }
   @include phone {
     width: $container-phone;
-    flex-direction: column;
-
+    grid-template-columns: 100%;
+    margin-top: 50px;
   }
 }
+
 .contentHero {
-  width: 45%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   @include tablet {
     width: 100%;
-    padding-right: 0%;
+    padding-right: 0;
+    gap: 2rem;
   }
   @include phone {
     width: 100%;
-    padding-right: 0%;
-    margin-bottom: 2rem;
+    padding-right: 0;
   }
   h1 {
     font-weight: bold;
-    color: $neutral-color-1000
+    color: $neutral-color-1000;
   }
 
-  .cover-text{
+  .cover-text {
     font-size: var(--cover-text);
     color: $neutral-color-1000;
     font-weight: 700;
     line-height: 70px;
     margin-top: 4px;
+
     @include phone {
       width: 100%;
       padding-right: 0%;
-      font-size: $size*8!important;
-      font-weight: 700!important;
+      font-size: $size * 8 !important;
+      font-weight: 700 !important;
     }
   }
-  
 
   p {
-
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
     color: #031d44;
     margin: 24px 0 40px;
-    @include phone{
-        font-size: 18px; 
-    }
-    b {
+    width: 95%;
 
+    @include phone {
+      font-size: 18px;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    @include tablet {
+      margin: 0;
+      width: 100%;
+    }
+
+    b {
       font-weight: bold;
       font-size: 14px;
       line-height: 21px;
       color: #084887;
-      @include phone{
-        font-size: 18px; 
+      @include phone {
+        font-size: 18px;
       }
     }
   }
@@ -89,122 +103,151 @@
 }
 
 .presitions {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #FFD875;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  background-color: #ffd875;
   border-radius: 10px;
-  padding: 26px 45px;
+  padding: 20px;
+  width: 100%;
+  gap: 9px;
 
   @include phone {
-    display: flex;
-    flex: 1;
-    padding: 16px 24px;
+    gap: 0;
     width: 100%;
     box-sizing: border-box;
   }
+
+  @include tablet {
+    width: 100%;
+  }
+
   img {
-    margin-left: 36px;
     width: 36px;
-    height: 36px;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    gap: 10px;
+
     @include phone {
-      margin-left: 24px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: 100%;
     }
-  }
- figure{
-  display: flex;
-  flex-direction: row;
-  margin-right: 28px;
-  height: 48px;
-  @include phone {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    text-align: center;
-  }
-  &:last-child{
-    margin-right: 0;
-  }
-  img{
-    margin-right: 8px;
-  }
-  figcaption{
-    display: flex;
-    flex-direction: column;
-    strong{
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 36px;
-      color: #AF9247;
-      @include phone{
-        font-size: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      @include phone {
+        height: 36px;
       }
     }
-    span{
-      font-style: normal;
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 0px;
-      color: #AF9247;
-      @include phone{
+
+    figcaption {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        color: #af9247;
+        @include phone {
+          font-size: 20px;
+        }
+      }
+      span {
+        font-style: normal;
         font-weight: 300;
-        font-size: 12px!important;
-        line-height: 18px!important;
-        color: #AF9247;
+        font-size: 14px;
+        line-height: 0px;
+        color: #af9247;
+        @include phone {
+          font-weight: 300;
+          font-size: 12px !important;
+          line-height: 18px !important;
+          color: #af9247;
+        }
       }
     }
   }
- }
 }
 
-
-.imgPy{
+.imgPy {
   margin-right: 16px;
-  @include phone{
+  @include phone {
     width: 73px;
   }
 }
 
-
-.formInfo-hero{
-  width: 414px;
-  background-color: #3774A6;
+.formInfo-hero {
+  background-color: #3774a6;
   border-radius: 10px;
   padding: 32px;
-  @include phone{
+
+  @include form;
+
+  @include phone {
     padding: 24px;
-    width: 90%;
+    width: 100%;
+    order: 3;
   }
-  h2{
-    font-size: $size*5;
-    color: $neutral-color-0;
-    @include phone{
-      font-size: $size*4;
+
+  button {
+    right: -32px;
+
+    @include phone {
+      right: -24px;
+      bottom: -80px;
     }
+
+    @include tablet {
+      position: unset;
+      grid-column: 4;
+      margin-top: 20px;
+      padding: 0;
+    }
+  }
+
+  h2 {
+    width: 100%;
+    font-size: $size * 5;
+    color: $neutral-color-0;
+    @include phone {
+      font-size: $size * 4;
+    }
+  }
+
+  p {
+    color: #fff;
+    line-height: 0;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  div {
+    margin: 0;
   }
 }
 
-
 .btnDownload {
-  // width: $container;
-  display: flex;
-  flex-direction: row;
-  // justify-content: space-around;
-  // align-items: center;
-  // margin: 0 auto;
-  position: relative;
-  z-index: 100;
-  margin-top: 40px;
+  margin-top: 70px;
+  grid-column: 1 / -1;
+  width: 100%;
+
   @include tablet {
     width: $container-tablet;
     flex-direction: column;
-    margin-top: 140px;
+    margin: 0 auto;
   }
   @include phone {
     width: $container-phone;
     flex-direction: column;
-
+    margin: 3rem 0;
   }
 }
-

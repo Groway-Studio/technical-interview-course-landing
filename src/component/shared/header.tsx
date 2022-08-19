@@ -1,33 +1,63 @@
-import React from "react";
+import { FC, useEffect, useState } from "react";
+import { animateScroll as scroll } from "react-scroll";
 import { Box } from "@material-ui/core";
-import LogoFajesa from "./../../assets/fajesa-b.png";
-import "./../../sass/shared/_header.scss";
+
 import headerBg from "./../../assets/blob-header.svg";
-import {  animateScroll as scroll } from "react-scroll";
+import headerMobile from "../../assets/blo-header-mobile.svg";
+import groway from "../../assets/groway-black.svg";
+import groway_mobile from "../../assets/groway-black2.svg";
+import groway_mobile_gray from "../../assets/groway-gray.svg";
 
-class Header extends React.Component {
-  scrollToSection = () => {
-    scroll.scrollToTop();
-  };
+import "./../../sass/shared/_header.scss";
 
-  render() {
-    return (
-      <React.Fragment>
-        <img src={headerBg} className="headerBg" alt="" />
-        <Box
-          className="navMenu"
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <img src={LogoFajesa} alt="logo" />
-          
-        </Box>
-      </React.Fragment>
-    );
-  }
+interface Props {
+  image?: boolean;
 }
 
-export default Header
+const Header: FC<Props> = ({ image = false }) => {
+  const [width, setWidth] = useState(0);
+  scroll.scrollToTop();
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+    return () => window.removeEventListener("resize", () => {});
+  }, []);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
+
+  return (
+    <>
+      <img
+        src={width < 700 ? headerMobile : headerBg}
+        className="headerBg"
+        alt="headerBg"
+      />
+      <Box
+        className="navMenu"
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <img
+          src={
+            width < 700
+              ? image
+                ? groway_mobile_gray
+                : groway_mobile
+              : image
+              ? groway_mobile_gray
+              : groway
+          }
+          draggable={false}
+          alt="Groway.Education"
+        />
+      </Box>
+    </>
+  );
+};
+
+export default Header;
