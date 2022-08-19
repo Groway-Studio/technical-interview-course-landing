@@ -1,7 +1,7 @@
 {
   "name": "landing-courses",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
@@ -56,5 +56,6 @@
     "@types/react-scroll": "^1.8.3",
     "@types/styled-components": "^5.1.24",
     "gh-pages": "^3.2.3"
-  }
+  },
+  "homepage": "https://aprendepython.groway.studio"
 }

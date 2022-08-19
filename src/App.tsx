@@ -6,12 +6,12 @@ import "./sass/style.scss";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/pago-exitoso" element={<Payment />}></Route>
-        <Route path="/pago-fallido" element={<Payment />}></Route>
-        <Route path="/pago-pendiente" element={<Payment />}></Route>
+        <Route path="/pago-exitoso" element={<Payment />} />
+        <Route path="/pago-fallido" element={<Payment />} />
+        <Route path="/pago-pendiente" element={<Payment />} />
         <Route path="*" element={<Navigate to="/" replace />}></Route>
       </Routes>
     </BrowserRouter>

@@ -1,5 +1,5 @@
-import failed from "./failed.svg";
-import pending from "./pending.svg";
-import success from "./success.svg";
+import failed from "./failed.png";
+import pending from "./pending.png";
+import success from "./success.png";
 
 export { failed, pending, success };

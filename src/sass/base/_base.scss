@@ -77,13 +77,18 @@ $desktop_xl: 1920px;
 
         label {
           &:first-child {
-            position: absolute;
-            bottom: 12px;
-            font-size: 14px;
+            bottom: 14px;
+
             color: #4a81ae;
+            font-size: 14px;
             font-weight: 500;
-            z-index: 100;
             left: 0px;
+            position: absolute;
+            z-index: 100;
+
+            @include phone {
+              bottom: 13px;
+            }
           }
         }
       }
