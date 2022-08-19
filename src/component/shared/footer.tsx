@@ -2,6 +2,7 @@ import LogoGrowayWhite from "../../assets/groway-white.svg";
 import fbIlus from "./../../assets/ic-socials-2.svg";
 import linkedinIlus from "./../../assets/ic-socials-1.svg";
 import igIlus from "./../../assets/ic-socials.svg";
+
 import "./../../sass/shared/_footer.scss";
 
 export default function Footer() {

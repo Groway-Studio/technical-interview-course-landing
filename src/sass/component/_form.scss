@@ -2,6 +2,10 @@
 
 .formComponent {
   margin-top: 40px;
+  background: url("../../assets/bg-cta.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 
   &::before {
     content: "";
@@ -69,7 +73,6 @@
 
         p {
           font-size: 14px;
-          line-height: 0;
         }
       }
 
