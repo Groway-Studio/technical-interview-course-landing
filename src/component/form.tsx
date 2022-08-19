@@ -1,9 +1,19 @@
 import { Form, FormGroup, Label, Input, Button } from "./shared/forms";
-
 import logoWhite from "./../assets/logo-white.png";
+import useUserInfo from "../hooks/useUserInfo";
 import "../sass/component/_form.scss";
 
 export default function FormContact() {
+  const {
+    firstName,
+    lastName,
+    email,
+    prefixPhoneNumber,
+    phoneNumber,
+    handleInputChange,
+    handleSubmit,
+  } = useUserInfo();
+
   return (
     <div className="formComponent">
       <section className="container">
@@ -18,29 +28,57 @@ export default function FormContact() {
             </div>
           </aside>
           <aside className="formInfo">
-            <Form>
+            <Form onSubmit={handleSubmit}>
               <FormGroup>
-                <Label htmlFor="label">Nombre</Label>
-                <Input id="label" />
+                <Label htmlFor="firstname">Nombre</Label>
+                <Input
+                  id="firstname"
+                  name="firstName"
+                  value={firstName}
+                  onChange={handleInputChange}
+                />
               </FormGroup>
               <FormGroup>
                 <Label htmlFor="lastname">Apellido</Label>
-                <Input type="text" id="lastname" />
+                <Input
+                  type="text"
+                  id="lastname"
+                  name="lastName"
+                  value={lastName}
+                  onChange={handleInputChange}
+                />
               </FormGroup>
               <FormGroup>
-                <Label htmlFor="email">E-mail</Label>
-                <Input type="email" id="email" />
+                <Label htmlFor="email1">E-mail</Label>
+                <Input
+                  type="email"
+                  id="email1"
+                  name="email"
+                  value={email}
+                  onChange={handleInputChange}
+                />
               </FormGroup>
               <FormGroup>
-                <Label htmlFor="prefijo1">+54</Label>
-                <Label htmlFor="prefijo1">Teléfono</Label>
-                <Input type="tel" id="prefijo1" />
+                <Label htmlFor="prefix">+54</Label>
+                <Label htmlFor="prefix">Teléfono</Label>
+                <Input
+                  type="tel"
+                  id="prefix"
+                  name="prefixPhoneNumber"
+                  value={prefixPhoneNumber}
+                  onChange={handleInputChange}
+                />
               </FormGroup>
               <FormGroup>
                 <Label>&nbsp;</Label>
-                <Input type="tel" />
+                <Input
+                  type="tel"
+                  name="phoneNumber"
+                  value={phoneNumber}
+                  onChange={handleInputChange}
+                />
               </FormGroup>
-              <Button>Último paso</Button>
+              <Button type="submit">Último paso</Button>
             </Form>
           </aside>
         </article>

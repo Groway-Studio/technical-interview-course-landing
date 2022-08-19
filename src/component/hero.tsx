@@ -7,9 +7,20 @@ import price from "./../assets/price.svg";
 import ButtonComponent from "./shared/button";
 import downloadIcon from "./../assets/download.svg";
 
+import useUserInfo from "../hooks/useUserInfo";
 import "./../sass/component/_hero.scss";
 
 export default function Hero() {
+  const {
+    firstName,
+    lastName,
+    email,
+    prefixPhoneNumber,
+    phoneNumber,
+    handleInputChange,
+    handleSubmit,
+  } = useUserInfo();
+
   return (
     <div className="heroComponent">
       <div className="contentHero">
@@ -61,29 +72,57 @@ export default function Hero() {
       <aside className="formInfo-hero">
         <h2>Inscríbete</h2>
         <p>Sólo necesitas completar tus datos:</p>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <FormGroup>
-            <Label htmlFor="label">Nombre</Label>
-            <Input id="label" />
+            <Label htmlFor="firstName">Nombre</Label>
+            <Input
+              id="firstName"
+              name="firstName"
+              value={firstName}
+              onChange={handleInputChange}
+            />
           </FormGroup>
           <FormGroup>
-            <Label htmlFor="lastname">Apellido</Label>
-            <Input type="text" id="lastname" />
+            <Label htmlFor="lastName">Apellido</Label>
+            <Input
+              type="text"
+              id="lastName"
+              name="lastName"
+              value={lastName}
+              onChange={handleInputChange}
+            />
           </FormGroup>
           <FormGroup>
             <Label htmlFor="email">E-mail</Label>
-            <Input type="email" id="email" />
+            <Input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={handleInputChange}
+            />
           </FormGroup>
           <FormGroup>
-            <Label htmlFor="prefijo">+54</Label>
-            <Label htmlFor="prefijo">Teléfono</Label>
-            <Input type="tel" id="prefijo" />
+            <Label htmlFor="prefix1">+54</Label>
+            <Label htmlFor="prefix1">Teléfono</Label>
+            <Input
+              type="tel"
+              id="prefix1"
+              name="prefixPhoneNumber"
+              value={prefixPhoneNumber}
+              onChange={handleInputChange}
+            />
           </FormGroup>
           <FormGroup>
             <Label>&nbsp;</Label>
-            <Input type="tel" />
+            <Input
+              type="tel"
+              name="phoneNumber"
+              value={phoneNumber}
+              onChange={handleInputChange}
+            />
           </FormGroup>
-          <Button>Último paso</Button>
+          <Button type="submit">Último paso</Button>
         </Form>
       </aside>
       <div className="btnDownload">
