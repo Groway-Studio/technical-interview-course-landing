@@ -28,6 +28,7 @@ Landing ->> Landing : Show a loading message
 Landing -->> Student API : Send the registration and student information 
 activate Student API
 Student API -->> Landing : Confirm the successfully registration
+Student API -->> User : Send confirmation email
 deactivate Student API
 Landing ->> Landing : Show the congratz message
 deactivate Landing
