@@ -16,13 +16,19 @@ deactivate Landing
 activate Payment API
 Payment API -->> Landing : Build a MP Preference and send the checkout link
 deactivate Payment API
+activate Landing
 Landing -->> Checkout : Redirect to the Checkout trough the link
+deactivate Landing
 activate Checkout
 User -->> Checkout : Complete the payment process
 Checkout ->> Landing : Redirect to the congratz view
 deactivate Checkout
 activate Landing
+Landing ->> Landing : Show a loading message
 Landing -->> Student API : Send the registration and student information 
+activate Student API
 Student API -->> Landing : Confirm the successfully registration
+deactivate Student API
+Landing ->> Landing : Show the congratz message
 deactivate Landing
 ```
