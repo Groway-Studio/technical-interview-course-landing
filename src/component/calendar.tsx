@@ -48,18 +48,10 @@ export default function Calendar() {
         <article className="courses">
           <div className="week-days">
             <div className="dayOne">
-              <div className="item-2">
-                Bienvenida y repaso de conceptos basicos de programación
-              </div>
-              <div className="item-1">
-                ¿Que es el codigo idiomatico?, el Zen de Python y PEP8
-              </div>
-              <div className="item-1">
-                Compiladores, Interpretes y el Interprete de Python
-              </div>
-              <div className="item-2">
-                Introduccion a la sintaxis del lenguaje: <br/> Variables, Tipos de Datos (Core data types)
-              </div>
+              <div className="item-2">Bienvenida y repaso de conceptos basicos de programación </div>
+              <div className="item-1">¿Que es el codigo idiomatico?, el Zen de Python y PEP8 </div>
+              <div className="item-1">Compiladores, Interpretes y el Interprete de Python</div>
+              <div className="item-2">Introduccion a la sintaxis del lenguaje: <br/> Variables, Tipos de Datos (Core data types)</div>
             </div>
             <div className="dayOne">
               <div className="item-2">Operadores, Expresiones, I/O</div>
@@ -67,6 +59,7 @@ export default function Calendar() {
               <div className="item-1">Introduccion a las estructuras de datos: <br/>Listas, Tuplas, Diccionarios</div>
               <div className="item-1">Operaciones con estructuras de datos, compresiones, generadores, itertools</div>
             </div>
+          </div>
           <div className="week-days">
             
             <div className="dayOne">
