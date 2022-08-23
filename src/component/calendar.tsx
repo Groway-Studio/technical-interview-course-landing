@@ -37,14 +37,14 @@ export default function Calendar() {
         </article>
       </aside>
       <aside className="classHours">
-        <article className="hours">
+        {/* <article className="hours">
           <div className="item">10:00 - 10:30</div>
           <div className="item">10:30 - 11:00</div>
           <div className="item">11:00 - 11:30</div>
           <div className="item">11:30 - 12:00</div>
           <div className="item">12:00 - 12:30</div>
           <div className="item">12:30 - 13:00</div>
-        </article>
+        </article> */}
         <article className="courses">
           <div className="week-days">
             <div className="dayOne">
