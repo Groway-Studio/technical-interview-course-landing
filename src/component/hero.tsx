@@ -33,12 +33,16 @@ export default function Hero() {
             </div>
           </div>
           <p>
-            <b>En Groway</b> diseñamos y dictamos este curso de Python para
-            introducir a aquellas personas que no han tenido contacto con el
-            lenguaje de programación. <b>Python</b> es un lenguaje que posee
-            muchas aplicaciones y hoy en día se puede utilizar para realizar
-            sitios web escalables, realizar cálculos estructurales complejos,
-            videojuegos, entre muchísimas cosas más.
+            <b>En Groway</b> diseñamos este curso de Python basado en la 
+            experiencia acumulada de nuestros expertos para que puedas
+            introducir y repasar los fundamentos de programacion a travez
+            de <b>Python</b> de una forma sencilla, eficiente y divertida,
+            recuerda que las bases son siempre importantes para crear 
+            conocimiento solido y prepararte para trabajar en tu
+            crecimiento profesional.
+
+            <br />
+            Aprende sobre estructuras de datos, principios solid, patrones de diseño, POO, Programacion Funcional, Algoritmos y mucho mas.
           </p>
         </div>
 

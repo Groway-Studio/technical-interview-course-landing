@@ -4,7 +4,7 @@ export default function Calendar() {
   return (
     <section className="calendarComponent">
       <aside className="weekDays">
-        <h3>Sistema de cursado</h3>
+        <h3>Programa</h3>
         <article>
           <div className="weeks">
             <div className="week">Semana 1</div>
