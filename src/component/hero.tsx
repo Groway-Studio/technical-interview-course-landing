@@ -74,7 +74,7 @@ export default function Hero() {
       </div>
 
       <aside className="formInfo-hero">
-        <h2>Inscríbete ahora y aprovecha el precio especial early bird</h2>
+        <h3>Inscríbete ahora y aprovecha el precio especial early bird</h3>
         {/* <p>Sólo necesitas completar tus datos:</p> */}
         <Form onSubmit={handleSubmit}>
           <FormGroup>
