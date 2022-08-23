@@ -55,15 +55,15 @@ export default function Calendar() {
             </div>
             <div className="dayOne">
               <div className="item-2">Operadores, Expresiones, I/O</div>
-              <div className="item-2 highlights"><b>Programacion estructurada:</b>Condicionales, Bucles, Iteradores</div>
-              <div className="item-2"><b>Estructuras de datos:</b>Listas, Tuplas, Diccionarios</div>
+              <div className="item-2"><b>Programacion estructurada:</b>Condicionales, Bucles, Iteradores</div>
+              <div className="item-2 highlights"><b>Estructuras de datos:</b>Listas, Tuplas, Diccionarios</div>
             </div>
           </div>
           <div className="week-days">
             
             <div className="dayOne">
-              <div className="item-3 highlights"><b>Estructuras de datos avanzadas:</b>Compresiones, Generadores, itertools, Pilas, Colas, Listas, Arboles, etc</div>
-              <div className="item-3">Algoritmos utiles con estructuras de datos</div>
+              <div className="item-3 highlights"><b>Estructuras de datos avanzado:</b>Compresiones, Generadores, itertools, Pilas, Colas, Listas, Arboles, etc</div>
+              <div className="item-3 highlights">Algoritmos utiles con estructuras de datos</div>
             </div>
             <div className="dayOne">
               <div className="item-4 highlights"><b>Algoritmos Utiles: </b> Busqueda, Ordenamiento, Grafos, Programacion Dinamica, etc</div>
@@ -79,8 +79,8 @@ export default function Calendar() {
               <div className="item-2"><b>Programacion Funcional: </b>Lambdas, Func. de Orden Superior, etc</div>
             </div>
             <div className="dayOne">
-              <div className="item-2"><b>POO: </b>Clases, Herencia, Encapsulamiento, Polimorfismo, etc</div>
-              <div className="item-2"><b>Patrones de diseño: </b>Factory, Builder, Adapter, Facade, Strategy, Observer, etc</div>
+              <div className="item-2 highlights"><b>POO: </b>Clases, Herencia, Encapsulamiento, Polimorfismo, etc</div>
+              <div className="item-2 highlights"><b>Patrones de diseño: </b>Factory, Builder, Adapter, Facade, Strategy, Observer, etc</div>
               <div className="item-2"><b>Buenas practicas de programacion: </b>Principios SOLID / KISS / DRY, Antipatrones</div>
             </div>
           </div>
