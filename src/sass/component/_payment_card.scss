@@ -18,9 +18,9 @@
   }
 
   &__image {
-    height: 500px;
+    height: 400px;
     margin: 0 auto;
-    object-fit: cover;
+    object-fit: contain;
     width: 600px;
     z-index: 300;
 
@@ -39,11 +39,11 @@
 }
 
 .success {
-  color: #b58303;
+  color: #68af47;
 }
 
 .pending {
-  color: #4b82af;
+  color: #ffd875;
 }
 
 h2.failed {

@@ -72,23 +72,21 @@ $desktop_xl: 1920px;
       &:nth-child(4) {
         position: relative;
         input {
-          padding-left: 2.3rem;
+          padding-left: 1.95rem;
         }
 
         label {
           &:first-child {
-            bottom: 14px;
-
+            border-radius: 10px;
+            bottom: 15px;
             color: #4a81ae;
             font-size: 14px;
             font-weight: 500;
-            left: 0px;
+            left: 1px;
+            margin: 0;
+
             position: absolute;
             z-index: 100;
-
-            @include phone {
-              bottom: 13px;
-            }
           }
         }
       }
