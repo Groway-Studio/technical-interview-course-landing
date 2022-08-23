@@ -126,7 +126,7 @@ export default function Hero() {
               onChange={handleInputChange}
             />
           </FormGroup>
-          <Button type="submit">Último paso</Button>
+          <Button type="submit">Comprar por solo $ 29.00</Button>
         </Form>
       </aside>
       <div className="btnDownload">
