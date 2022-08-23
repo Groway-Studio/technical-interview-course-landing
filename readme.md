@@ -1,5 +1,6 @@
 ```mermaid
 sequenceDiagram
+autonumber
 participant User
 participant Landing
 participant Payment API
