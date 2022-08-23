@@ -129,9 +129,6 @@ export default function Hero() {
           <Button type="submit">Comprar por solo $ 29.00</Button>
         </Form>
       </aside>
-      {/* <div className="btnDownload">
-        <ButtonComponent label="Descargar Brochure" icon={downloadIcon} />
-      </div> */}
     </div>
   );
 }
