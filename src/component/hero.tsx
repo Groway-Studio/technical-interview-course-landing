@@ -7,8 +7,6 @@ import python from "./../assets/python.png";
 import duration from "./../assets/duration.svg";
 import hours from "./../assets/hours.svg";
 import price from "./../assets/price.svg";
-import ButtonComponent from "./shared/button";
-import downloadIcon from "./../assets/download.svg";
 
 import { useUserInfo } from "../hooks";
 import { RedirectMP } from "../utils";
@@ -42,20 +40,22 @@ export default function Hero() {
             <div className="dflex fd-row">
               <img src={python} className="imgPy" alt="python" />
               <div className="dflex fd-col">
-                <h5>Curso de </h5>
-                <span className="cover-text">Python</span>
+                <h5>Aprende </h5>
+                <span className="cover-text">Python</span> como se debe.
               </div>
             </div>
             <p>
-              <b>En Groway</b> diseñamos y dictamos este curso de Python para
-              introducir a aquellas personas que no han tenido contacto con el
-              lenguaje de programación. <b>Python</b> es un lenguaje que posee
-              muchas aplicaciones y hoy en día se puede utilizar para realizar
-              sitios web escalables, realizar cálculos estructurales complejos,
-              videojuegos, entre muchísimas cosas más.
+              <b>En Groway</b> diseñamos este curso de Python basado en la 
+            experiencia acumulada de nuestros expertos para que puedas
+            introducir y repasar los fundamentos de programacion a travez
+            de <b>Python</b> de una forma sencilla, eficiente y divertida,
+            recuerda que las bases son siempre importantes para crear 
+            conocimiento solido y prepararte para trabajar en tu
+            crecimiento profesional.
             </p>
+            <br />
+            Aprende sobre estructuras de datos, principios solid, patrones de diseño, POO, Programacion Funcional, Algoritmos y mucho mas.
           </div>
-
           <article className="presitions">
             <figure className="item">
               <img src={duration} alt="duration" />
@@ -72,7 +72,6 @@ export default function Hero() {
                 <span>15:00 a 17:00</span>
               </figcaption>
             </figure>
-
             <figure className="item">
               <img src={price} alt="price" />
               <figcaption>
@@ -82,7 +81,6 @@ export default function Hero() {
             </figure>
           </article>
         </div>
-
         <aside className="formInfo-hero">
           <h2>Inscríbete</h2>
           <p>Sólo necesitas completar tus datos:</p>
@@ -136,12 +134,9 @@ export default function Hero() {
                 onChange={handleInputChange}
               />
             </FormGroup>
-            <Button type="submit">Último paso</Button>
+            <Button type="submit">Comprar por solo $ 29.00</Button>
           </Form>
         </aside>
-        <div className="btnDownload">
-          <ButtonComponent label="Descargar Brochure" icon={downloadIcon} />
-        </div>
       </div>
     </>
   );
