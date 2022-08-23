@@ -39,22 +39,24 @@ export default function Hero() {
           <div>
             <div className="dflex fd-row">
               <img src={python} className="imgPy" alt="python" />
-              <div className="dflex fd-col">
-                <h5>Aprende </h5>
-                <span className="cover-text">Python</span> como se debe.
+              <div className="dflex fd-col title">
+                <h5>Aprende</h5>
+                <span className="cover-text">Python</span>
+                <small>como se debe.</small>
               </div>
             </div>
             <p>
-              <b>En Groway</b> diseñamos este curso de Python basado en la 
-            experiencia acumulada de nuestros expertos para que puedas
-            introducir y repasar los fundamentos de programacion a travez
-            de <b>Python</b> de una forma sencilla, eficiente y divertida,
-            recuerda que las bases son siempre importantes para crear 
-            conocimiento solido y prepararte para trabajar en tu
-            crecimiento profesional.
+              <b>En Groway</b> diseñamos este curso de Python basado en la
+              experiencia acumulada de nuestros expertos para que puedas
+              introducir y repasar los fundamentos de programación a través de{" "}
+              <b>Python</b> de una forma sencilla, eficiente y divertida,
+              recuerda que las bases son siempre importantes para crear
+              conocimiento sólido y prepararte para trabajar en tu crecimiento
+              profesional.
             </p>
             <p>
-            Aprende sobre estructuras de datos, principios solid, patrones de diseño, POO, Programacion Funcional, Algoritmos y mucho mas!
+              Aprende sobre Estructuras de Datos, Principios SOLID, Patrones de
+              Diseño, POO, Programación Funcional, Algoritmos y mucho más!
             </p>
           </div>
           <article className="presitions">
@@ -84,7 +86,10 @@ export default function Hero() {
         </div>
         <aside className="formInfo-hero">
           <h2>Early Bird Sale</h2>
-          <p>Aprovecha la venta anticipada para adquirir tu lugar en el curso con un precio especial!</p>
+          <p>
+            Aprovecha la venta anticipada para adquirir tu lugar en el curso con
+            un precio especial!
+          </p>
           <Form onSubmit={handleSubmit}>
             <FormGroup>
               <Label htmlFor="firstName">Nombre</Label>

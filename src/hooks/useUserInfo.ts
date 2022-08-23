@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { State, TopLevel } from "../interfaces";
-import { keystore } from "../utils";
+import { keystore, validPaths } from "../utils";
 
 const useUserInfo = () => {
   const [state, setState] = useState<State>({
@@ -15,6 +15,8 @@ const useUserInfo = () => {
   const [response, setResponse] = useState<TopLevel>();
 
   const { firstName, lastName, email, prefixPhoneNumber, phoneNumber } = state;
+
+  const pathnameOrigin: string = window.location.origin;
 
   const handleInputChange = ({
     target,
@@ -38,9 +40,9 @@ const useUserInfo = () => {
             method: "POST",
             body: JSON.stringify({
               title: "Curso Python 1er batch",
-              success_url: "https://aprendepython.groway.studio/pago-exitoso",
-              pending_url: "https://aprendepython.groway.studio/pago-pendiente",
-              failure_url: "https://aprendepython.groway.studio/pago-fallido",
+              success_url: `${pathnameOrigin}${validPaths.success}`,
+              pending_url: `${pathnameOrigin}${validPaths.pending}`,
+              failure_url: `${pathnameOrigin}${validPaths.failed}`,
             }),
           }
         );
@@ -60,7 +62,7 @@ const useUserInfo = () => {
 
         setTimeout(() => {
           setLoading(false);
-        }, 1500);
+        }, 1000);
       } catch (error: any) {
         setLoading(false);
         throw new Error(error);

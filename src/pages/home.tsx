@@ -1,9 +1,5 @@
-import Header from "../component/shared/header";
-import Hero from "../component/hero";
-import Footer from "../component/shared/footer";
-import Modality from "../component/modality"; 
-import Calendar from "../component/calendar";
-import Faqs from "../component/faqs";
+import { Hero, Modality, Calendar, Faqs, Instructor } from "../component";
+import { Header, Footer } from "../component/shared";
 
 export default function Home() {
   return (
@@ -12,6 +8,7 @@ export default function Home() {
       <Hero />
       <Modality />
       <Calendar />
+      <Instructor />
       <Faqs />
       <Footer />
     </>

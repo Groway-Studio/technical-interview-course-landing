@@ -1,0 +1,41 @@
+@import "../base/base";
+
+.instructor {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: calc(190px - 1rem) calc(100% - 190px);
+  margin: 5rem auto 0;
+  max-width: $container;
+  width: 90%;
+
+  @include phone {
+    grid-template-columns: 100%;
+    gap: 1.5rem;
+  }
+
+  &__profile {
+    &-image {
+      border-radius: 50%;
+      border: 1px solid;
+      height: 150px;
+      margin: auto;
+      width: 150px;
+
+      @include phone {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    &-info {
+      display: grid;
+      gap: 0.5rem;
+
+      h2 {
+        @include phone {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
