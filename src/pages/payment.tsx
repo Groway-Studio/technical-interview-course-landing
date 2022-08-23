@@ -13,10 +13,7 @@ const Payment = () => {
 
   useEffect(() => {
     (async () => {
-      if (
-        pathname === validPaths.success &&
-        (user_data !== "" || user_data !== undefined)
-      ) {
+      if (pathname === validPaths.success && !!user_data) {
         try {
           const user = JSON.parse(user_data || "");
 
@@ -24,24 +21,15 @@ const Payment = () => {
             "https://python-course-function-git-main-joelibaceta.vercel.app/api/new_sale.py",
             {
               body: JSON.stringify({ ...user, payment_id }),
-              headers: {
-                "Content-Type": "application/json",
-                // prettier-ignore
-                "Accept": "*/*",
-                "Access-Control-Allow-Origin": "*",
-              },
-              mode: "cors",
               method: "POST",
             }
           );
 
-          const data = await response.json();
+          const data = await response.text();
 
           if (data === "OK") {
-            localStorage.clear();
+            localStorage.removeItem(keystore.USER_DATA);
           }
-
-          console.log(data);
         } catch (error: any) {
           throw new Error(error);
         }
