@@ -1,7 +1,6 @@
-import * as React from "react";
+import { ButtonComponent } from "./shared";
 
 import programming from "./../assets/programming.png";
-import ButtonComponent from "./shared/button";
 import downloadIcon from "./../assets/download.svg";
 import "./../sass/component/_brochure.scss";
 

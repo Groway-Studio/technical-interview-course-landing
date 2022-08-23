@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import Header from "../component/shared/header";
-import PaymentCard from "../component/payment_card";
+import { Header } from "../component/shared";
+import { PaymentCard } from "../component";
 import { failed, pending, success } from "../assets/payment-status";
 import { payment_id, validPaths, keystore } from "../utils";
 

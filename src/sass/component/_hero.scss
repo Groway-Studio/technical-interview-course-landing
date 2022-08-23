@@ -25,6 +25,7 @@
     width: $container-phone;
     grid-template-columns: 100%;
     margin-top: 50px;
+    gap: 1.5rem;
   }
 }
 
@@ -179,10 +180,8 @@
 }
 
 .imgPy {
-  margin-right: 16px;
-  @include phone {
-    width: 73px;
-  }
+  height: 150px;
+  min-width: 125px;
 }
 
 .formInfo-hero {
@@ -198,39 +197,44 @@
     order: 3;
   }
 
-  button:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    transform: scale(1.2, 1.2);
-    transition: all 0.3s ease-in-out;
-  }
-
   button {
-
-    transition: all 0.3s ease-in-out;
-
-    padding: 5px;
-    
-    width: 100%;
     cursor: pointer;
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+
+    &:hover {
+      box-shadow: 0 5px 15px #0000004d;
+      transform: scale(1.2, 1.2);
+    }
 
     @include phone {
       right: -24px;
       bottom: -80px;
+
+      &:hover {
+        transform: unset;
+      }
     }
 
     @include tablet {
-      position: unset;
-      grid-column: 4;
+      grid-column: 3 / 5;
       margin-top: 20px;
       padding: 0;
+      position: unset;
+
+      &:hover {
+        transform: unset;
+      }
     }
   }
 
   h2 {
-    width: 100%;
-    font-size: $size * 5;
     color: $neutral-color-0;
+    font-size: $size * 5;
     text-align: center;
+    width: 100%;
+
     @include phone {
       font-size: $size * 4;
     }
@@ -262,5 +266,20 @@
     width: $container-phone;
     flex-direction: column;
     margin: 3rem 0;
+  }
+}
+
+.title {
+  small {
+    font-size: 1rem;
+    margin: 5px 0 0 108px;
+
+    @include phone {
+      margin: 0;
+    }
+
+    @include tablet {
+      margin: 0;
+    }
   }
 }
