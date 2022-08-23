@@ -62,7 +62,7 @@ export default function Hero() {
               <img src={duration} alt="duration" />
               <figcaption>
                 <h2>Duración</h2>
-                <span>3 semanas</span>
+                <span>4 semanas</span>
               </figcaption>
             </figure>
 
@@ -70,14 +70,14 @@ export default function Hero() {
               <img src={hours} alt="hours" />
               <figcaption>
                 <h2>Horario</h2>
-                <span>15:00 a 17:00</span>
+                <span>Sab y Dom de 10:00 a 13:00</span>
               </figcaption>
             </figure>
             <figure className="item">
               <img src={price} alt="price" />
               <figcaption>
                 <h2>Costo</h2>
-                <span>150 usd</span>
+                <span>120 usd</span>
               </figcaption>
             </figure>
           </article>
