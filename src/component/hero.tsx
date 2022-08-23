@@ -28,8 +28,8 @@ export default function Hero() {
           <div className="dflex fd-row">
             <img src={python} className="imgPy" alt="python" />
             <div className="dflex fd-col">
-              <h5>Curso de </h5>
-              <span className="cover-text">Python</span>
+              <h5>Aprende </h5>
+              <span className="cover-text">Python</span> como se debe.
             </div>
           </div>
           <p>
@@ -51,7 +51,7 @@ export default function Hero() {
             <img src={duration} alt="duration" />
             <figcaption>
               <h2>Duración</h2>
-              <span>3 semanas</span>
+              <span>4 semanas</span>
             </figcaption>
           </figure>
 
@@ -59,7 +59,7 @@ export default function Hero() {
             <img src={hours} alt="hours" />
             <figcaption>
               <h2>Horario</h2>
-              <span>15:00 a 17:00</span>
+              <span>Sab y Dom de 10:00 a 13:00</span>
             </figcaption>
           </figure>
 
@@ -74,8 +74,8 @@ export default function Hero() {
       </div>
 
       <aside className="formInfo-hero">
-        <h2>Inscríbete</h2>
-        <p>Sólo necesitas completar tus datos:</p>
+        <h2>Inscríbete ahora y aprovecha el precio especial early bird</h2>
+        {/* <p>Sólo necesitas completar tus datos:</p> */}
         <Form onSubmit={handleSubmit}>
           <FormGroup>
             <Label htmlFor="firstName">Nombre</Label>
