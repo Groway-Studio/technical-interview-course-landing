@@ -198,8 +198,20 @@
     order: 3;
   }
 
+  button:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: scale(1.2, 1.2);
+    transition: all 0.3s ease-in-out;
+  }
+
   button {
-    right: -32px;
+
+    transition: all 0.3s ease-in-out;
+
+    padding: 5px;
+    
+    width: 100%;
+    cursor: pointer;
 
     @include phone {
       right: -24px;
@@ -218,12 +230,14 @@
     width: 100%;
     font-size: $size * 5;
     color: $neutral-color-0;
+    text-align: center;
     @include phone {
       font-size: $size * 4;
     }
   }
 
   p {
+    text-align: center;
     color: #fff;
     font-size: 14px;
     margin-bottom: 20px;

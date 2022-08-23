@@ -14,7 +14,7 @@ export default function Modality() {
         <article className="item">
           <img src={icWifi} alt="wifi" />
           <span>
-            100% <br /> Online
+            100% <br /> Online y Sincrono
           </span>
         </article>
         <article className="item">

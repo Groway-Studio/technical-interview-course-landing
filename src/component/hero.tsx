@@ -53,8 +53,9 @@ export default function Hero() {
             conocimiento solido y prepararte para trabajar en tu
             crecimiento profesional.
             </p>
-            <br />
-            Aprende sobre estructuras de datos, principios solid, patrones de diseño, POO, Programacion Funcional, Algoritmos y mucho mas.
+            <p>
+            Aprende sobre estructuras de datos, principios solid, patrones de diseño, POO, Programacion Funcional, Algoritmos y mucho mas!
+            </p>
           </div>
           <article className="presitions">
             <figure className="item">
@@ -82,8 +83,8 @@ export default function Hero() {
           </article>
         </div>
         <aside className="formInfo-hero">
-          <h2>Inscríbete</h2>
-          <p>Sólo necesitas completar tus datos:</p>
+          <h2>Early Bird Sale</h2>
+          <p>Aprovecha la venta anticipada para adquirir tu lugar en el curso con un precio especial!</p>
           <Form onSubmit={handleSubmit}>
             <FormGroup>
               <Label htmlFor="firstName">Nombre</Label>
@@ -115,7 +116,7 @@ export default function Hero() {
               />
             </FormGroup>
             <FormGroup>
-              <Label htmlFor="prefix1">+54</Label>
+              <Label htmlFor="prefix1">+51</Label>
               <Label htmlFor="prefix1">Teléfono</Label>
               <Input
                 type="tel"
@@ -134,7 +135,7 @@ export default function Hero() {
                 onChange={handleInputChange}
               />
             </FormGroup>
-            <Button type="submit">Comprar por solo $ 29.00</Button>
+            <Button type="submit">Comprar por solo $39.00</Button>
           </Form>
         </aside>
       </div>
