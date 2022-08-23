@@ -10,7 +10,12 @@ interface Props {
 const PaymentCard = ({ image, title, message, type }: Props) => {
   return (
     <section className="paymentCard">
-      <img src={image} alt={title} className="paymentCard__image" />
+      <img
+        src={image}
+        alt={title}
+        className="paymentCard__image"
+        draggable={false}
+      />
       <h2 className={`paymentCard__title ${type}`}>{title}</h2>
       <p className={`paymentCard__message ${type}`}>{message}</p>
     </section>
