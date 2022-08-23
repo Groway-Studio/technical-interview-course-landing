@@ -51,7 +51,7 @@ export default function Hero() {
             <img src={duration} alt="duration" />
             <figcaption>
               <h2>Duración</h2>
-              <span>4 semanas</span>
+              <span>24 horas en 4 semanas</span>
             </figcaption>
           </figure>
 

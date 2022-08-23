@@ -38,10 +38,10 @@ export default function Calendar() {
       </aside>
       <aside className="classHours">
         <article className="hours">
-          <div className="item">10:00 - 10:30</div>
-          <div className="item">10:30 - 10:50</div>
-          <div className="item">12:00 - 12:30</div>
-          <div className="item">12:30 - 13:00</div>
+          <div className="item">10:00 - 11:00</div>
+          <div className="item">11:00 - 11:50</div>
+          <div className="item">12:00 - 13:00</div>
+          <div className="item">12:00 - 13:00</div>
         </article>
         <article className="courses">
           <div className="week-days">
@@ -63,7 +63,7 @@ export default function Calendar() {
               <div className="item-1">Programacion estructurada, Variables y Estructuras de control</div>
               <div className="item-1 highlights">Tipos de datos y Operadores</div>
               <div className="item-1">Introduccion a las estructuras de datos, Listas, Tuplas y Diccionarios</div>
-              <div className="item-1">Operaciones con estructuras de datos</div>
+              <div className="item-1">Operaciones con estructuras de datos, compresiones y generadores</div>
             </div>
           </div>
           <div className="week-days">
@@ -75,8 +75,8 @@ export default function Calendar() {
               <div className="item-2 highlights">
                 Programación Modular (Funciones, Argumentos, Paquetes, Scopes)
               </div>
+              <div className="item-1">Programacion Funcional</div>
               <div className="item-1">Biblioteca estandar</div>
-              <div className="item-1">Biblioteca de terceros (PIL)</div>
             </div>
           </div>
           <div className="week-days">
