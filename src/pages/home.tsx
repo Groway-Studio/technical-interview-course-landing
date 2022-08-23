@@ -13,8 +13,6 @@ export default function Home() {
       <Hero />
       <Modality />
       <Calendar />
-      <Brochure />
-      <FormContact />
       <Footer />
     </>
   );
