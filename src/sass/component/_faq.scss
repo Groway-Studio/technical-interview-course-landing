@@ -1,0 +1,53 @@
+@import "./../base/_base.scss";
+
+.FaqComponent {
+  &::after,
+  &::before {
+    content: "";
+    width: 85%;
+    height: 2px;
+    background: #cccccc;
+  }
+
+  max-width: $container;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin: 82px auto 82px auto;
+  z-index: 100;
+
+  h1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 50px;
+    color: #084887;
+    margin-top: 30px;
+  }
+
+  aside {
+
+    padding-bottom: 50px;
+
+    h2 {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 50px;
+      color: #084887;
+      margin-top: 50px;
+    }
+    ul {
+      padding-top: 5px;
+      padding-left: 25px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+
+  
+}
