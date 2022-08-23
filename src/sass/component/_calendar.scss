@@ -68,13 +68,14 @@
         .week {
           display: flex;
           align-items: center;
+          text-align: center;
           width: 160px;
           border-right: 1px solid #ccc;
           border-bottom: 1px solid #ccc;
           padding: 24px;
           font-style: normal;
           font-weight: 500;
-          font-size: 24px;
+          font-size: 16px;
           line-height: 36px;
           @include phone {
             text-align: center;
@@ -95,7 +96,7 @@
             border-bottom: 1px solid #ccc;
             font-style: normal;
             font-weight: 500;
-            font-size: 24px;
+            font-size: 14px;
             line-height: 36px;
             @include phone {
               font-size: $size * 3 !important;
@@ -111,7 +112,7 @@
 
   .classHours {
     width: 75%;
-
+    padding-top: 48px;
     display: flex;
     flex-direction: column;
     margin: 24px 20px;
@@ -164,6 +165,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        font-size: 12px;
         .item-1 {
           display: flex;
           justify-content: center;
@@ -175,8 +177,7 @@
           border-radius: 10px;
           margin-right: 20px;
           font-weight: 300;
-          box-sizing: border-box;
-          font-size: 14px;
+          box-sizing: border-box; 
           line-height: 20px;
           text-align: center;
           color: #031d44;
@@ -198,7 +199,6 @@
           border-radius: 10px;
           margin-right: 20px;
           box-sizing: border-box;
-          font-size: 14px;
           line-height: 20px;
           color: #031d44;
           background-color: #fff;
@@ -220,7 +220,6 @@
           border-radius: 10px;
           margin-right: 20px;
           box-sizing: border-box;
-          font-size: 14px;
           line-height: 20px;
           color: #031d44;
           background-color: #fff;
@@ -242,7 +241,6 @@
           border-radius: 10px;
           margin-right: 20px;
           box-sizing: border-box;
-          font-size: 14px;
           line-height: 20px;
           color: #031d44;
           background-color: #fff;
