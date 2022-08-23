@@ -9,29 +9,29 @@ export default function Calendar() {
           <div className="weeks">
             <div className="week">Semana 1</div>
             <div className="days">
-              <span>Martes</span>
-              <span>Jueves</span>
+              <span>Sabado</span>
+              <span>Domingo</span>
             </div>
           </div>
           <div className="weeks">
             <div className="week">Semana 2</div>
             <div className="days">
-              <span>Martes</span>
-              <span>Jueves</span>
+              <span>Sabado</span>
+              <span>Domingo</span>
             </div>
           </div>
           <div className="weeks">
             <div className="week">Semana 3</div>
             <div className="days">
-              <span>Martes</span>
-              <span>Jueves</span>
+              <span>Sabado</span>
+              <span>Domingo</span>
             </div>
           </div>
           <div className="weeks">
             <div className="week">Semana 4</div>
             <div className="days">
-              <span>Martes</span>
-              <span>Jueves</span>
+              <span>Sabado</span>
+              <span>Domingo</span>
             </div>
           </div>
         </article>
