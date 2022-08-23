@@ -4,8 +4,6 @@ import python from "./../assets/python.png";
 import duration from "./../assets/duration.svg";
 import hours from "./../assets/hours.svg";
 import price from "./../assets/price.svg";
-import ButtonComponent from "./shared/button";
-import downloadIcon from "./../assets/download.svg";
 
 import useUserInfo from "../hooks/useUserInfo";
 import "./../sass/component/_hero.scss";
