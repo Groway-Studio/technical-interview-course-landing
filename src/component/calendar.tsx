@@ -38,15 +38,17 @@ export default function Calendar() {
       </aside>
       <aside className="classHours">
         <article className="hours">
-          <div className="item">10:00 - 11:00</div>
-          <div className="item">11:00 - 11:50</div>
-          <div className="item">12:00 - 13:00</div>
-          <div className="item">12:00 - 13:00</div>
+          <div className="item">10:00 - 10:30</div>
+          <div className="item">10:30 - 11:00</div>
+          <div className="item">11:00 - 11:30</div>
+          <div className="item">11:30 - 12:00</div>
+          <div className="item">12:00 - 12:30</div>
+          <div className="item">12:30 - 13:00</div>
         </article>
         <article className="courses">
           <div className="week-days">
             <div className="dayOne">
-              <div className="item-1">
+              <div className="item-2">
                 Bienvenida y repaso de conceptos basicos de programación
               </div>
               <div className="item-1">
@@ -55,62 +57,53 @@ export default function Calendar() {
               <div className="item-1">
                 Compiladores, Interpretes y el Interprete de Python
               </div>
-              <div className="item-1">
-                Ejecutando codigo e Introduccion a la sintaxis del lenguaje
-              </div>
-            </div>
-            <div className="dayOne">
-              <div className="item-1">Programacion estructurada, Variables y Estructuras de control</div>
-              <div className="item-1 highlights">Tipos de datos y Operadores</div>
-              <div className="item-1">Introduccion a las estructuras de datos, Listas, Tuplas y Diccionarios</div>
-              <div className="item-1">Operaciones con estructuras de datos, compresiones y generadores</div>
-            </div>
-          </div>
-          <div className="week-days">
-            <div className="dayOne">
-              <div className="item-2">Estructuras de datos avanzadas (Colas, Pilas, Sets, Arboles, Listas enlazadas, etc) </div>
-              <div className="item-2 highlights">Algoritmos utiles con estructuras de datos</div>
-            </div>
-            <div className="dayOne">
-              <div className="item-2 highlights">
-                Programación Modular (Funciones, Argumentos, Paquetes, Scopes)
-              </div>
-              <div className="item-1">Programacion Funcional</div>
-              <div className="item-1">Biblioteca estandar</div>
-            </div>
-          </div>
-          <div className="week-days">
-            <div className="dayOne">
-              <div className="item-1">
-                Introducción a la programación orientada a objetos
-              </div>
-              <div className="item-1">POO en Python</div>
-              <div className="item-2 highlights">
-                Ejercicios Problem Solving POO
-              </div>
-            </div>
-            <div className="dayOne">
-              <div className="item-1">Programación estructurada</div>
-              <div className="item-2">Ejercicios</div>
-              <div className="item-1">Manejo de errores</div>
-            </div>
-          </div>
-          <div className="week-days">
-            <div className="dayOne">
-              <div className="item-1">
-                Bienvenida. Introducción y repaso Python
-              </div>
-              <div className="item-1">
-                El interprete de Python, CPython y entornos visuales
-              </div>
               <div className="item-2">
-                Sintáxis Python. Tipos de datos, Operadores.
+                Introduccion a la sintaxis del lenguaje: <br/> Variables, Tipos de Datos (Core data types)
               </div>
             </div>
             <div className="dayOne">
-              <div className="item-1">Programación estructurada</div>
-              <div className="item-2">Ejercicios</div>
-              <div className="item-1">Manejo de errores</div>
+              <div className="item-2">Operadores, Expresiones, I/O</div>
+              <div className="item-2 highlights">Programacion estructurada: <br/>Condicionales, Bucles, Iteradores</div>
+              <div className="item-1">Introduccion a las estructuras de datos: <br/>Listas, Tuplas, Diccionarios</div>
+              <div className="item-1">Operaciones con estructuras de datos, compresiones, generadores, itertools</div>
+            </div>
+          <div className="week-days">
+            
+            <div className="dayOne">
+              <div className="item-3 highlights"> Estructuras de datos avanzadas: <br/>Pilas, Colas, Listas, Arboles, etc</div>
+              <div className="item-3">Algoritmos utiles con estructuras de datos</div>
+            </div>
+            <div className="dayOne">
+              <div className="item-4">Algoritmos Utiles: <br/>Busqueda, Ordenamiento, Grafos, etc</div>
+              <div className="item-1">Principios de diseño de algoritmos</div>
+              <div className="item-1 highlights">Analisis de complejidad Algoritmica</div>
+            </div>
+          </div>
+          <div className="week-days">
+            
+            <div className="dayOne">
+              <div className="item-2">Programacion modular: <br/>Funciones, Argumentos, Paquetes, Scopes</div>
+              <div className="item-1">La biblioteca estandar de Python</div>
+              <div className="item-1">Entornos Virtuales, PIP y Bibliotecas de terceros</div>
+              <div className="item-2">Programacion Funcional: <br/>Calculo Lambda, Funciones de Orden Superior, Transparencia Referencial, etc</div>
+            </div>
+            <div className="dayOne">
+              <div className="item-2">Introduccion a la Programacion Orientada a Objetos: <br/>Clases, Herencia, Encapsulamiento, Polimorfismo, Asociaciones, etc</div>
+              <div className="item-2">Patrones de diseño: <br/>Factory, Builder, Adapter, Facade, Strategy, Observer</div>
+              <div className="item-2">Buenas practicas de programacion: <br/> Principios SOLID / KISS / DRY, Antipatrones</div>
+            </div>
+          </div>
+          <div className="week-days">
+            
+            <div className="dayOne">
+              <div className="item-2">Metaprogramación <br/> Decorators, Metodos Magicos, Metaclases, Generacion de codigo al vuelo, etc</div>
+              <div className="item-2">Concurrencia: <br/>GIL, Hilos, Subprocesos, Señales, etc</div>
+              <div className="item-2">Programacion Reactiva: <br/> Observers, AsyncIO, RxPy, etc</div>
+            </div>
+            <div className="dayOne">
+              <div className="item-2">Testing: <br/>Test unitarios, Fixtures, Github CI, Coverage</div>
+              <div className="item-2">Programacion Defensiva: <br/>Manejo de errores, Tipado, Analisis de Codigo Estatico, DocStrings, etc</div>
+              <div className="item-2">Protocolo HTTP, Sockets y Python para internet</div>
             </div>
           </div>
         </article>
