@@ -1,12 +1,14 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 
+
+
 import { Home, Payment } from "./pages";
 
 import "./sass/style.scss";
 
 export default function App() {
   return (
-    <HashRouter basename="/">
+    <HashRouter basename="https://aprendepython.groway.studio">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pago-exitoso" element={<Payment />} />
