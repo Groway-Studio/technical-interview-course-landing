@@ -6,7 +6,7 @@ import "./sass/style.scss";
 
 export default function App() {
   return (
-    <HashRouter basename="http://localhost:3000">
+    <HashRouter basename="https://aprendepython.groway.studio/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pago-exitoso" element={<Payment />} />
