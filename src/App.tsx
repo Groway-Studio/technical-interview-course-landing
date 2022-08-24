@@ -8,7 +8,6 @@ export default function App() {
   return (
     <HashRouter basename="/">
       <Routes>
-        
         <Route path="/pago-exitoso" element={<Payment />} />
         <Route path="/pago-fallido" element={<Payment />} />
         <Route path="/pago-pendiente" element={<Payment />} />
