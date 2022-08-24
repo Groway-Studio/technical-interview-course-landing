@@ -1,3 +1,6 @@
+import { FiFacebook, FiTwitter } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
+
 import "../sass/component/_payment_card.scss";
 
 interface Props {
@@ -18,6 +21,19 @@ const PaymentCard = ({ image, title, message, type }: Props) => {
       />
       <h2 className={`paymentCard__title ${type}`}>{title}</h2>
       <p className={`paymentCard__message ${type}`}>{message}</p>
+
+      {type === "success" && (
+        <>
+          <p className="share-content">
+            Cuéntale a tus amigos sobre este curso!
+          </p>
+          <div className="social-media">
+            <FiFacebook />
+            <FiTwitter />
+            <FaWhatsapp />
+          </div>
+        </>
+      )}
     </section>
   );
 };

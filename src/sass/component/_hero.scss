@@ -210,7 +210,8 @@
 
     @include phone {
       right: -24px;
-      bottom: -80px;
+      bottom: -90px;
+      width: $container-phone;
 
       &:hover {
         transform: unset;
@@ -272,13 +273,9 @@
 .title {
   small {
     font-size: 1rem;
-    margin: 5px 0 0 108px;
+    margin: 0.3125rem 0 0 6.75rem;
 
     @include phone {
-      margin: 0;
-    }
-
-    @include tablet {
       margin: 0;
     }
   }

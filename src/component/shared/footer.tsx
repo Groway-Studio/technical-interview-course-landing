@@ -37,15 +37,21 @@ export default function Footer() {
             </article>
             <article>
               <strong>EE.UU</strong>
-              <p>+1 786 7558193</p>
+              <a href="tel:+1 786 7558193">
+                <p>+1 786 7558193</p>
+              </a>
             </article>
             <article>
               <strong>Argentina</strong>
-              <p>+54 11 52175854</p>
+              <a href="tel:+54 11 52175854">
+                <p>+54 11 52175854</p>
+              </a>
             </article>
             <article>
               <strong>Colombia</strong>
-              <p>+57 15800311</p>
+              <a href="tel:+57 15800311">
+                <p>+57 15800311</p>
+              </a>
             </article>
           </aside>
           <article className="socials">

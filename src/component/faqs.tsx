@@ -11,16 +11,16 @@ export default function Faqs() {
           <article>
             <h2>¿A quién va dirigido el curso?</h2>
             <p>
-              Este curso esta pensado en todos aquellos programadores con poca o
+              Este curso está pensado en todos aquellos programadores con poca o
               ninguna experiencia usando Python y que quieran aprender en
               profundidad el uso de este lenguaje sin dejar de lado las bases y
               fundamentos de programación.
             </p>
           </article>
           <article>
-            <h2>¿Cuando inicia el curso?</h2>
+            <h2>¿Cuándo inicia el curso?</h2>
             <p>
-              El inicio del curso esta programado para el día 21 de Septiembre
+              El inicio del curso está programado para el día 21 de Septiembre
               de 2022.
             </p>
           </article>

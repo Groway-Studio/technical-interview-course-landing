@@ -166,6 +166,16 @@
           display: none;
         }
 
+        a {
+          text-decoration: none;
+          color: #fff;
+
+          &:visited,
+          &:active {
+            color: #fff;
+          }
+        }
+
         @include phone {
           &:first-child {
             display: block;

@@ -43,12 +43,14 @@ const Payment = () => {
     <>
       <Header image={true} />
       {pathname === validPaths.success && (
-        <PaymentCard
-          image={success}
-          title="Pago exitoso"
-          message="Te esperamos en el curso para aprender juntos"
-          type="success"
-        />
+        <>
+          <PaymentCard
+            image={success}
+            title="Pago exitoso"
+            message="Te esperamos en el curso para aprender juntos"
+            type="success"
+          />
+        </>
       )}
       {pathname === validPaths.failed && (
         <PaymentCard

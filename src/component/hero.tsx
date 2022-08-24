@@ -17,7 +17,6 @@ export default function Hero() {
     firstName,
     lastName,
     email,
-    prefixPhoneNumber,
     phoneNumber,
     loading,
     response,
@@ -87,8 +86,8 @@ export default function Hero() {
         <aside className="formInfo-hero">
           <h2>Early Bird Sale</h2>
           <p>
-            Aprovecha la venta anticipada para adquirir tu lugar en el curso con
-            un precio especial!
+            ¡Aprovecha la venta anticipada para adquirir tu lugar en el curso
+            con un precio especial!
           </p>
           <Form onSubmit={handleSubmit}>
             <FormGroup>
@@ -126,20 +125,14 @@ export default function Hero() {
               <Input
                 type="tel"
                 id="prefix1"
-                name="prefixPhoneNumber"
-                value={prefixPhoneNumber}
-                onChange={handleInputChange}
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label>&nbsp;</Label>
-              <Input
-                type="tel"
                 name="phoneNumber"
                 value={phoneNumber}
+                maxLength={12}
+                minLength={9}
                 onChange={handleInputChange}
               />
             </FormGroup>
+
             <Button type="submit">Comprar por solo $39.00</Button>
           </Form>
         </aside>
