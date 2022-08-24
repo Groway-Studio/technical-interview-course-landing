@@ -8,13 +8,12 @@ const useUserInfo = () => {
     firstName: "",
     lastName: "",
     email: "",
-    prefixPhoneNumber: "",
     phoneNumber: "",
   });
   const [loading, setLoading] = useState<boolean>(false);
   const [response, setResponse] = useState<TopLevel>();
 
-  const { firstName, lastName, email, prefixPhoneNumber, phoneNumber } = state;
+  const { firstName, lastName, email, phoneNumber } = state;
 
   const pathnameOrigin: string = window.location.origin;
 
@@ -29,7 +28,6 @@ const useUserInfo = () => {
 
     if (
       Object.values(state).every((item) => item.trim() !== "") &&
-      !isNaN(+prefixPhoneNumber) &&
       !isNaN(+phoneNumber)
     ) {
       setLoading(true);
@@ -40,9 +38,15 @@ const useUserInfo = () => {
             method: "POST",
             body: JSON.stringify({
               title: "Curso Python 1er batch",
-              success_url: `${pathnameOrigin}${validPaths.success}`,
-              pending_url: `${pathnameOrigin}${validPaths.pending}`,
-              failure_url: `${pathnameOrigin}${validPaths.failed}`,
+              success_url: `${pathnameOrigin}${
+                process.env.NODE_ENV === "production" ? "/#" : ""
+              }${validPaths.success}`,
+              pending_url: `${pathnameOrigin}${
+                process.env.NODE_ENV === "production" ? "/#" : ""
+              }${validPaths.pending}`,
+              failure_url: `${pathnameOrigin}${
+                process.env.NODE_ENV === "production" ? "/#" : ""
+              }${validPaths.failed}`,
             }),
           }
         );
@@ -55,7 +59,7 @@ const useUserInfo = () => {
           user_first_name: firstName,
           user_last_name: lastName,
           user_email: email,
-          user_phone: `+54${prefixPhoneNumber}${phoneNumber}`,
+          user_phone: `+51${phoneNumber}`,
         };
 
         localStorage.setItem(keystore.USER_DATA, JSON.stringify(user));
@@ -74,7 +78,6 @@ const useUserInfo = () => {
     firstName,
     lastName,
     email,
-    prefixPhoneNumber,
     phoneNumber,
     loading,
     response,

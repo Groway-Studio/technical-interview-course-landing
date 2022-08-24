@@ -14,7 +14,6 @@ export default function FormContact() {
     firstName,
     lastName,
     email,
-    prefixPhoneNumber,
     phoneNumber,
     response,
     loading,
@@ -80,15 +79,6 @@ export default function FormContact() {
                   <Input
                     type="tel"
                     id="prefix"
-                    name="prefixPhoneNumber"
-                    value={prefixPhoneNumber}
-                    onChange={handleInputChange}
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <Label>&nbsp;</Label>
-                  <Input
-                    type="tel"
                     name="phoneNumber"
                     value={phoneNumber}
                     onChange={handleInputChange}

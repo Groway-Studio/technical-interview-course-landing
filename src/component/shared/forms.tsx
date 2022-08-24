@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Form = styled.form`
   display: grid;
-  gap: 0 1rem;
+  gap: 0.5rem 1rem;
   grid-template-columns: repeat(4, calc(25% - 0.75rem));
   position: relative;
   width: 100%;
@@ -28,7 +28,6 @@ export const Input = styled.input`
   background: #fff;
   border: none;
   border-radius: 10px;
-  margin-bottom: 0.5em;
 `;
 export const TextArea = styled.textarea`
   padding: 0.5em;

@@ -12,27 +12,27 @@ export default function Modality() {
       </aside>
       <aside>
         <article className="item">
-          <img src={icWifi} alt="wifi" />
+          <img src={icWifi} alt="wifi" draggable={false} />
           <span>
             100% <br /> Online y Síncrono
           </span>
         </article>
         <article className="item">
-          <img src={icTutor} alt="tutos" />
+          <img src={icTutor} alt="tutos" draggable={false} />
           <span>
             Acompañamiento <br />
             de tutores
           </span>
         </article>
         <article className="item">
-          <img src={icPlay} alt="play" />
+          <img src={icPlay} alt="play" draggable={false} />
           <span>
             Clases <br />
             grabadas
           </span>
         </article>
         <article className="item">
-          <img src={icMaterial} alt="material" />
+          <img src={icMaterial} alt="material" draggable={false} />
           <span>
             Material <br />
             descargable
