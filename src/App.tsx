@@ -10,10 +10,11 @@ export default function App() {
   return (
     <HashRouter basename="/">
       <Routes>
-        <Route path="/" element={<Home />} />
+        
         <Route path="/pago-exitoso" element={<Payment />} />
         <Route path="/pago-fallido" element={<Payment />} />
         <Route path="/pago-pendiente" element={<Payment />} />
+        <Route path="/" element={<Home />} />
         {/* <Route path="*" element={<Navigate to="/" replace />}></Route> */}
       </Routes>
     </HashRouter>
