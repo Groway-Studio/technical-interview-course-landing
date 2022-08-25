@@ -35,7 +35,7 @@ export default function Hero() {
       {loading && <Spinner />}
       <div className="heroComponent">
         <div className="contentHero">
-          <div>
+          <div className="header-title">
             <div className="dflex fd-row">
               <img src={python} className="imgPy" alt="python" />
               <div className="dflex fd-col title">

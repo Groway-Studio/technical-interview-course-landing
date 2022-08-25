@@ -11,6 +11,7 @@
   @include phone {
     grid-template-columns: 100%;
     gap: 1.5rem;
+    min-width: $container-phone;
   }
 
   &__profile {
@@ -35,7 +36,6 @@
       p {
         font-size: 14px;
       }
-      
 
       h2 {
         @include phone {

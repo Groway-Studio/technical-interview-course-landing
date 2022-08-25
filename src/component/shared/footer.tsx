@@ -55,9 +55,27 @@ export default function Footer() {
             </article>
           </aside>
           <article className="socials">
-            <img src={igIlus} alt="" />
-            <img src={linkedinIlus} alt="" />
-            <img src={fbIlus} alt="" />
+            <a
+              href="https://www.instagram.com/groway.studio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={igIlus} alt="Groway.Studio" />
+            </a>
+            <a
+              href="https://pe.linkedin.com/company/growaystudio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={linkedinIlus} alt="Groway.Studio" />
+            </a>
+            <a
+              href="https://www.facebook.com/groway.studio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={fbIlus} alt="Groway.Studio" />
+            </a>
           </article>
         </aside>
       </section>

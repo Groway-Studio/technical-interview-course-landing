@@ -26,7 +26,7 @@ export default function Instructor() {
           la seguridad laboral.
         </p>
         <p>
-          Él nos acompañara desde Seúl, Corea del Sur, y será nuestro instructor
+          Él nos acompañará desde Seúl, Corea del Sur, y será nuestro instructor
           en esta primera edición de nuestro curso de Python.
         </p>
       </div>

@@ -5,12 +5,13 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin: 82px auto 82px auto;
+  margin: 2rem auto;
   max-width: $container;
   width: 90%;
   z-index: 100;
 
   @include phone {
+    max-width: $container-phone;
     gap: 0;
   }
 
@@ -20,16 +21,20 @@
 
   h1 {
     color: #084887;
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 50px;
     margin-top: 30px;
+
+    @include phone {
+      font-size: 2.125rem;
+      text-align: center;
+    }
   }
 
   &__faq-list {
     width: 800px;
 
-    // width: 85%;
     padding: 1rem 0;
 
     @include phone {
@@ -68,6 +73,7 @@
         @include phone {
           line-height: unset;
           font-size: 1.2rem;
+          padding: 0.4rem 0;
         }
 
         @include tablet {

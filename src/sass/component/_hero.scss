@@ -25,24 +25,26 @@
     gap: 1.5rem;
     grid-template-columns: 100%;
     margin-top: 50px;
-    width: $container-phone;
+    max-width: $container-phone;
   }
 }
 
 .contentHero {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 
   @include tablet {
-    width: 100%;
-    padding-right: 0;
     gap: 0rem;
-  }
-  @include phone {
-    width: 100%;
     padding-right: 0;
+    width: 100%;
   }
+
+  @include phone {
+    padding-right: 0;
+    width: 100%;
+  }
+
   h1 {
     font-weight: bold;
     color: $neutral-color-1000;
@@ -56,10 +58,10 @@
     margin-top: 4px;
 
     @include phone {
-      width: 100%;
-      padding-right: 0%;
       font-size: $size * 8 !important;
       font-weight: 700 !important;
+      width: 100%;
+      line-height: 3.75rem;
     }
   }
 
@@ -190,6 +192,11 @@
 .imgPy {
   height: 150px;
   min-width: 125px;
+
+  @include phone {
+    min-width: 5.5rem;
+    height: 7.5rem;
+  }
 }
 
 .formInfo-hero {
@@ -220,11 +227,8 @@
     }
 
     @include phone {
-      right: -1.5rem;
-      bottom: -5.3125rem;
-      width: $container-phone;
-      position: absolute;
       grid-column: 1 / -1;
+      margin-top: 1rem;
 
       &:hover {
         transform: unset;
@@ -290,6 +294,12 @@
 }
 
 .title {
+  h5 {
+    @include phone {
+      line-height: 1.5rem;
+    }
+  }
+
   small {
     font-size: 1rem;
     margin: -0.125rem 0 0 6.75rem;
@@ -297,6 +307,18 @@
 
     @include phone {
       margin: 0;
+    }
+  }
+}
+
+.header-title {
+  width: 100%;
+
+  div {
+    @include phone {
+      &:first-child {
+        align-items: center;
+      }
     }
   }
 }
