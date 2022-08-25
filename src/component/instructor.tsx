@@ -17,7 +17,7 @@ export default function Instructor() {
         <h2>Sobre el Instructor</h2>
         <p>
           Joel Ibaceta es un programador experimentado con más de 15 años de
-          experiencia en la industria, ha trabajando en diversas empresas a lo
+          experiencia en la industria, ha trabajado en diversas empresas a lo
           largo de la Latinoamérica, desde startups, corporaciones y unicornios.
         </p>
         <p>
@@ -26,7 +26,7 @@ export default function Instructor() {
           la seguridad laboral.
         </p>
         <p>
-          Él nos acompañara desde Seul, Corea del Sur, y será nuestro instructor
+          Él nos acompañara desde Seúl, Corea del Sur, y será nuestro instructor
           en esta primera edición de nuestro curso de Python.
         </p>
       </div>
