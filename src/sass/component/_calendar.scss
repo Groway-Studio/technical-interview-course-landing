@@ -8,8 +8,31 @@
   margin: 0 auto;
   position: relative;
   z-index: 100;
-  margin-top: 30px;
+
   overflow-x: scroll;
+
+  &-container {
+    margin-top: 30px;
+
+    @include tablet {
+      margin: 0;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 2.125rem;
+      line-height: 48px;
+      text-align: center;
+      color: #084887;
+      margin-bottom: 24px;
+
+      @include phone {
+        font-size: $size * 4 !important;
+        line-height: $size * 5 !important;
+        font-weight: 700 !important;
+      }
+    }
+  }
 
   gap: 1rem;
 
@@ -35,21 +58,6 @@
       width: 100%;
     }
 
-    h3 {
-      font-style: normal;
-      font-weight: 700;
-      font-size: 30px;
-      line-height: 48px;
-      text-align: center;
-      color: #084887;
-      margin-bottom: 24px;
-
-      @include phone {
-        font-size: $size * 4 !important;
-        line-height: $size * 5 !important;
-        font-weight: 700 !important;
-      }
-    }
     article {
       border-radius: 10px;
       padding: 16px;
@@ -115,9 +123,8 @@
   .classHours {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 0.4rem;
     min-width: 750px;
-    padding-top: 48px;
     width: 75%;
 
     @include phone {

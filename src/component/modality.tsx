@@ -14,14 +14,14 @@ export default function Modality() {
         <article className="item">
           <img src={icWifi} alt="wifi" draggable={false} />
           <span>
-            100% <br /> Online y Síncrono
+            100% <br /> Online
           </span>
         </article>
         <article className="item">
-          <img src={icTutor} alt="tutos" draggable={false} />
+          <img src={icMaterial} alt="material" draggable={false} />
           <span>
-            Acompañamiento <br />
-            de tutores
+            Material <br />
+            descargable
           </span>
         </article>
         <article className="item">
@@ -32,10 +32,10 @@ export default function Modality() {
           </span>
         </article>
         <article className="item">
-          <img src={icMaterial} alt="material" draggable={false} />
+          <img src={icTutor} alt="tutos" draggable={false} />
           <span>
-            Material <br />
-            descargable
+            Acompañamiento <br />
+            de tutores
           </span>
         </article>
       </aside>

@@ -41,7 +41,7 @@ export default function Hero() {
               <div className="dflex fd-col title">
                 <h5>Aprende</h5>
                 <span className="cover-text">Python</span>
-                <small>como se debe.</small>
+                <small>como se debe...</small>
               </div>
             </div>
             <p>
@@ -71,7 +71,8 @@ export default function Hero() {
               <img src={hours} alt="hours" />
               <figcaption>
                 <h2>Horario</h2>
-                <span>Sab y Dom de 10:00 a 13:00</span>
+                <span>Sab y Dom</span>
+                <span>15:00 a 17:00</span>
               </figcaption>
             </figure>
             <figure className="item">
@@ -84,7 +85,9 @@ export default function Hero() {
           </article>
         </div>
         <aside className="formInfo-hero">
-          <h2>Early Bird Sale</h2>
+          <h2>
+            Early Bird <span>Sale!</span>
+          </h2>
           <p>
             ¡Aprovecha la venta anticipada para adquirir tu lugar en el curso
             con un precio especial!
@@ -133,7 +136,7 @@ export default function Hero() {
               />
             </FormGroup>
 
-            <Button type="submit">Comprar por solo $39.00</Button>
+            <Button type="submit">Comprar por $39.00</Button>
           </Form>
         </aside>
       </div>
