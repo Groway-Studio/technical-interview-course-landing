@@ -11,6 +11,7 @@
   @include phone {
     grid-template-columns: 100%;
     gap: 1.5rem;
+    max-width: $container-phone;
   }
 
   &__profile {
