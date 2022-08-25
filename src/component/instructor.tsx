@@ -1,6 +1,6 @@
 import "../sass/component/_instructor.scss";
 
-// import profile from "../assets/profile.png";
+import profile from "./../assets/profile.jpg";
 
 export default function Instructor() {
   return (
@@ -9,7 +9,7 @@ export default function Instructor() {
         className="instructor__profile-image"
         style={
           {
-            // backgroundImage: `url(${profile})`,
+            backgroundImage: `url(${profile})`,
           }
         }
       ></div>
