@@ -83,14 +83,6 @@ h5 {
   }
 }
 
-p {
-  font-size: var(--paragraph-1);
-  @include phone {
-    font-weight: 400 !important;
-    line-height: 26px !important;
-  }
-}
-
 b {
   color: $primary-color;
   font-style: italic;
