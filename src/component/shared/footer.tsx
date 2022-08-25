@@ -12,7 +12,7 @@ export default function Footer() {
         <aside className="logoSection">
           <img className="brandTwo" src={LogoGrowayWhite} alt="" />
         </aside>
-        <aside className="ctaSection">
+        {/* <aside className="ctaSection">
           <span>
             <a href="/#">Curso de Python</a>
           </span>
@@ -25,7 +25,7 @@ export default function Footer() {
           <span>
             <a href="/#">Brochure</a>
           </span>
-        </aside>
+        </aside> */}
         <aside className="sectionRight">
           <aside className="ubication">
             <article>

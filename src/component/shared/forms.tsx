@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Form = styled.form`
   display: grid;
-  gap: 0.5rem 1rem;
-  grid-template-columns: repeat(4, calc(25% - 0.75rem));
+  gap: 0.7rem 1rem;
+  grid-template-columns: repeat(8, calc(12.5% - 0.89rem));
   position: relative;
   width: 100%;
 `;
@@ -52,7 +52,6 @@ export const Button = styled.button`
   font-weight: 500;
   line-height: 36px;
   padding: 0 30px;
-  position: absolute;
   right: 0;
   bottom: -95px;
 `;

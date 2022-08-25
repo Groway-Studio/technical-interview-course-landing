@@ -1,58 +1,116 @@
 @import "./../base/_base.scss";
 
 .FaqComponent {
-  &::after,
-  &::before {
-    content: "";
-    width: 85%;
-    height: 2px;
-    background: #cccccc;
-  }
-
-  max-width: $container;
-  width: 90%;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 2rem;
   margin: 82px auto 82px auto;
+  max-width: $container;
+  width: 90%;
   z-index: 100;
 
+  @include phone {
+    gap: 0;
+  }
+
+  @include tablet {
+    gap: 1rem;
+  }
+
   h1 {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 50px;
     color: #084887;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 50px;
     margin-top: 30px;
   }
 
-  aside {
-    padding-bottom: 50px;
+  &__faq-list {
+    width: 800px;
 
-    h2 {
-      font-family: "Poppins";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 21px;
-      line-height: 50px;
-      color: #084887;
-      margin-top: 50px;
-    }
-    ul {
-      padding-top: 5px;
-      padding-left: 25px;
+    // width: 85%;
+    padding: 1rem 0;
+
+    @include phone {
+      width: 100%;
     }
 
-    ul,
-    p {
-      font-size: 0.875rem;
+    @include tablet {
+      width: 100%;
     }
 
-    b {
-      @include phone {
-        font-size: 0.75rem;
+    &__item {
+      &::after {
+        background: #ccc;
+        content: "";
+        display: block;
+        height: 0.5px;
+        width: 100%;
+      }
+
+      h2 {
+        color: #084887;
+        cursor: pointer;
+        display: flex;
+        font-size: 1.5rem;
+        font-weight: 600;
+        gap: 0.5rem;
+        justify-content: space-between;
+        line-height: 50px;
+        padding: 0.5rem 0.8rem;
+
+        &::selection {
+          background: transparent;
+        }
+
+        @include phone {
+          line-height: unset;
+          font-size: 1.2rem;
+        }
+
+        @include tablet {
+          font-size: 1.3rem;
+        }
+
+        img {
+          &::selection {
+            background: transparent;
+          }
+        }
+      }
+
+      ul {
+        padding-top: 5px;
+        padding-left: 3rem;
+      }
+
+      p {
+        padding: 0 1rem;
+      }
+
+      ul,
+      p {
+        &::selection {
+          background-color: transparent;
+        }
+
+        font-size: 0.875rem;
+        height: 100%;
+        margin-bottom: 1rem;
+      }
+
+      b {
+        @include phone {
+          font-size: 0.75rem;
+        }
       }
     }
   }
+}
+
+.content-parent {
+  height: 0px;
+  overflow: hidden;
+  transition: height ease 0.3s;
 }

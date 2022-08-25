@@ -1,31 +1,31 @@
 @import "./../base/_base.scss";
 
 .heroComponent {
-  max-width: $container;
-  width: 90%;
-  display: grid;
-  grid-template-columns: calc(60% - 2rem) calc(40% - 2rem);
-  margin: 0 auto;
-  position: relative;
   align-items: flex-start;
+  display: grid;
   gap: 0 4rem;
+  grid-template-columns: calc(59% - 2rem) calc(41% - 2rem);
+  margin: 3.75rem auto 0;
+  max-width: $container;
+  position: relative;
+  width: 90%;
   z-index: 100;
-  margin-top: 82px;
 
   @include tablet {
-    max-width: $container-tablet;
-    margin-top: 90px;
-    grid-template-columns: 100%;
-    gap: 3rem;
     align-items: center;
+    gap: 1.5rem;
+    grid-template-columns: 100%;
     justify-content: center;
+    margin-top: 2rem;
+    max-width: $container-tablet;
     width: 90%;
   }
+
   @include phone {
-    width: $container-phone;
+    gap: 1.5rem;
     grid-template-columns: 100%;
     margin-top: 50px;
-    gap: 1.5rem;
+    width: $container-phone;
   }
 }
 
@@ -33,10 +33,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
   @include tablet {
     width: 100%;
     padding-right: 0;
-    gap: 2rem;
+    gap: 0rem;
   }
   @include phone {
     width: 100%;
@@ -67,8 +68,12 @@
     font-size: 14px;
     line-height: 21px;
     color: #031d44;
-    margin: 24px 0 40px;
+    margin: 1rem 0 0;
     width: 95%;
+
+    &:last-child {
+      margin-bottom: 1rem;
+    }
 
     @include phone {
       font-size: 18px;
@@ -77,7 +82,7 @@
     }
 
     @include tablet {
-      margin: 0;
+      margin: 1rem 0;
       width: 100%;
     }
 
@@ -153,26 +158,29 @@
       display: flex;
       flex-direction: column;
 
-      h2 {
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 36px;
+      h2,
+      span {
         color: #af9247;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 20px;
+        margin-top: 0.4375rem;
+
         @include phone {
           font-size: 20px;
         }
       }
       span {
-        font-style: normal;
+        font-size: 0.875rem;
         font-weight: 300;
-        font-size: 14px;
-        line-height: 0px;
-        color: #af9247;
+        line-height: 14px;
+
         @include phone {
-          font-weight: 300;
           font-size: 12px !important;
           line-height: 18px !important;
-          color: #af9247;
         }
       }
     }
@@ -188,6 +196,7 @@
   background-color: #3774a6;
   border-radius: 10px;
   padding: 32px;
+  height: 100%;
 
   @include form;
 
@@ -199,9 +208,11 @@
 
   button {
     cursor: pointer;
-    padding: 5px;
+    padding: 0 5px;
     transition: all 0.3s ease-in-out;
     width: 100%;
+    grid-column: 2 / -2;
+    margin-top: 1.3rem;
 
     &:hover {
       box-shadow: 0 5px 15px #0000004d;
@@ -209,9 +220,11 @@
     }
 
     @include phone {
-      right: -24px;
-      bottom: -90px;
+      right: -1.5rem;
+      bottom: -5.3125rem;
       width: $container-phone;
+      position: absolute;
+      grid-column: 1 / -1;
 
       &:hover {
         transform: unset;
@@ -219,7 +232,7 @@
     }
 
     @include tablet {
-      grid-column: 3 / 5;
+      grid-column: -1 / -5;
       margin-top: 20px;
       padding: 0;
       position: unset;
@@ -232,9 +245,15 @@
 
   h2 {
     color: $neutral-color-0;
-    font-size: $size * 5;
+    font-size: 2.5rem;
     text-align: center;
     width: 100%;
+
+    span {
+      color: #ffd875;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
 
     @include phone {
       font-size: $size * 4;
@@ -242,7 +261,7 @@
   }
 
   p {
-    text-align: center;
+    text-align: left;
     color: #fff;
     font-size: 14px;
     margin-bottom: 20px;
@@ -273,7 +292,8 @@
 .title {
   small {
     font-size: 1rem;
-    margin: 0.3125rem 0 0 6.75rem;
+    margin: -0.125rem 0 0 6.75rem;
+    font-size: var(--size-3);
 
     @include phone {
       margin: 0;

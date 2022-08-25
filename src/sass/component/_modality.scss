@@ -4,7 +4,7 @@
   &::after,
   &::before {
     content: "";
-    width: 85%;
+    width: 90%;
     height: 2px;
     background: #cccccc;
   }
@@ -13,64 +13,70 @@
     margin-bottom: 70px;
   }
 
-  max-width: $container;
-  width: 90%;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-  margin: 82px auto 0 auto;
+  margin: 60px auto 0 auto;
+  max-width: $container;
+  width: 90%;
   z-index: 100;
 
   @include tablet {
     width: $container-tablet;
     flex-direction: column;
-    margin: 5rem auto;
+    margin: 3rem auto 2rem;
   }
 
   @include phone {
     width: $container-phone;
     flex-direction: column;
-    margin-top: 140px;
+    margin-top: 7rem;
   }
 
   aside {
-    width: 100%;
     text-align: center;
-    margin-bottom: 40px;
+    width: 100%;
+
+    @include phone {
+      gap: 1rem;
+    }
 
     h1 {
-      font-family: "Poppins";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 34px;
-      line-height: 70px;
       color: #084887;
-      margin-top: 50px;
+      font-size: 2.125rem;
+      font-weight: 700;
+      line-height: 70px;
+      margin: 1rem 0;
     }
 
     &:last-child {
-      width: 60%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly;
+      display: grid;
+      grid-template-columns: repeat(4, 25%);
       margin-bottom: 70px;
+      width: 85%;
 
       @include phone {
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-bottom: 40px;
+        grid-template-columns: 100%;
+        margin-bottom: 2.5rem;
+        width: 100%;
+      }
+
+      @include tablet {
+        grid-template-columns: repeat(2, 50%);
+        margin-bottom: 3rem;
       }
 
       article {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         @include phone {
-          margin-bottom: 40px;
           width: 160px;
+          margin: 0 auto;
         }
+
         img {
           margin-bottom: 16px;
           padding: 10px;
@@ -78,7 +84,7 @@
 
         span {
           color: $primary-color;
-          font-size: 18px;
+          font-size: 1.5rem;
           font-weight: 600;
           line-height: 30px;
 

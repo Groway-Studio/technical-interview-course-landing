@@ -1,4 +1,5 @@
 import "./../sass/component/_faq.scss";
+import FaqItem from "./faq_item";
 
 export default function Faqs() {
   return (
@@ -7,41 +8,37 @@ export default function Faqs() {
         <aside>
           <h1>Preguntas Frecuentes</h1>
         </aside>
-        <aside>
-          <article>
-            <h2>¿A quién va dirigido el curso?</h2>
-            <p>
-              Este curso está pensado en todos aquellos programadores con poca o
+        <aside className="FaqComponent__faq-list">
+          <FaqItem
+            title="¿A quién va dirigido el curso?"
+            description="Este curso está pensado en todos aquellos programadores con poca o
               ninguna experiencia usando Python y que quieran aprender en
               profundidad el uso de este lenguaje sin dejar de lado las bases y
-              fundamentos de programación.
-            </p>
-          </article>
-          <article>
-            <h2>¿Cuándo inicia el curso?</h2>
-            <p>
-              El inicio del curso está programado para el día 21 de Septiembre
-              de 2022.
-            </p>
-          </article>
-          <article>
-            <h2>¿Qué hace a este curso diferente a los demás?</h2>
-            <p>
-              Este curso te permitirá no sólo aprender la sintaxis de un
+              fundamentos de programación."
+          />
+
+          <FaqItem
+            title="¿Cuándo inicia el curso?"
+            description="El inicio del curso está programado para el día 21 de Septiembre
+              de 2022."
+          />
+
+          <FaqItem
+            title="¿Qué hace a este curso diferente a los demás?"
+            description="Este curso te permitirá no sólo aprender la sintaxis de un
               lenguaje de programación, sino repasar los fundamentos de
               programación, buenas prácticas, algoritmos y otros temas que te
               permitirán conocer en profundidad el lenguaje y sus
-              particularidades.
-            </p>
-          </article>
-          <article>
-            <h2>¿Qué material se incluye en el curso?</h2>
-            <p>
-              Este curso incluye material de apoyo para que puedas aprender a
+              particularidades."
+          />
+
+          <FaqItem
+            title="¿Qué material se incluye en el curso?"
+            description="Este curso incluye material de apoyo para que puedas aprender a
               programar en Python de una forma sencilla, eficiente y divertida.
               Durante el desarrollo del curso contarás con los siguientes
-              materiales de apoyo:
-            </p>
+              materiales de apoyo:"
+          >
             <ul>
               <li>Presentaciones expuestas en las sesiones</li>
               <li>
@@ -55,15 +52,13 @@ export default function Faqs() {
                 ejercicios para que puedas practicar
               </li>
             </ul>
-          </article>
-          <article>
-            <h2>¿Cuánto tiempo seguirá disponible la tarifa early bird?</h2>
-            <p>
-              El precio especial de compra anticipada estará disponible hasta el
-              día 31 de Agosto de 2022.
-            </p>
-          </article>
-          <br />
+          </FaqItem>
+
+          <FaqItem
+            title="¿Cuánto tiempo seguirá disponible la tarifa Early Bird?"
+            description="El precio especial de compra anticipada estará disponible hasta el
+              día 31 de Agosto de 2022."
+          />
         </aside>
       </section>
     </>
