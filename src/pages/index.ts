@@ -1,4 +1,5 @@
+import Error from "./error";
 import Home from "./home";
 import Payment from "./payment";
 
-export { Home, Payment };
+export { Error, Home, Payment };
