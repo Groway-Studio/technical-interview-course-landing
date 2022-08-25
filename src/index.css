@@ -66,8 +66,8 @@ p {
 
   .content {
     width: 95%;
-    margin-top: 3rem;
-    gap: 4rem;
+    margin-top: 2rem;
+    gap: 2rem;
   }
 
   .content img {
@@ -79,11 +79,11 @@ p {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     width: 90%;
     margin: 0 auto;
     text-align: left;
@@ -134,12 +134,12 @@ p {
   .content {
     margin-top: 0;
     max-width: 1024px;
-    gap: 1rem;
-    width: 90%;
+    gap: 0.4rem;
+    width: 100%;
   }
 
   .content img {
-    width: 80%;
+    width: 90%;
   }
 
   .info {
@@ -151,8 +151,8 @@ p {
   }
 
   p {
-    font-size: 1rem;
-    text-align: left;
+    font-size: 2rem;
+    text-align: center;
   }
 }
 
