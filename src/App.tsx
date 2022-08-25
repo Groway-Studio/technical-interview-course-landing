@@ -1,13 +1,10 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import { Home, Payment } from "./pages";
 
 import "./sass/style.scss";
-import { useEffect } from "react";
 
 export default function App() {
-  const navigate = useNavigate();
-
   // useEffect(() => {
   //   // if (window.location.href.split(window.location.origin)[1] === "/") {
   //   //   window.history.replaceState(null, "", "/#");
