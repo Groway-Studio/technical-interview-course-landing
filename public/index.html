@@ -10,11 +10,14 @@
     <script type="text/javascript">
       (function (location) {
         if (location.href.split(location.origin)[1] === "/") {
-          return;
+          // window.history.replaceState(null, null, "/#");
         } else if (
+          // (location.href.split(location.origin)[1].split("")[1] === "#" &&
+          //   location.hash.split("#").length >= 2) ||
           location.href.split(location.origin)[1].split("")[1] !== "#" ||
           (location.href.split(location.origin)[1].split("")[1] === "#" &&
-            location.hash.split("")[1] !== "/")
+            location.hash.split("")[1] === "/") ||
+          location.hash.split("").length > 2
         ) {
           location.href = `${location.origin}/#/not-found`;
         }

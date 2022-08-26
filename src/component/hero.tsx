@@ -63,8 +63,8 @@ export default function Hero() {
               <img src={duration} alt="duration" />
               <figcaption>
                 <h2>Duración</h2>
-                <span>4 semanas</span>
                 <span>Inicio Septiembre 22</span>
+                <span>4 semanas</span>
               </figcaption>
             </figure>
             <figure className="item">
@@ -79,7 +79,7 @@ export default function Hero() {
               <img src={price} alt="price" />
               <figcaption>
                 <h2>Costo</h2>
-                <span>100 s/.</span>
+                <span>s/. 100</span>
               </figcaption>
             </figure>
           </article>
@@ -139,8 +139,8 @@ export default function Hero() {
             <div className="offer">
               <p>Precio real</p>
               <div>
-                <span>100</span>
                 <small>s/.</small>
+                <span>100</span>
               </div>
             </div>
 

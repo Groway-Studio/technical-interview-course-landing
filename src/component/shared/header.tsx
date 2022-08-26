@@ -43,7 +43,7 @@ const Header: FC<Props> = ({ image = false }) => {
           alignItems: "center",
         }}
       >
-        <Link to="/">
+        <Link to={window.location.origin}>
           <img
             src={
               width < 700
