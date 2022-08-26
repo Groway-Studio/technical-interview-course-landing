@@ -72,7 +72,7 @@ export default function Hero() {
               <figcaption>
                 <h2>Horario</h2>
                 <span>Sab y Dom</span>
-                <span>15:00 a 17:00</span>
+                <span>9:00 a 12:00</span>
               </figcaption>
             </figure>
             <figure className="item">
