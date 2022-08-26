@@ -69,28 +69,9 @@ export default function Calendar() {
             </div>
             <div className="week-days">
               <div className="dayOne">
-                <div className="item-3 highlights">
-                  <b>Estructuras de datos avanzado:</b>Compresiones,
-                  Generadores, itertools, Pilas, Colas, Listas, Árboles, etc
+                <div className="item-1">Manejo de errores y Debugging
                 </div>
                 <div className="item-3 highlights">
-                  Algoritmos útiles con estructuras de datos
-                </div>
-              </div>
-              <div className="dayOne">
-                <div className="item-4 highlights">
-                  <b>Algoritmos Útiles: </b> Búsqueda, Ordenamiento, Grafos,
-                  Programación Dinámica, etc
-                </div>
-                <div className="item-1">Principios de diseño de algoritmos</div>
-                <div className="item-1 highlights">
-                  Análisis de complejidad Algorítmica
-                </div>
-              </div>
-            </div>
-            <div className="week-days">
-              <div className="dayOne">
-                <div className="item-2">
                   <b>Programación modular: </b>Funciones, Argumentos, Paquetes,
                   etc
                 </div>
@@ -98,48 +79,60 @@ export default function Calendar() {
                   La biblioteca estándar de Python, Entornos Virtuales, PIP y
                   Bibliotecas de terceros
                 </div>
-                <div className="item-2">
-                  <b>Programación Funcional: </b>Lambdas, Func. de Orden
-                  Superior, etc
-                </div>
+
               </div>
               <div className="dayOne">
-                <div className="item-2 highlights">
-                  <b>POO: </b>Clases, Herencia, Encapsulamiento, Polimorfismo,
-                  etc
+                <div className="item-3 highlights">
+                  <b>Estructuras de datos Avanzado: </b> Pilas, Colas, Listas enlazadas, Arboles, etc
                 </div>
-                <div className="item-2 highlights">
-                  <b>Patrones de diseño: </b>Factory, Builder, Adapter, Facade,
-                  Strategy, Observer, etc
-                </div>
-                <div className="item-2">
-                  <b>Buenas prácticas de programación: </b>Principios SOLID /
-                  KISS / DRY, Antipatrones
-                </div>
+                <div className="item-2">Algoritmos utiles con estructuras de datos</div>
+                <div className="item-1">Principios de diseño de algoritmos</div>
+                
               </div>
             </div>
             <div className="week-days">
               <div className="dayOne">
+                <div className="item-4 highlights">
+                  <b>Algoritmos Útiles: </b> Búsqueda, Ordenamiento, Grafos,
+                  Programación Dinámica, etc
+                </div>
+
                 <div className="item-2">
-                  <b>Meta programación: </b>Decorators, Metaclases, etc
+                  Análisis de complejidad Algorítmica
+                </div>
+              </div>
+              <div className="dayOne">
+                <div className="item-3 highlights">
+                  <b>Programación Orientada a Objetos: </b>Clases, Herencia, Encapsulamiento, Polimorfismo,
+                  etc
+                </div>
+                <div className="item-3 highlights">
+                  <b>Patrones de diseño: </b>Factory, Builder, Adapter, Facade,
+                  Strategy, Observer, etc
+                </div>
+                
+              </div>
+            </div>
+            <div className="week-days">
+              <div className="dayOne">
+                <div className="item-4 highlights">
+                  <b>Programación Funcional: </b>Calculo Lambda, Funciones de Orden
+                  Superior, Transparencia referencial, etc
                 </div>
                 <div className="item-2">
                   <b>Concurrencia:</b> GIL, Hilos, Subprocesos, Señales, etc
                 </div>
-                <div className="item-2">
-                  <b>Programación Reactiva:</b> Observers, AsyncIO, RxPy, etc
-                </div>
               </div>
               <div className="dayOne">
-                <div className="item-2">
+                <div className="item-2 highlights">
+                  <b>Buenas prácticas de programación: </b>Principios SOLID /
+                  KISS / DRY, Antipatrones
+                </div>
+                <div className="item-2 highlights">
                   <b>Testing: </b>Test unitarios, Fixtures, Github CI, Coverage
                 </div>
                 <div className="item-2">
-                  <b>Programación Defensiva:</b>Manejo de errores, Tipado,
-                  DocStrings, etc
-                </div>
-                <div className="item-2">
-                  Protocolo HTTP, Sockets y Python para internet
+                  <b>Metaprogramación: </b>Decorators, Metaclases, etc
                 </div>
               </div>
             </div>
