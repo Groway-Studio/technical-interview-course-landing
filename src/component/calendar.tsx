@@ -85,7 +85,7 @@ export default function Calendar() {
                 <div className="item-3 highlights">
                   <b>Estructuras de datos Avanzado: </b> Pilas, Colas, Listas enlazadas, Arboles, etc
                 </div>
-                <div className="item-2">Algoritmos utiles con estructuras de datos</div>
+                <div className="item-2">Algoritmos con estructuras de datos avanzadas</div>
                 <div className="item-1">Principios de diseño de algoritmos</div>
                 
               </div>
