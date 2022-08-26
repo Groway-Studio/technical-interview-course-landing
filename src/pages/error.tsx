@@ -1,4 +1,4 @@
-import "../index.css";
+import "../sass/shared/_404.scss";
 
 interface Props {
   image: string;
@@ -10,7 +10,7 @@ interface Props {
 const Error = ({ image, paragraph1, paragraph2, code }: Props) => {
   return (
     <>
-      <nav>
+      <nav className="navbar">
         <img
           src="assets/img/groway-gray.svg"
           alt="Groway.Studio"

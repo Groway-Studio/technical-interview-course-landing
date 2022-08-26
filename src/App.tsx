@@ -36,6 +36,19 @@ export default function App() {
           />
         }
       />
+
+      <Route
+        path="/404"
+        element={
+          <Error
+            code="404"
+            image={NotFound}
+            paragraph1="El sitio configurado en esta dirección no contiene el archivo solicitado."
+            paragraph2="Si este es su sitio, asegúrese de que el nombre del archivo coincida
+          con la URL."
+          />
+        }
+      />
     </Routes>
   );
 }

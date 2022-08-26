@@ -16,7 +16,7 @@
           (location.href.split(location.origin)[1].split("")[1] === "#" &&
             location.hash.split("")[1] !== "/")
         ) {
-          window.location.href = "./404.html";
+          window.location.href = `${window.location.origin}/#/404`;
         }
       })(window.location);
     </script>
