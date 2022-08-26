@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { Header } from "../component/shared";
 import { PaymentCard } from "../component";
@@ -8,6 +8,7 @@ import { payment_id, validPaths, keystore } from "../utils";
 
 const Payment = () => {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   const user_data = localStorage.getItem(keystore.USER_DATA);
 
@@ -31,6 +32,7 @@ const Payment = () => {
             localStorage.removeItem(keystore.USER_DATA);
           }
         } catch (error: any) {
+          navigate("/server-error");
           throw new Error(error);
         }
       }

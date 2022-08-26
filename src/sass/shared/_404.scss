@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
-body {
-  background: #f9f7f8;
-  font-family: "Poppins", sans-serif;
-}
+@import "../base/base";
 
-nav.navbar {
-  padding: 2rem;
-  margin: auto;
-  max-width: 1024px;
+nav {
+  .navbar {
+    padding: 2rem;
+    margin: auto;
+    max-width: 1024px;
+
+    @include phone {
+      padding: 1rem 0;
+    }
+  }
 }
 
 nav img {
@@ -115,7 +118,7 @@ nav img {
 
 @media (min-width: 900px) {
   nav {
-    padding: 3rem;
+    padding: 2rem;
   }
 
   nav img {
@@ -130,7 +133,7 @@ nav img {
   }
 
   .content img {
-    width: 80%;
+    width: 60%;
   }
 
   .info {
