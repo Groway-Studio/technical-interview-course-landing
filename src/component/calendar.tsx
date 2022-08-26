@@ -62,7 +62,7 @@ export default function Calendar() {
                   <b>Programación estructurada:</b>Condicionales, Bucles,
                   Iteradores
                 </div>
-                <div className="item-2 highlights">
+                <div className="item-2">
                   <b>Estructuras de datos:</b>Listas, Tuplas, Diccionarios
                 </div>
               </div>
