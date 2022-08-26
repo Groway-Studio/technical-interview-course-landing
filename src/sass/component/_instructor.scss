@@ -6,7 +6,7 @@
   grid-template-columns: calc(190px - 1rem) calc(100% - 190px);
   margin: 5rem auto 0;
   max-width: $container;
-  width: 60%;
+  width: 50%;
 
   @include phone {
     grid-template-columns: 100%;
@@ -34,12 +34,12 @@
       display: grid;
       gap: 0.5rem;
       p {
-        font-size: 14px;
+        font-size: 13px;
       }
 
       h2 {
         @include phone {
-          font-size: 32px;
+          font-size: 24px;
           text-align: center;
         }
       }
