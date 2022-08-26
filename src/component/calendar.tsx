@@ -119,20 +119,19 @@ export default function Calendar() {
                   <b>Programación Funcional: </b>Calculo Lambda, Funciones de Orden
                   Superior, Transparencia referencial, etc
                 </div>
-                <div className="item-2">
-                  <b>Concurrencia:</b> GIL, Hilos, Subprocesos, Señales, etc
-                </div>
-              </div>
-              <div className="dayOne">
                 <div className="item-2 highlights">
                   <b>Buenas prácticas de programación: </b>Principios SOLID /
                   KISS / DRY, Antipatrones
                 </div>
-                <div className="item-2 highlights">
+                
+              </div>
+              <div className="dayOne">
+                
+                <div className="item-3 highlights">
                   <b>Testing: </b>Test unitarios, Fixtures, Github CI, Coverage
                 </div>
-                <div className="item-2">
-                  <b>Metaprogramación: </b>Decorators, Metaclases, etc
+                <div className="item-3">
+                  <b>Topicos Avanzados: </b> Metaprogramación, Concurrencia, Reactividad
                 </div>
               </div>
             </div>
