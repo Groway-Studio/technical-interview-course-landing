@@ -1,5 +1,4 @@
 import { FC, useEffect, useState } from "react";
-import { animateScroll as scroll } from "react-scroll";
 import { Box } from "@material-ui/core";
 
 import headerBg from "./../../assets/blob-header.svg";
@@ -16,7 +15,7 @@ interface Props {
 
 const Header: FC<Props> = ({ image = false }) => {
   const [width, setWidth] = useState(0);
-  scroll.scrollToTop();
+  //scroll.scrollToTop();
 
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
