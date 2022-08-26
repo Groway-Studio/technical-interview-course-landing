@@ -76,22 +76,24 @@ nav img {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-  }
 
-  p {
-    font-size: 0.85rem;
-    width: 90%;
-    margin: 0 auto;
+    p {
+      font-size: 0.85rem;
+      width: 90%;
+      margin: 0 auto;
+    }
   }
 }
 
 @media (min-width: 768px) and (max-width: 899px) {
   nav {
-    padding: 3rem;
-  }
+    .navbar {
+      padding: 3rem;
 
-  nav img {
-    width: 120px;
+      img {
+        width: 120px;
+      }
+    }
   }
 
   .content {
@@ -109,10 +111,10 @@ nav img {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-  }
 
-  p {
-    font-size: 1rem;
+    p {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -142,10 +144,10 @@ nav img {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-  }
 
-  p {
-    font-size: 1rem;
+    p {
+      font-size: 1rem;
+    }
   }
 }
 
