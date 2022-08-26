@@ -2,15 +2,13 @@
 
 @import "../base/base";
 
-nav {
-  .navbar {
-    padding: 2rem;
-    margin: auto;
-    max-width: 1024px;
+.navbar {
+  padding: 2rem;
+  margin: auto;
+  max-width: 1024px;
 
-    @include phone {
-      padding: 1rem 0;
-    }
+  @include phone {
+    padding: 1rem 0;
   }
 }
 
@@ -86,13 +84,11 @@ nav img {
 }
 
 @media (min-width: 768px) and (max-width: 899px) {
-  nav {
-    .navbar {
-      padding: 3rem;
+  .navbar {
+    padding: 3rem;
 
-      img {
-        width: 120px;
-      }
+    img {
+      width: 120px;
     }
   }
 
@@ -119,12 +115,12 @@ nav img {
 }
 
 @media (min-width: 900px) {
-  nav {
+  .navbar {
     padding: 2rem;
-  }
 
-  nav img {
-    width: 120px;
+    img {
+      width: 120px;
+    }
   }
 
   .content {
