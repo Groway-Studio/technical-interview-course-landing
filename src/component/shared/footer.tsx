@@ -35,24 +35,6 @@ export default function Footer() {
                 Surco Lima - Perú
               </p>
             </article>
-            <article>
-              <strong>EE.UU</strong>
-              <a href="tel:+1 786 7558193">
-                <p>+1 786 7558193</p>
-              </a>
-            </article>
-            <article>
-              <strong>Argentina</strong>
-              <a href="tel:+54 11 52175854">
-                <p>+54 11 52175854</p>
-              </a>
-            </article>
-            <article>
-              <strong>Colombia</strong>
-              <a href="tel:+57 15800311">
-                <p>+57 15800311</p>
-              </a>
-            </article>
           </aside>
           <article className="socials">
             <a
