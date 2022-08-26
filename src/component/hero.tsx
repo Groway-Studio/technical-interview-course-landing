@@ -66,7 +66,13 @@ export default function Hero() {
                 <span>4 semanas</span>
               </figcaption>
             </figure>
-
+            <figure className="item">
+              <img src={duration} alt="hours" />
+              <figcaption>
+                <h2>Inicio</h2>
+                <span>22 Sep</span>
+              </figcaption>
+            </figure>
             <figure className="item">
               <img src={hours} alt="hours" />
               <figcaption>
