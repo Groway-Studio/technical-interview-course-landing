@@ -74,7 +74,7 @@ $desktop_xl: 1920px;
         position: relative;
 
         @include tablet {
-          grid-column: 1 / -5;
+          grid-column: 1 / -1;
         }
 
         input {
@@ -96,7 +96,7 @@ $desktop_xl: 1920px;
         }
       }
 
-      &:nth-child(5) {
+      &:last-child {
         grid-column: 2 / -1;
       }
     }
