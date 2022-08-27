@@ -77,7 +77,7 @@ export default function Hero() {
               <img src={price} alt="price" />
               <figcaption>
                 <span>Costo</span>
-                <h2><b>USD 150</b></h2>
+                <h2><b>USD 150.00</b></h2>
                 
               </figcaption>
             </figure>
@@ -142,7 +142,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <Button type="submit"><b>Comprar por USD 49</b></Button>
+            <Button type="submit"><b>Comprar por USD 49.00</b></Button>
           </Form>
         </aside>
       </div>
