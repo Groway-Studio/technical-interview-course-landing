@@ -36,7 +36,7 @@ const useUserInfo = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          "https://python-course-function-git-main-joelibaceta.vercel.app/api/checkout.py",
+          "https://python-course-function-git-main-joelibaceta.vercel.app/api/checkout.py?sandbox=true",
           {
             method: "POST",
             body: JSON.stringify({
