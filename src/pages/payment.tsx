@@ -21,8 +21,16 @@ const Payment = () => {
 
           payload["payment_id"] = getParameterByName("payment_id");
 
+          let saleUrl = "https://python-course-function-git-main-joelibaceta.vercel.app/api/new_sale.py";
+
+          if (process.env.NODE_ENV === "development") {
+            saleUrl += "?sandbox=true"
+          } else {
+            saleUrl += "?sandbox=false"
+          }
+
           const response = await fetch(
-            "https://python-course-function-git-main-joelibaceta.vercel.app/api/new_sale.py",
+            saleUrl,
             {
               body: JSON.stringify(payload),
               method: "POST",
