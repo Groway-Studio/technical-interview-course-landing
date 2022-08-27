@@ -31,9 +31,9 @@ const Payment = () => {
 
           const data = await response.text();
 
-          if (data === "OK") {
-            localStorage.removeItem(keystore.USER_DATA);
-          }
+          // if (data === "OK") {
+          localStorage.removeItem(keystore.USER_DATA);
+          // }
         } catch (error: any) {
           navigate("/server-error");
           throw new Error(error);

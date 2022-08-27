@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { State, TopLevel } from "../interfaces";
-import { keystore, validPaths, payment_id } from "../utils";
+import { keystore, validPaths, getParameterByName } from "../utils";
 
 const useUserInfo = () => {
   const [state, setState] = useState<State>({
@@ -66,6 +66,7 @@ const useUserInfo = () => {
           user_last_name: lastName,
           user_email: email,
           user_phone: `+51${phoneNumber}`,
+          invitation_code: getParameterByName("invitation_code"),
         };
 
         localStorage.setItem(keystore.USER_DATA, JSON.stringify(user));
