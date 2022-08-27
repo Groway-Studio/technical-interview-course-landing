@@ -29,7 +29,9 @@ const Payment = () => {
             }
           );
 
-          //const data = await response.text();
+          const data = await response.text();
+
+          console.log(data);
 
           // if (data === "OK") {
           localStorage.removeItem(keystore.USER_DATA);
