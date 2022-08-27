@@ -141,7 +141,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <Button type="submit">Comprar por USD 49</Button>
+            <Button type="submit"><b>Comprar por USD 49</b></Button>
           </Form>
         </aside>
       </div>
