@@ -60,6 +60,7 @@ const useUserInfo = () => {
             }),
           }
         );
+        
 
         const data = await response.json();
 
