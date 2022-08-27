@@ -53,6 +53,10 @@ const useUserInfo = () => {
               success_url: `${pathnameOrigin}${"/#"}${validPaths.success}`,
               pending_url: `${pathnameOrigin}${"/#"}${validPaths.pending}`,
               failure_url: `${pathnameOrigin}${"/#"}${validPaths.failed}`,
+              user_first_name: firstName,
+              user_last_name: lastName,
+              user_email: email,
+              user_phone: `+51${phoneNumber}`,
             }),
           }
         );
