@@ -6,6 +6,7 @@ export const Form = styled.form`
   grid-template-columns: repeat(8, calc(12.5% - 0.89rem));
   position: relative;
   width: 100%;
+  align-items: center;
 `;
 
 export const FormGroup = styled.div`

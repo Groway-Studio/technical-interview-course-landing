@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { State, TopLevel } from "../interfaces";
 import { keystore, validPaths } from "../utils";
@@ -16,6 +17,8 @@ const useUserInfo = () => {
   const { firstName, lastName, email, phoneNumber } = state;
 
   const pathnameOrigin: string = window.location.origin;
+
+  const navigate = useNavigate();
 
   const handleInputChange = ({
     target,
@@ -69,6 +72,7 @@ const useUserInfo = () => {
         }, 1000);
       } catch (error: any) {
         setLoading(false);
+        navigate("/server-error");
         throw new Error(error);
       }
     }

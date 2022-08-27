@@ -1,13 +1,15 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { Header } from "../component/shared";
 import { PaymentCard } from "../component";
 import { failed, pending, success } from "../assets/payment-status";
 import { payment_id, validPaths, keystore } from "../utils";
+import arrow from "../assets/faqs/arrow.svg";
 
 const Payment = () => {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   const user_data = localStorage.getItem(keystore.USER_DATA);
 
@@ -31,6 +33,7 @@ const Payment = () => {
             localStorage.removeItem(keystore.USER_DATA);
           }
         } catch (error: any) {
+          navigate("/server-error");
           throw new Error(error);
         }
       }
@@ -42,6 +45,12 @@ const Payment = () => {
   return (
     <>
       <Header image={true} />
+
+      <Link to="/" className="go_back">
+        <img src={arrow} alt="arrow" />
+        Regresar
+      </Link>
+
       {pathname === validPaths.success && (
         <>
           <PaymentCard

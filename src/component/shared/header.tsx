@@ -8,6 +8,7 @@ import groway_mobile from "../../assets/groway-black2.svg";
 import groway_mobile_gray from "../../assets/groway-gray.svg";
 
 import "./../../sass/shared/_header.scss";
+import { Link } from "react-router-dom";
 
 interface Props {
   image?: boolean;
@@ -33,6 +34,7 @@ const Header: FC<Props> = ({ image = false }) => {
         className="headerBg"
         alt="headerBg"
       />
+
       <Box
         className="navMenu"
         sx={{
@@ -41,19 +43,21 @@ const Header: FC<Props> = ({ image = false }) => {
           alignItems: "center",
         }}
       >
-        <img
-          src={
-            width < 700
-              ? image
+        <Link to="/">
+          <img
+            src={
+              width < 700
+                ? image
+                  ? groway_mobile_gray
+                  : groway_mobile
+                : image
                 ? groway_mobile_gray
-                : groway_mobile
-              : image
-              ? groway_mobile_gray
-              : groway
-          }
-          draggable={false}
-          alt="Groway.Education"
-        />
+                : groway
+            }
+            draggable={false}
+            alt="Groway.Education"
+          />
+        </Link>
       </Box>
     </>
   );

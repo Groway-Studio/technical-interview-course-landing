@@ -63,21 +63,15 @@ export default function Hero() {
               <img src={duration} alt="duration" />
               <figcaption>
                 <h2>Duración</h2>
+                <span>Inicio Septiembre 22</span>
                 <span>4 semanas</span>
-              </figcaption>
-            </figure>
-            <figure className="item">
-              <img src={duration} alt="hours" />
-              <figcaption>
-                <h2>Inicio</h2>
-                <span>22 Sep</span>
               </figcaption>
             </figure>
             <figure className="item">
               <img src={hours} alt="hours" />
               <figcaption>
                 <h2>Horario</h2>
-                <span>Sab y Dom</span>
+                <span>Sábado y Domingo</span>
                 <span>9:00 a 12:00</span>
               </figcaption>
             </figure>
@@ -85,7 +79,7 @@ export default function Hero() {
               <img src={price} alt="price" />
               <figcaption>
                 <h2>Costo</h2>
-                <span>120 usd</span>
+                <span>s/. 100</span>
               </figcaption>
             </figure>
           </article>
@@ -142,7 +136,15 @@ export default function Hero() {
               />
             </FormGroup>
 
-            <Button type="submit">Comprar por $39.00</Button>
+            <div className="offer">
+              <p>Precio real</p>
+              <div>
+                <small>s/.</small>
+                <span>100</span>
+              </div>
+            </div>
+
+            <Button type="submit">Comprar por $39</Button>
           </Form>
         </aside>
       </div>

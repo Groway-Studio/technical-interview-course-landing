@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
-body {
-  background: #f9f7f8;
-  font-family: "Poppins", sans-serif;
-}
+@import "../base/base";
 
-nav.navbar {
+.navbar {
   padding: 2rem;
   margin: auto;
   max-width: 1024px;
+
+  @include phone {
+    padding: 1rem 0;
+  }
 }
 
 nav img {
@@ -73,22 +74,22 @@ nav img {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-  }
 
-  p {
-    font-size: 0.85rem;
-    width: 90%;
-    margin: 0 auto;
+    p {
+      font-size: 0.85rem;
+      width: 90%;
+      margin: 0 auto;
+    }
   }
 }
 
 @media (min-width: 768px) and (max-width: 899px) {
-  nav {
+  .navbar {
     padding: 3rem;
-  }
 
-  nav img {
-    width: 120px;
+    img {
+      width: 120px;
+    }
   }
 
   .content {
@@ -106,20 +107,20 @@ nav img {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-  }
 
-  p {
-    font-size: 1rem;
+    p {
+      font-size: 1rem;
+    }
   }
 }
 
 @media (min-width: 900px) {
-  nav {
-    padding: 3rem;
-  }
+  .navbar {
+    padding: 2rem;
 
-  nav img {
-    width: 120px;
+    img {
+      width: 120px;
+    }
   }
 
   .content {
@@ -130,7 +131,7 @@ nav img {
   }
 
   .content img {
-    width: 80%;
+    width: 60%;
   }
 
   .info {
@@ -139,10 +140,10 @@ nav img {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-  }
 
-  p {
-    font-size: 1rem;
+    p {
+      font-size: 1rem;
+    }
   }
 }
 

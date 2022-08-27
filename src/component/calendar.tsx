@@ -52,49 +52,62 @@ export default function Calendar() {
                 <div className="item-2">
                   Bienvenida y repaso de conceptos básicos de programación{" "}
                 </div>
-                <div className="item-1">Zen de Python y PEP8 </div>
+                <div className="item-1">Zen de Python y PEP8</div>
                 <div className="item-1">El Intérprete de Python</div>
                 <div className="item-2">Variables y Tipos de Datos</div>
               </div>
               <div className="dayOne">
                 <div className="item-2">Operadores, Expresiones, I/O</div>
                 <div className="item-2">
-                  <b>Programación estructurada:</b>Condicionales, Bucles,
-                  Iteradores
+                  <span className="calendar__titles_highlights">
+                    Programación estructurada:
+                  </span>
+                  <p>Condicionales, Bucles, Iteradores</p>
                 </div>
                 <div className="item-2">
-                  <b>Estructuras de datos:</b>Listas, Tuplas, Diccionarios
+                  <span className="calendar__titles_highlights">
+                    Estructuras de datos:
+                  </span>
+                  <p>Listas, Tuplas, Diccionarios</p>
                 </div>
               </div>
             </div>
             <div className="week-days">
               <div className="dayOne">
-                <div className="item-1">Manejo de errores y Debugging
-                </div>
+                <div className="item-1">Manejo de errores y Debugging</div>
                 <div className="item-3 highlights">
-                  <b>Programación modular: </b>Funciones, Argumentos, Paquetes,
-                  etc
+                  <span className="calendar__titles_highlights">
+                    Programación modular:
+                  </span>
+                  <p>Funciones, Argumentos, Paquetes, etc</p>
                 </div>
                 <div className="item-2">
                   La biblioteca estándar de Python, Entornos Virtuales, PIP y
                   Bibliotecas de terceros
                 </div>
-
               </div>
               <div className="dayOne">
                 <div className="item-3 highlights">
-                  <b>Estructuras de datos Avanzado: </b> Pilas, Colas, Listas enlazadas, Arboles, etc
+                  <span className="calendar__titles_highlights">
+                    Estructuras de datos Avanzado:
+                  </span>
+                  <p>Pilas, Colas, Listas enlazadas, Arboles, etc.</p>
                 </div>
-                <div className="item-2">Algoritmos con estructuras de datos avanzadas</div>
+                <div className="item-2">
+                  Algoritmos con estructuras de datos avanzadas
+                </div>
                 <div className="item-1">Principios de diseño de algoritmos</div>
-                
               </div>
             </div>
             <div className="week-days">
               <div className="dayOne">
                 <div className="item-4 highlights">
-                  <b>Algoritmos Útiles: </b> Búsqueda, Ordenamiento, Grafos,
-                  Programación Dinámica, etc
+                  <span className="calendar__titles_highlights">
+                    Algoritmos Útiles:
+                  </span>
+                  <p>
+                    Búsqueda, Ordenamiento, Grafos, Programación Dinámica, etc
+                  </p>
                 </div>
 
                 <div className="item-2">
@@ -103,35 +116,49 @@ export default function Calendar() {
               </div>
               <div className="dayOne">
                 <div className="item-3 highlights">
-                  <b>Programación Orientada a Objetos: </b>Clases, Herencia, Encapsulamiento, Polimorfismo,
-                  etc
+                  <span className="calendar__titles_highlights">
+                    Programación Orientada a Objetos:
+                  </span>
+                  <p>Clases, Herencia, Encapsulamiento, Polimorfismo, etc</p>
                 </div>
                 <div className="item-3 highlights">
-                  <b>Patrones de diseño: </b>Factory, Builder, Adapter, Facade,
-                  Strategy, Observer, etc
+                  <span className="calendar__titles_highlights">
+                    Patrones de diseño:
+                  </span>
+                  <p>
+                    Factory, Builder, Adapter, Facade, Strategy, Observer, etc
+                  </p>
                 </div>
-                
               </div>
             </div>
             <div className="week-days">
               <div className="dayOne">
                 <div className="item-4 highlights">
-                  <b>Programación Funcional: </b>Calculo Lambda, Funciones de Orden
-                  Superior, Transparencia referencial, etc
+                  <span className="calendar__titles_highlights">
+                    Programación Funcional:
+                  </span>
+                  <p>
+                    Cálculo Lambda, Funciones de Orden Superior, Transparencia
+                    referencial, etc
+                  </p>
                 </div>
                 <div className="item-2 highlights">
-                  <b>Buenas prácticas de programación: </b>Principios SOLID /
-                  KISS / DRY, Antipatrones
+                  <span className="calendar__titles_highlights">
+                    Buenas prácticas de programación:
+                  </span>
+                  <p>Principios SOLID / KISS / DRY, Antipatrones</p>
                 </div>
-                
               </div>
               <div className="dayOne">
-                
                 <div className="item-3 highlights">
-                  <b>Testing: </b>Test unitarios, Fixtures, Github CI, Coverage
+                  <span className="calendar__titles_highlights">Testing:</span>
+                  <p>Test unitarios, Fixtures, Github CI, Coverage</p>
                 </div>
                 <div className="item-3">
-                  <b>Topicos Avanzados: </b> Metaprogramación, Concurrencia, Reactividad
+                  <span className="calendar__titles_highlights">
+                    Topicos Avanzados:
+                  </span>
+                  <p>Metaprogramación, Concurrencia, Reactividad</p>
                 </div>
               </div>
             </div>

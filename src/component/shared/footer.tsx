@@ -45,7 +45,7 @@ export default function Footer() {
               <img src={igIlus} alt="Groway.Studio" />
             </a>
             <a
-              href="https://pe.linkedin.com/company/growaystudio"
+              href="https://www.linkedin.com/company/growaystudio"
               target="_blank"
               rel="noreferrer"
             >

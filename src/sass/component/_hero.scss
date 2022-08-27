@@ -112,15 +112,19 @@
 
 .presitions {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  // grid-template-columns: repeat(auto-fit, 200px) 100px;
+  align-items: center;
+
+  grid-template-columns: repeat(2, 37%) 100px;
   background-color: #ffd875;
   border-radius: 10px;
   padding: 20px;
   width: 100%;
-  gap: 9px;
+  gap: 0.5rem;
 
   @include phone {
-    gap: 0;
+    grid-template-columns: repeat(2, 33.3%) calc(33.3% - 12px);
+    gap: 6px;
     width: 100%;
     box-sizing: border-box;
   }
@@ -133,21 +137,30 @@
     width: 36px;
   }
 
-  figure {
+  .item {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    height: 50px;
     gap: 10px;
+    height: 100%;
+    max-width: 250px;
+    width: 100%;
 
     @include phone {
-      flex-direction: column;
       align-items: center;
-      text-align: center;
+      flex-direction: column;
       height: 100%;
+      text-align: center;
     }
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &:last-child {
+      img {
+        width: 40px;
+      }
     }
 
     img {
@@ -169,7 +182,6 @@
         font-size: 1.2rem;
         font-weight: 500;
         line-height: 20px;
-        margin-top: 0.4375rem;
 
         @include phone {
           font-size: 20px;
@@ -215,11 +227,13 @@
 
   button {
     cursor: pointer;
+    grid-column: -1 / 4;
+    height: 100%;
+    margin-top: 0.8rem;
+    max-height: 2.5rem;
     padding: 0 5px;
     transition: all 0.3s ease-in-out;
     width: 100%;
-    grid-column: 2 / -2;
-    margin-top: 1.3rem;
 
     &:hover {
       box-shadow: 0 5px 15px #0000004d;
@@ -227,7 +241,7 @@
     }
 
     @include phone {
-      grid-column: 1 / -1;
+      grid-column: 0 / -1;
       margin-top: 1rem;
 
       &:hover {
@@ -236,7 +250,7 @@
     }
 
     @include tablet {
-      grid-column: -1 / -5;
+      grid-column: -1 / -7;
       margin-top: 20px;
       padding: 0;
       position: unset;
@@ -271,9 +285,9 @@
     margin-bottom: 20px;
   }
 
-  div {
-    margin: 0;
-  }
+  // div {
+  //   margin: 0;
+  // }
 }
 
 .btnDownload {
@@ -320,5 +334,57 @@
         align-items: center;
       }
     }
+  }
+}
+
+.offer {
+  grid-column: 1 / -6;
+  color: #f9f7f8;
+  margin-top: 0.6rem;
+
+  @include tablet {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / -7;
+  }
+
+  div {
+    display: flex;
+    position: relative;
+
+    &::before {
+      background: #c53f3f;
+      border-radius: 10px;
+      bottom: -1.6rem;
+      content: "";
+      display: block;
+      height: 5.4rem;
+      left: 2.4rem;
+      position: absolute;
+      transform: rotate(70deg);
+      width: 4px;
+    }
+  }
+
+  p,
+  small {
+    font-weight: 300;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+
+  span {
+    font-size: 2.25rem;
+    font-weight: 900;
+    line-height: 35px;
+  }
+
+  small {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
