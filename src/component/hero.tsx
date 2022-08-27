@@ -60,19 +60,17 @@ export default function Hero() {
           </div>
           <article className="presitions">
             <figure className="item">
-              <img src={duration} alt="duration" />
+              <img src={duration} alt="hours" />
               <figcaption>
-                <h2>Duración</h2>
-                <span>Inicio Septiembre 22</span>
-                <span>4 semanas</span>
+                <span><b>Inicio</b> <br/>22 Septiembre</span>
+                <span><b>Duración</b> <br/>4 semanas</span>
               </figcaption>
             </figure>
             <figure className="item">
               <img src={hours} alt="hours" />
               <figcaption>
-                <h2>Horario</h2>
-                <span>Sábado y Domingo</span>
-                <span>9:00 a 12:00</span>
+                <span>Sábados y <br/>Domingos</span>
+                <span>de 9:00 a 12:00</span>
               </figcaption>
             </figure>
             <figure className="item">

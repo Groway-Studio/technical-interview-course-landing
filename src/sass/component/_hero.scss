@@ -121,6 +121,7 @@
   padding: 20px;
   width: 100%;
   gap: 0.5rem;
+  
 
   @include phone {
     grid-template-columns: repeat(2, 33.3%) calc(33.3% - 12px);
@@ -145,6 +146,7 @@
     height: 100%;
     max-width: 250px;
     width: 100%;
+    
 
     @include phone {
       align-items: center;
@@ -175,7 +177,7 @@
 
       h2,
       span {
-        color: #af9247;
+        color: #725b20;
       }
 
       h2 {
@@ -190,7 +192,7 @@
       span {
         font-size: 0.875rem;
         font-weight: 300;
-        line-height: 14px;
+        line-height: 18px;
 
         @include phone {
           font-size: 12px !important;
