@@ -11,7 +11,7 @@ export const RedirectMP: RedirectFn = (loading, response) => {
   ) {
     response?.sandbox_init_point &&
       window.location.replace(response.sandbox_init_point);
-  } else (  // Use production by default
+  } else if (  // Use production by default
     loading === false &&
     (response?.init_point !== "" || response?.init_point !== undefined)
   ) {
