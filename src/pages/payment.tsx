@@ -77,7 +77,7 @@ const Payment = () => {
         <PaymentCard
           image={pending}
           title="Pago pendiente"
-          message="Debes completar el pago en las proximas 24 horas."
+          message="Debes completar el pago en las próximas 24 horas."
           type="pending"
         />
       )}
