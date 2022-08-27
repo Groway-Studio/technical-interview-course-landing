@@ -156,7 +156,7 @@ export default function Calendar() {
                 </div>
                 <div className="item-3">
                   <span className="calendar__titles_highlights">
-                    Topicos Avanzados:
+                    Tópicos Avanzados:
                   </span>
                   <p>Metaprogramación, Concurrencia, Reactividad</p>
                 </div>
