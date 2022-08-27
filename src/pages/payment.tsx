@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Header } from "../component/shared";
 import { PaymentCard } from "../component";
 import { failed, pending, success } from "../assets/payment-status";
-import { payment_id, validPaths, keystore } from "../utils";
+import { getParameterByName, validPaths, keystore } from "../utils";
 import arrow from "../assets/faqs/arrow.svg";
 
 const Payment = () => {
@@ -17,12 +17,14 @@ const Payment = () => {
     (async () => {
       if (pathname === validPaths.success && !!user_data) {
         try {
-          const user = JSON.parse(user_data || "");
+          const payload = JSON.parse(user_data || "");
+
+          payload["payment_id"] = getParameterByName("payment_id");
 
           const response = await fetch(
             "https://python-course-function-git-main-joelibaceta.vercel.app/api/new_sale.py",
             {
-              body: JSON.stringify({ ...user, payment_id }),
+              body: JSON.stringify(payload),
               method: "POST",
             }
           );
@@ -56,7 +58,7 @@ const Payment = () => {
           <PaymentCard
             image={success}
             title="Pago exitoso"
-            message="Te esperamos en el curso para aprender juntos"
+            message="Te hemos enviado un correo de confirmación"
             type="success"
           />
         </>

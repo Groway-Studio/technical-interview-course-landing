@@ -19,16 +19,27 @@ export const RedirectMP: RedirectFn = (loading, response) => {
   }
 };
 
+export const getParameterByName = (name="", url = window.location.href) => {
+  name = name.replace(/[\[\]]/g, '\\$&');
+  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
 export enum validPaths {
   success = "/pago-exitoso",
   failed = "/pago-fallido",
   pending = "/pago-pendiente",
 }
 
-export const payment_id = window.location.search
-  .split("&")
-  .filter((item: string) => item.includes("payment_id"))[0]
-  ?.split("=")[1];
+export const payment_id = getParameterByName("payment_id");
+
+// export const payment_id = window.location.search
+//   .split("&")
+//   .filter((item: string) => item.includes("payment_id"))[0]
+//   ?.split("=")[1];
 
 export const keystore = {
   USER_DATA: "user_data",

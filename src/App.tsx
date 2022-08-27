@@ -7,12 +7,15 @@ import NotFound from "./assets/error/404.svg";
 import "./sass/style.scss";
 
 export default function App() {
+  
   return (
     <Routes>
       <Route path="/pago-exitoso" element={<Payment />} />
       <Route path="/pago-fallido" element={<Payment />} />
       <Route path="/pago-pendiente" element={<Payment />} />
       <Route path="/" index={false} element={<Home />} />
+      <Route path="/" element={<Home />} />
+      
       <Route
         path="/server-error"
         element={
@@ -26,7 +29,7 @@ export default function App() {
         }
       />
 
-      {/* <Route
+      <Route
         path="/404"
         element={
           <Error
@@ -37,33 +40,9 @@ export default function App() {
           con la URL."
           />
         }
-      /> */}
-
-      <Route
-        path="/*"
-        element={
-          <Error
-            code="404"
-            image={NotFound}
-            paragraph1="El sitio configurado en esta dirección no contiene el archivo solicitado."
-            paragraph2="Si este es su sitio, asegúrese de que el nombre del archivo coincida
-          con la URL."
-          />
-        }
       />
 
-      <Route
-        path="#"
-        element={
-          <Error
-            code="404"
-            image={NotFound}
-            paragraph1="El sitio configurado en esta dirección no contiene el archivo solicitado."
-            paragraph2="Si este es su sitio, asegúrese de que el nombre del archivo coincida
-          con la URL."
-          />
-        }
-      />
+      
     </Routes>
   );
 }

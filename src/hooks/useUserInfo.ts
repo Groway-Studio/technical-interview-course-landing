@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { State, TopLevel } from "../interfaces";
-import { keystore, validPaths } from "../utils";
+import { keystore, validPaths, payment_id } from "../utils";
 
 const useUserInfo = () => {
   const [state, setState] = useState<State>({
@@ -50,15 +50,9 @@ const useUserInfo = () => {
             method: "POST",
             body: JSON.stringify({
               title: "Curso Python 1er batch",
-              success_url: `${pathnameOrigin}${
-                process.env.NODE_ENV === "production" ? "/#" : ""
-              }${validPaths.success}`,
-              pending_url: `${pathnameOrigin}${
-                process.env.NODE_ENV === "production" ? "/#" : ""
-              }${validPaths.pending}`,
-              failure_url: `${pathnameOrigin}${
-                process.env.NODE_ENV === "production" ? "/#" : ""
-              }${validPaths.failed}`,
+              success_url: `${pathnameOrigin}${"/#"}${validPaths.success}`,
+              pending_url: `${pathnameOrigin}${"/#"}${validPaths.pending}`,
+              failure_url: `${pathnameOrigin}${"/#"}${validPaths.failed}`,
             }),
           }
         );
