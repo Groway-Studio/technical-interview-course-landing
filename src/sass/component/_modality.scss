@@ -57,9 +57,10 @@
       width: 85%;
 
       @include phone {
-        grid-template-columns: 100%;
+        grid-template-columns: repeat(2, 50%);
         margin-bottom: 2.5rem;
         width: 100%;
+        gap: 0;
       }
 
       @include tablet {

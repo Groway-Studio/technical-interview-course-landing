@@ -83,17 +83,6 @@ h5 {
   }
 }
 
-b {
-  color: $primary-color;
-  font-style: italic;
-  font-weight: 700;
-  @include phone {
-    font-size: 10px;
-    font-weight: 600 !important;
-    line-height: 26px !important;
-  }
-}
-
 .dflex {
   display: flex;
 }
@@ -105,4 +94,35 @@ b {
 }
 .jc-sb {
   justify-content: space-between;
+}
+
+.go_back {
+  align-items: center;
+  color: $neutral-color-600;
+  display: flex;
+  font-size: 1rem;
+  gap: 0.8rem;
+  margin: 0.5rem auto 0;
+  max-width: $container;
+  position: relative;
+  text-decoration: none;
+  width: 90%;
+
+  img {
+    transform: rotate(-90deg);
+    height: 1rem;
+  }
+
+  &:active,
+  &:visited {
+    color: $neutral-color-600;
+  }
+
+  @include phone {
+    max-width: $container-phone;
+  }
+
+  @include tablet {
+    max-width: $container-tablet;
+  }
 }

@@ -1,10 +1,11 @@
 import { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { Header } from "../component/shared";
 import { PaymentCard } from "../component";
 import { failed, pending, success } from "../assets/payment-status";
 import { payment_id, validPaths, keystore } from "../utils";
+import arrow from "../assets/faqs/arrow.svg";
 
 const Payment = () => {
   const { pathname } = useLocation();
@@ -44,6 +45,12 @@ const Payment = () => {
   return (
     <>
       <Header image={true} />
+
+      <Link to="/" className="go_back">
+        <img src={arrow} alt="arrow" />
+        Regresar
+      </Link>
+
       {pathname === validPaths.success && (
         <>
           <PaymentCard
