@@ -76,8 +76,9 @@ export default function Hero() {
             <figure className="item">
               <img src={price} alt="price" />
               <figcaption>
-                <h2>Costo</h2>
-                <span>USD 150</span>
+                <span>Costo</span>
+                <h2>USD 150</h2>
+                
               </figcaption>
             </figure>
           </article>
