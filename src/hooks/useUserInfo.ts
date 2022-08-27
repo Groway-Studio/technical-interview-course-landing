@@ -35,8 +35,17 @@ const useUserInfo = () => {
     ) {
       setLoading(true);
       try {
+
+        let checkoutUrl = "https://python-course-function-git-main-joelibaceta.vercel.app/api/checkout.py"
+
+        if (process.env.NODE_ENV === "development") {
+          checkoutUrl += "?sandbox=true"
+        } else {
+          checkoutUrl += "?sandbox=false"
+        }
+
         const response = await fetch(
-          "https://python-course-function-git-main-joelibaceta.vercel.app/api/checkout.py?sandbox=true",
+          checkoutUrl,
           {
             method: "POST",
             body: JSON.stringify({
