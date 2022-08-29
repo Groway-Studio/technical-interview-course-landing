@@ -18,11 +18,7 @@ const Payment = () => {
       if (pathname === validPaths.success && !!user_data) {
 
         window.dataLayer.push({
-          event: 'checkout_completed',
-          eventProps: {
-              label: "Checkout completed",
-              value: "Checkout completed val"
-          }
+          event: 'checkout_completed'
         });
 
         try {

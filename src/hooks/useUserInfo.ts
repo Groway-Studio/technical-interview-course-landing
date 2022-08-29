@@ -35,11 +35,7 @@ const useUserInfo = () => {
 
   
     window.dataLayer.push({
-      event: 'checkout_initiated',
-      eventProps: {
-          label: "Buy intention",
-          value: "By intention val"
-      }
+      event: 'checkout_initiated'
     });
 
     if (
