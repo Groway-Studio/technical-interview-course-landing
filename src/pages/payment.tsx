@@ -17,9 +17,7 @@ const Payment = () => {
     (async () => {
       if (pathname === validPaths.success && !!user_data) {
 
-        window.dataLayer.push({
-          event: 'checkout_completed'
-        });
+        
 
         try {
           const payload = JSON.parse(user_data || "");
@@ -46,7 +44,12 @@ const Payment = () => {
 
           console.log(data);
 
-          // if (data === "OK") {
+          if (data === "OK") {
+            window.dataLayer.push({
+              event: 'purchase',
+              value: getParameterByName("amount"),
+            });
+          }
           localStorage.removeItem(keystore.USER_DATA);
           // }
         } catch (error: any) {
