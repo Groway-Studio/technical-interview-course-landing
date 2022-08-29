@@ -1,8 +1,17 @@
+
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { State, TopLevel } from "../interfaces";
 import { keystore, validPaths, getParameterByName } from "../utils";
+
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+    dataLayer: Record<string, any>
+  }
+}
 
 const useUserInfo = () => {
   const [state, setState] = useState<State>({
@@ -28,6 +37,15 @@ const useUserInfo = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+  
+    window.dataLayer.push({
+      event: 'checkout_initiated',
+      eventProps: {
+          label: "Buy intention",
+          value: "By: " + firstName + " " + lastName + ", Email: " + email
+      }
+    });
 
     if (
       Object.values(state).every((item) => item.trim() !== "") &&
