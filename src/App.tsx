@@ -8,6 +8,13 @@ import TagManager from 'react-gtm-module'
 
 import "./sass/style.scss";
 
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+    dataLayer: Record<string, any>
+  }
+}
+
 
 export default function App() {
 

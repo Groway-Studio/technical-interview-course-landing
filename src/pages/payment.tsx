@@ -16,6 +16,15 @@ const Payment = () => {
   useEffect(() => {
     (async () => {
       if (pathname === validPaths.success && !!user_data) {
+
+        window.dataLayer.push({
+          event: 'checkout_completed',
+          eventProps: {
+              label: "Checkout completed",
+              value: "Checkout completed val"
+          }
+        });
+
         try {
           const payload = JSON.parse(user_data || "");
 

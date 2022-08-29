@@ -6,12 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { State, TopLevel } from "../interfaces";
 import { keystore, validPaths, getParameterByName } from "../utils";
 
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-    dataLayer: Record<string, any>
-  }
-}
+
 
 const useUserInfo = () => {
   const [state, setState] = useState<State>({
