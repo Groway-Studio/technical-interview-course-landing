@@ -91,7 +91,7 @@ export default function Hero() {
             ¡Aprovecha la venta anticipada para adquirir tu lugar en el curso
             con un precio especial!
           </p>
-          <Form onSubmit={handleSubmit}>
+          <Form id="checkoutForm" onSubmit={handleSubmit}>
             <FormGroup>
               <Label htmlFor="firstName">Nombre</Label>
               <Input
