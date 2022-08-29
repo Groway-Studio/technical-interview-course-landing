@@ -67,6 +67,7 @@ const useUserInfo = () => {
               user_email: email,
               user_phone: `+51${phoneNumber}`,
               invitation_code: getParameterByName("invitation_code"),
+              price: 49.0
             }),
           }
         );
