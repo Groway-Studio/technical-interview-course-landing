@@ -43,7 +43,7 @@ const useUserInfo = () => {
       event: 'checkout_initiated',
       eventProps: {
           label: "Buy intention",
-          value: "By: " + firstName + " " + lastName + ", Email: " + email
+          value: "By intention val"
       }
     });
 
