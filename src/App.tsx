@@ -4,9 +4,19 @@ import { Error, Home, Payment } from "./pages";
 import ServerError from "./assets/error/500.svg";
 import NotFound from "./assets/error/404.svg";
 
+import TagManager from 'react-gtm-module'
+
 import "./sass/style.scss";
 
+
 export default function App() {
+
+  const tagManagerArgs = {
+    gtmId: 'G-T1WNEB8F9Q'
+  }
+
+  TagManager.initialize(tagManagerArgs)
+  
   
   return (
     <Routes>
