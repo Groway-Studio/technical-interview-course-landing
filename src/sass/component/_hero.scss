@@ -124,7 +124,6 @@
   padding: 20px;
   width: 100%;
   gap: 0.5rem;
-  
 
   @include phone {
     grid-template-columns: repeat(2, 33.3%) calc(33.3% - 12px);
@@ -148,7 +147,6 @@
     gap: 10px;
     height: 100%;
     max-width: 250px;
-    
 
     @include phone {
       align-items: center;
@@ -220,6 +218,33 @@
   border-radius: 10px;
   padding: 32px;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &__ribbon {
+    position: absolute;
+    background: #ffd875;
+    width: 11rem;
+    padding: 0.2rem 0;
+    font-weight: 600;
+    left: -3.3rem;
+    top: 1.2rem;
+    color: #776f74;
+    font-size: 1.2rem;
+    text-align: center;
+    transform: rotate(-45deg);
+
+    @include phone {
+      left: -3.5rem;
+      top: 1rem;
+      font-size: 1rem;
+    }
+
+    @include tablet {
+      left: -3rem;
+      top: 1.5rem;
+    }
+  }
 
   @include form;
 
@@ -238,15 +263,17 @@
     padding: 0 5px;
     transition: all 0.3s ease-in-out;
     width: 100%;
+    font-size: 0.9rem;
 
     &:hover {
       box-shadow: 0 5px 15px #0000004d;
-      transform: scale(1.2, 1.2);
+      transform: scale(1.05);
     }
 
     @include phone {
-      grid-column: 0 / -1;
+      grid-column: -6 / -1;
       margin-top: 1rem;
+      font-size: 0.8125rem;
 
       &:hover {
         transform: unset;

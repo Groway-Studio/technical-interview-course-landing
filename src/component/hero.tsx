@@ -20,6 +20,7 @@ export default function Hero() {
     phoneNumber,
     loading,
     response,
+    error,
     handleInputChange,
     handleSubmit,
   } = useUserInfo();
@@ -33,6 +34,7 @@ export default function Hero() {
   return (
     <>
       {loading && <Spinner />}
+      {!!error && <p className="error-message">{error}</p>}
       <div className="heroComponent">
         <div className="contentHero">
           <div className="header-title">
@@ -62,14 +64,22 @@ export default function Hero() {
             <figure className="item">
               <img src={duration} alt="hours" />
               <figcaption>
-                <span><b>Inicio</b> <br/>22 Septiembre</span>
-                <span><b>Duración</b> <br/>4 semanas</span>
+                <span>
+                  <b>Inicio</b> <br />
+                  22 Septiembre
+                </span>
+                <span>
+                  <b>Duración</b> <br />4 semanas
+                </span>
               </figcaption>
             </figure>
             <figure className="item">
               <img src={hours} alt="hours" />
               <figcaption>
-                <span>Sábados y <br/>Domingos</span>
+                <span>
+                  Sábados y <br />
+                  Domingos
+                </span>
                 <span>de 9:00 a 12:00</span>
               </figcaption>
             </figure>
@@ -77,13 +87,15 @@ export default function Hero() {
               <img src={price} alt="price" />
               <figcaption>
                 <span>Costo</span>
-                <h2><b>USD 150.00</b></h2>
-                
+                <h2>
+                  <b>USD 150.00</b>
+                </h2>
               </figcaption>
             </figure>
           </article>
         </div>
         <aside className="formInfo-hero">
+          <div className="formInfo-hero__ribbon">67% OFF</div>
           <h2>
             Early Bird <span>Sale!</span>
           </h2>
@@ -114,7 +126,7 @@ export default function Hero() {
             <FormGroup>
               <Label htmlFor="email">E-mail</Label>
               <Input
-                type="email"
+                type="text"
                 id="email"
                 name="email"
                 value={email}
@@ -130,7 +142,6 @@ export default function Hero() {
                 name="phoneNumber"
                 value={phoneNumber}
                 maxLength={12}
-                minLength={9}
                 onChange={handleInputChange}
               />
             </FormGroup>
@@ -142,7 +153,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <Button type="submit"><b>Comprar por USD 49.00</b></Button>
+            <Button type="submit">Comprar por USD 49.00</Button>
           </Form>
         </aside>
       </div>

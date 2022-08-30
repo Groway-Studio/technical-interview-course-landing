@@ -8,15 +8,12 @@ import "./sass/style.scss";
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void
-    dataLayer: Record<string, any>
+    gtag: (...args: any[]) => void;
+    dataLayer: Record<string, any>;
   }
 }
 
-
 export default function App() {
-  
-  
   return (
     <Routes>
       <Route path="/pago-exitoso" element={<Payment />} />
@@ -24,7 +21,7 @@ export default function App() {
       <Route path="/pago-pendiente" element={<Payment />} />
       <Route path="/" index={false} element={<Home />} />
       <Route path="/" element={<Home />} />
-      
+
       <Route
         path="/server-error"
         element={
@@ -50,8 +47,6 @@ export default function App() {
           />
         }
       />
-
-      
     </Routes>
   );
 }

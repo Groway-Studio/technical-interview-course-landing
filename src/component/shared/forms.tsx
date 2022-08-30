@@ -49,7 +49,6 @@ export const Button = styled.button`
   border-radius: 10px;
   border-style: none;
   color: #ffffff;
-  font-size: 14px;
   font-weight: 500;
   line-height: 36px;
   padding: 0 30px;
