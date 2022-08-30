@@ -1,0 +1,22 @@
+@import "../base/base";
+
+.timeline {
+  width: 90%;
+  max-width: $container;
+  margin: 5rem auto 0;
+
+  &__title {
+    text-align: center;
+    width: 100%;
+    color: $primary-color;
+  }
+
+  &__dates {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
