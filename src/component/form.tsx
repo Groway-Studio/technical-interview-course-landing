@@ -29,7 +29,7 @@ export default function FormContact() {
 
   return (
     <>
-      {loading && <Spinner />}
+      {loading && <Spinner info={true} />}
       <div className="formComponent">
         <section className="container">
           <article className="talkto">

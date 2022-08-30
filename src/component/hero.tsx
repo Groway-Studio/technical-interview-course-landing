@@ -33,7 +33,7 @@ export default function Hero() {
 
   return (
     <>
-      {loading && <Spinner />}
+      {loading && <Spinner info={true} />}
       {!!error && <p className="error-message">{error}</p>}
       <div className="heroComponent">
         <div className="contentHero">

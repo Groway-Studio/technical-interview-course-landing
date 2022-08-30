@@ -1,11 +1,15 @@
 import "../sass/component/_spinner.scss";
 
-const Spinner = () => {
+interface Props {
+  info?: boolean;
+}
+
+const Spinner = ({ info }: Props) => {
   return (
     <div className="loadingio-spinner-eclipse-r5qwc0ticrn">
       <div className="ldio-he9ppiasvpj">
         <div></div>
-        <p>Procesando los datos...</p>
+        {info === true && <p>Procesando los datos...</p>}
       </div>
     </div>
   );
