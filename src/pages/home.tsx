@@ -1,13 +1,23 @@
-import { useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { Hero, Modality, Calendar, Faqs, Instructor } from "../component";
+import {
+  Hero,
+  Modality,
+  Calendar,
+  Faqs,
+  Instructor,
+  Overlay,
+} from "../component";
 import { Header, Footer } from "../component/shared";
 
 import { API } from "../api";
+import Spinner from "../component/spinner";
 
 export default function Home() {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState<boolean>(true);
+  const [showOverlay, setShowOverlay] = useState<boolean>(false);
 
   const searchParams = new URLSearchParams(window.location.search);
 
@@ -16,18 +26,28 @@ export default function Home() {
       try {
         const response = await fetch(`${API}/invitation_code.py`, {
           method: "POST",
-          body: JSON.stringify({
-            invitation_code: searchParams.get("invitation_code"),
-          }),
+          body: searchParams.get("invitation_code")
+            ? JSON.stringify({
+                invitation_code: searchParams.get("invitation_code"),
+              })
+            : JSON.stringify({}),
         });
 
         const data: string = await response.text();
 
-        if (data === "Invalid invitation_code") {
+        if (
+          data === "Invalid invitation_code" ||
+          data === "No invitation_code"
+        ) {
+          setShowOverlay(true);
+          setLoading(false);
         }
 
-        // console.log(JSON.parse(data));
+        setLoading(false);
       } catch (error: any) {
+        setLoading(false);
+        navigate("/server-error");
+
         throw new Error(error);
       }
     })();
@@ -37,13 +57,21 @@ export default function Home() {
 
   return (
     <>
-      <Header />
-      <Hero />
-      <Modality />
-      <Calendar />
-      <Instructor />
-      <Faqs />
-      <Footer />
+      {loading ? (
+        <Spinner info={false} />
+      ) : showOverlay ? (
+        <Overlay />
+      ) : (
+        <>
+          <Header />
+          <Hero />
+          <Modality />
+          <Calendar />
+          <Instructor />
+          <Faqs />
+          <Footer />
+        </>
+      )}
     </>
   );
 }
