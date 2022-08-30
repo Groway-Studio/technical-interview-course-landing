@@ -8,11 +8,12 @@ import {
   Faqs,
   Instructor,
   Overlay,
+  Spinner,
+  Timeline,
 } from "../component";
 import { Header, Footer } from "../component/shared";
 
 import { API } from "../api";
-import Spinner from "../component/spinner";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -67,6 +68,7 @@ export default function Home() {
           <Hero />
           <Modality />
           <Calendar />
+          <Timeline />
           <Instructor />
           <Faqs />
           <Footer />

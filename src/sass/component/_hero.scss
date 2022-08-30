@@ -112,13 +112,9 @@
 
 .presitions {
   display: grid;
-  // grid-template-columns: repeat(auto-fit, 200px) 100px;
   align-items: center;
-
-  //grid-template-columns: repeat(2, 37%) 100px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background-color: #ffd875;
   border-radius: 10px;
   padding: 20px;
@@ -263,7 +259,9 @@
     padding: 0 5px;
     transition: all 0.3s ease-in-out;
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    padding: 0 2rem;
 
     &:hover {
       box-shadow: 0 5px 15px #0000004d;
@@ -273,6 +271,7 @@
     @include phone {
       grid-column: -6 / -1;
       margin-top: 1rem;
+      padding: 0 1rem;
       font-size: 0.8125rem;
 
       &:hover {

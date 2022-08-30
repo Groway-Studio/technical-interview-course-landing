@@ -38,12 +38,14 @@
       display: grid;
       gap: 0.5rem;
       p {
-        font-size: 13px;
+        font-size: 0.8125rem;
       }
 
       h2 {
+        color: $primary-color;
+
         @include phone {
-          font-size: 24px;
+          font-size: 1.5rem;
           text-align: center;
         }
       }

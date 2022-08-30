@@ -8,6 +8,7 @@ import Modality from "./modality";
 import Overlay from "./overlay";
 import PaymentCard from "./payment_card";
 import Spinner from "./spinner";
+import Timeline from "./timeline";
 
 export {
   Brochure,
@@ -20,4 +21,5 @@ export {
   Overlay,
   PaymentCard,
   Spinner,
+  Timeline,
 };

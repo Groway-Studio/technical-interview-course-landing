@@ -53,3 +53,46 @@ export const validateEmail = (email: string) => {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
 };
+
+export interface Timeline {
+  day: number;
+  month: string;
+  typeOfSale: string;
+  description: string;
+  price: string;
+  until: string;
+  ribbon?: boolean;
+  disabled?: boolean;
+}
+
+export const timeline: Timeline[] = [
+  {
+    day: 25,
+    month: "Agosto",
+    typeOfSale: "Venta Privada",
+    description:
+      "Este curso está pensado en todos aquellos programadores con poca o ninguna experiencia.",
+    price: "49 USD",
+    until: "31 de Agosto",
+  },
+  {
+    day: 25,
+    month: "Agosto",
+    typeOfSale: "Venta Privada",
+    description:
+      "Este curso está pensado en todos aquellos programadores con poca o ninguna experiencia.",
+    price: "49 USD",
+    until: "31 de Agosto",
+    ribbon: true,
+  },
+  {
+    day: 11,
+    month: "Septiembre",
+    typeOfSale: "Precio Real",
+    description:
+      "Este curso está pensado en todos aquellos programadores con poca o ninguna experiencia.",
+    price: "150 USD",
+    until: "20 de Septiembre",
+    disabled: true,
+  },
+];

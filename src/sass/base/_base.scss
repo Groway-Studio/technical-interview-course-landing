@@ -10,6 +10,8 @@ $neutral-color-500: #2f2e41;
 $neutral-color-400: #3f3d56;
 $neutral-color-100: #f9f7f8;
 $neutral-color-0: #ffffff;
+$black: #000;
+$yellow-light: #ffd875;
 
 $size: 8px;
 $spacing: 4px;
@@ -101,4 +103,8 @@ $desktop_xl: 1920px;
       }
     }
   }
+}
+
+@mixin uppercase {
+  text-transform: uppercase;
 }
