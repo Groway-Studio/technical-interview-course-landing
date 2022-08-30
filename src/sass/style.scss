@@ -60,19 +60,6 @@ h2 {
   }
 }
 
-h3 {
-  font-size: var(--title-h3);
-  color: $neutral-color-400;
-  @include tablet {
-    font-size: var(--size-2);
-  }
-  @include phone {
-    font-size: 13px;
-    font-weight: 500 !important;
-    line-height: 23px !important;
-  }
-}
-
 h5 {
   font-style: italic;
   font-weight: 400;

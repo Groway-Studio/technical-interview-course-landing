@@ -5,7 +5,7 @@ import "../sass/component/_timeline.scss";
 const Timeline = () => {
   return (
     <section className="timeline">
-      <h2 className="timeline__title">Fechas Importantes</h2>
+      <h3 className="timeline__title">Fechas Importantes</h3>
 
       <ul className="timeline__dates">
         {timeline.map((timelineItem, index) => (
