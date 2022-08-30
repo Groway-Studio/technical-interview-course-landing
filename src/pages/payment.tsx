@@ -3,8 +3,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { Header } from "../component/shared";
 import { PaymentCard } from "../component";
-import { failed, pending, success } from "../assets/payment-status";
 import { getParameterByName, validPaths, keystore } from "../utils";
+import { API } from "../api";
+
+import { failed, pending, success } from "../assets/payment-status";
 import arrow from "../assets/faqs/arrow.svg";
 
 const Payment = () => {
@@ -16,29 +18,23 @@ const Payment = () => {
   useEffect(() => {
     (async () => {
       if (pathname === validPaths.success && !!user_data) {
-
-        
-
         try {
           const payload = JSON.parse(user_data || "");
 
           payload["payment_id"] = getParameterByName("payment_id");
 
-          let saleUrl = "https://python-course-function-git-main-joelibaceta.vercel.app/api/new_sale.py";
+          let saleUrl = `${API}/new_sale.py`;
 
           if (process.env.NODE_ENV === "development") {
-            saleUrl += "?sandbox=true"
+            saleUrl += "?sandbox=true";
           } else {
-            saleUrl += "?sandbox=false"
+            saleUrl += "?sandbox=false";
           }
 
-          const response = await fetch(
-            saleUrl,
-            {
-              body: JSON.stringify(payload),
-              method: "POST",
-            }
-          );
+          const response = await fetch(saleUrl, {
+            body: JSON.stringify(payload),
+            method: "POST",
+          });
 
           const data = await response.text();
 
@@ -46,7 +42,7 @@ const Payment = () => {
 
           if (data === "OK") {
             window.dataLayer.push({
-              event: 'purchase',
+              event: "purchase",
               value: getParameterByName("amount"),
             });
           }

@@ -1,12 +1,14 @@
-
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { State, TopLevel } from "../interfaces";
-import { keystore, validPaths, getParameterByName } from "../utils";
-
-
+import {
+  keystore,
+  validPaths,
+  getParameterByName,
+  validateEmail,
+} from "../utils";
+import { API } from "../api";
 
 const useUserInfo = () => {
   const [state, setState] = useState<State>({
@@ -17,6 +19,7 @@ const useUserInfo = () => {
   });
   const [loading, setLoading] = useState<boolean>(false);
   const [response, setResponse] = useState<TopLevel>();
+  const [error, setError] = useState<string | null>(null);
 
   const { firstName, lastName, email, phoneNumber } = state;
 
@@ -33,45 +36,42 @@ const useUserInfo = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-  
+    formValidations();
+
     window.dataLayer.push({
-      event: 'checkout_initiated'
+      event: "checkout_initiated",
     });
 
     if (
       Object.values(state).every((item) => item.trim() !== "") &&
-      !isNaN(+phoneNumber)
+      !isNaN(+phoneNumber) &&
+      phoneNumber.trim().length >= 9
     ) {
       setLoading(true);
       try {
-
-        let checkoutUrl = "https://python-course-function-git-main-joelibaceta.vercel.app/api/checkout.py"
+        let checkoutUrl = `${API}/checkout.py`;
 
         if (process.env.NODE_ENV === "development") {
-          checkoutUrl += "?sandbox=true"
+          checkoutUrl += "?sandbox=true";
         } else {
-          checkoutUrl += "?sandbox=false"
+          checkoutUrl += "?sandbox=false";
         }
 
-        const response = await fetch(
-          checkoutUrl,
-          {
-            method: "POST",
-            body: JSON.stringify({
-              title: "Curso Python 1er batch",
-              success_url: `${pathnameOrigin}${"/#"}${validPaths.success}`,
-              pending_url: `${pathnameOrigin}${"/#"}${validPaths.pending}`,
-              failure_url: `${pathnameOrigin}${"/#"}${validPaths.failed}`,
-              user_first_name: firstName,
-              user_last_name: lastName,
-              user_email: email,
-              user_phone: `+51${phoneNumber}`,
-              invitation_code: getParameterByName("invitation_code"),
-              price: 49.0
-            }),
-          }
-        );
-        
+        const response = await fetch(checkoutUrl, {
+          method: "POST",
+          body: JSON.stringify({
+            title: "Curso Python 1er batch",
+            success_url: `${pathnameOrigin}${"/#"}${validPaths.success}`,
+            pending_url: `${pathnameOrigin}${"/#"}${validPaths.pending}`,
+            failure_url: `${pathnameOrigin}${"/#"}${validPaths.failed}`,
+            user_first_name: firstName,
+            user_last_name: lastName,
+            user_email: email,
+            user_phone: `+51${phoneNumber}`,
+            invitation_code: getParameterByName("invitation_code"),
+            price: 49.0,
+          }),
+        });
 
         const data = await response.json();
 
@@ -98,6 +98,18 @@ const useUserInfo = () => {
     }
   };
 
+  const formValidations = () => {
+    if (!firstName.trim()) setError("¡Nombre no válido!");
+    else if (!lastName.trim()) setError("¡Apellido no válido!");
+    else if (!validateEmail(email)) setError("¡Correo electrónico no válido!");
+    else if (!phoneNumber.match(/^\d+$/) || phoneNumber.trim().length < 9)
+      setError("¡Número de teléfono no válido!");
+
+    setTimeout(() => {
+      setError(null);
+    }, 3000);
+  };
+
   return {
     firstName,
     lastName,
@@ -107,6 +119,7 @@ const useUserInfo = () => {
     response,
     handleInputChange,
     handleSubmit,
+    error,
   };
 };
 

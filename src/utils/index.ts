@@ -11,7 +11,8 @@ export const RedirectMP: RedirectFn = (loading, response) => {
   ) {
     response?.sandbox_init_point &&
       window.location.replace(response.sandbox_init_point);
-  } else if (  // Use production by default
+  } else if (
+    // Use production by default
     loading === false &&
     (response?.init_point !== "" || response?.init_point !== undefined)
   ) {
@@ -19,14 +20,14 @@ export const RedirectMP: RedirectFn = (loading, response) => {
   }
 };
 
-export const getParameterByName = (name="", url = window.location.href) => {
-  name = name.replace(/[[]]/g, '\\$&');
-  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-      results = regex.exec(url);
+export const getParameterByName = (name = "", url = window.location.href) => {
+  name = name.replace(/[[]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(url);
   if (!results) return null;
-  if (!results[2]) return '';
-  return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
+  if (!results[2]) return "";
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+};
 
 export enum validPaths {
   success = "/pago-exitoso",
@@ -43,4 +44,12 @@ export const payment_id = getParameterByName("payment_id");
 
 export const keystore = {
   USER_DATA: "user_data",
+};
+
+export const validateEmail = (email: string) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
 };
