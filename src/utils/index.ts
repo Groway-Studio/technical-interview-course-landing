@@ -117,7 +117,7 @@ export const timeline: Timeline[] = [
   {
     day: 11,
     month: "Septiembre",
-    typeOfSale: "Precio Real",
+    typeOfSale: "Precio General",
     description:
       "Este curso está pensado para todos aquellos programadores con poca o ninguna experiencia.",
     price: "150 USD",
