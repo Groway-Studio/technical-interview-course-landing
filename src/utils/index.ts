@@ -57,39 +57,31 @@ export const validateEmail = (email: string) => {
 type DateValidation = (
   startDate: number,
   endDate: number,
-  currentMonth: number,
-  currentYear?: number
+  currentMonth: "august" | "september"
 ) => boolean;
 
-const dateValitation: DateValidation = (
-  startDate,
-  endDate,
-  currentMoth,
-  currentYear = 2022
-) => {
+const dateValitation: DateValidation = (startDate, endDate, currentMoth) => {
   return (
-    new Date().getMonth() === currentMoth &&
     new Date().getDate() >= startDate &&
     new Date().getDate() <= endDate &&
-    new Date().getFullYear() === currentYear
+    new Date().getMonth() === (currentMoth === "august" ? 7 : 8) &&
+    new Date().getFullYear() === 2022
   );
 };
 
-const privateSaleVerification = (): boolean => {
-  return !dateValitation(24, 31, 7);
-};
+const privateSaleVerification = (): boolean =>
+  !dateValitation(24, 31, "august");
+const earlyBirdVerification = (): boolean =>
+  !dateValitation(1, 10, "september");
+const realPriceVerification = (): boolean =>
+  !dateValitation(11, 20, "september");
 
-const earlyBirdVerification = (): boolean => {
-  return !dateValitation(1, 10, 8);
-};
-
-const realPriceVerification = (): boolean => {
-  return !dateValitation(11, 20, 8);
-};
-
-export const getCurrentPrice = (): number => {
-  return dateValitation(25, 31, 7) ? 49 : dateValitation(1, 10, 8) ? 99 : 150;
-};
+export const getCurrentPrice = (): number =>
+  dateValitation(25, 31, "august")
+    ? 49
+    : dateValitation(1, 10, "september")
+    ? 99
+    : 150;
 
 export interface Timeline {
   day: number;
