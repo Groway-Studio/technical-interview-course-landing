@@ -15,7 +15,12 @@ const TimelineDateItem = ({
 }: Props) => {
   return (
     <li className={disabled ? "disabled" : "timeline__item"}>
-      {ribbon && <div className="ribbon">Sold Out</div>}
+      {ribbon && (
+        <div className="ribbon">
+          <span>Sold Out</span>
+          <small>67% Off</small>
+        </div>
+      )}
       <small className="timeline__item-limit">Desde el</small>
 
       <span className="timeline__item-day">{day}</span>

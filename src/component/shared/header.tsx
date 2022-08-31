@@ -33,6 +33,7 @@ const Header: FC<Props> = ({ image = false }) => {
         src={width < 700 ? headerMobile : headerBg}
         className="headerBg"
         alt="headerBg"
+        draggable={false}
       />
 
       <Box

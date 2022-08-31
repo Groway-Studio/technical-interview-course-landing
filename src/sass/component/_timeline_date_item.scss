@@ -58,15 +58,24 @@
 .ribbon {
   background: #c53f3f;
   color: $neutral-color-0;
-  font-size: 1.5rem;
   font-weight: 700;
-  left: -3rem;
-  padding: 0.2rem 0;
+  left: -4rem;
+  line-height: 1.2rem;
+  padding: 0.3rem 0;
   position: absolute;
   text-transform: uppercase;
-  top: 2rem;
+  top: 2.2rem;
   transform: rotate(-45deg);
-  width: 12rem;
+  width: 15rem;
+
+  span {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  small {
+    font-size: 1rem;
+  }
 }
 
 .timeline__item,

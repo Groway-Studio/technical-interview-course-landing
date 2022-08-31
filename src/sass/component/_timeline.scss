@@ -5,6 +5,10 @@
   max-width: $container;
   margin: 5rem auto 0;
 
+  @include phone {
+    max-width: $container-phone;
+  }
+
   &__title {
     text-align: center;
     width: 100%;

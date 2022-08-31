@@ -54,6 +54,33 @@ export const validateEmail = (email: string) => {
     );
 };
 
+const privateSaleVerification = (): boolean => {
+  return new Date().getDate() > 24 &&
+    new Date().getDate() <= 31 &&
+    new Date().getMonth() === 7 &&
+    new Date().getFullYear() === 2022
+    ? false
+    : true;
+};
+
+const earlyBirdVerification = (): boolean => {
+  return new Date().getDate() >= 1 &&
+    new Date().getDate() <= 10 &&
+    new Date().getFullYear() === 2022 &&
+    new Date().getMonth() === 8
+    ? false
+    : true;
+};
+
+const realPriceVerification = (): boolean => {
+  return new Date().getDate() > 10 &&
+    new Date().getDate() <= 20 &&
+    new Date().getMonth() === 8 &&
+    new Date().getFullYear() === 2022
+    ? false
+    : true;
+};
+
 export interface Timeline {
   day: number;
   month: string;
@@ -62,7 +89,7 @@ export interface Timeline {
   price: string;
   until: string;
   ribbon?: boolean;
-  disabled?: boolean;
+  disabled: boolean;
 }
 
 export const timeline: Timeline[] = [
@@ -71,28 +98,30 @@ export const timeline: Timeline[] = [
     month: "Agosto",
     typeOfSale: "Venta Privada",
     description:
-      "Este curso está pensado en todos aquellos programadores con poca o ninguna experiencia.",
-    price: "49 USD",
-    until: "31 de Agosto",
-  },
-  {
-    day: 25,
-    month: "Agosto",
-    typeOfSale: "Venta Privada",
-    description:
-      "Este curso está pensado en todos aquellos programadores con poca o ninguna experiencia.",
+      "Este curso está pensado para todos aquellos programadores con poca o ninguna experiencia.",
     price: "49 USD",
     until: "31 de Agosto",
     ribbon: true,
+    disabled: privateSaleVerification(),
+  },
+  {
+    day: 1,
+    month: "Septiembre",
+    typeOfSale: "Early Bird Sale",
+    description:
+      "Este curso está pensado para todos aquellos programadores con poca o ninguna experiencia.",
+    price: "99 USD",
+    until: "10 de Septiembre",
+    disabled: earlyBirdVerification(),
   },
   {
     day: 11,
     month: "Septiembre",
     typeOfSale: "Precio Real",
     description:
-      "Este curso está pensado en todos aquellos programadores con poca o ninguna experiencia.",
+      "Este curso está pensado para todos aquellos programadores con poca o ninguna experiencia.",
     price: "150 USD",
     until: "20 de Septiembre",
-    disabled: true,
+    disabled: realPriceVerification(),
   },
 ];
