@@ -54,32 +54,34 @@ export const validateEmail = (email: string) => {
     );
 };
 
-const privateSaleVerification = (): boolean => {
-  return new Date().getDate() > 24 &&
-    new Date().getDate() <= 31 &&
-    new Date().getMonth() === 7 &&
+type DateValidation = (
+  startDate: number,
+  endDate: number,
+  currentMonth: "august" | "september"
+) => boolean;
+
+const dateValitation: DateValidation = (startDate, endDate, currentMoth) => {
+  return (
+    new Date().getDate() >= startDate &&
+    new Date().getDate() <= endDate &&
+    new Date().getMonth() === (currentMoth === "august" ? 7 : 8) &&
     new Date().getFullYear() === 2022
-    ? false
-    : true;
+  );
 };
 
-const earlyBirdVerification = (): boolean => {
-  return new Date().getDate() >= 1 &&
-    new Date().getDate() <= 10 &&
-    new Date().getFullYear() === 2022 &&
-    new Date().getMonth() === 8
-    ? false
-    : true;
-};
+const privateSaleVerification = (): boolean =>
+  !dateValitation(24, 31, "august");
+const earlyBirdVerification = (): boolean =>
+  !dateValitation(1, 10, "september");
+const realPriceVerification = (): boolean =>
+  !dateValitation(11, 20, "september");
 
-const realPriceVerification = (): boolean => {
-  return new Date().getDate() > 10 &&
-    new Date().getDate() <= 20 &&
-    new Date().getMonth() === 8 &&
-    new Date().getFullYear() === 2022
-    ? false
-    : true;
-};
+export const getCurrentPrice = (): number =>
+  dateValitation(25, 31, "august")
+    ? 49
+    : dateValitation(1, 10, "september")
+    ? 99
+    : 150;
 
 export interface Timeline {
   day: number;
