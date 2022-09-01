@@ -95,7 +95,7 @@ export default function Hero() {
           </article>
         </div>
         <aside className="formInfo-hero">
-          <div className="formInfo-hero__ribbon">67% OFF</div>
+          <div className="formInfo-hero__ribbon">33% OFF</div>
           <h2>
             Early Bird <span>Sale!</span>
           </h2>
