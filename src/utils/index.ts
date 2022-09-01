@@ -101,7 +101,7 @@ export const timeline: Timeline[] = [
       "Este curso está pensado para todos aquellos programadores con poca o ninguna experiencia.",
     price: "49 USD",
     until: "31 de Agosto",
-    ribbon: false,
+    ribbon: true,
     disabled: privateSaleVerification(),
   },
   {
