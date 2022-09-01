@@ -9,7 +9,7 @@ import hours from "./../assets/hours.svg";
 import price from "./../assets/price.svg";
 
 import { useUserInfo } from "../hooks";
-import { RedirectMP, getCurrentPrice } from "../utils";
+import { RedirectMP, getCurrentPrice, dateValitation } from "../utils";
 import "./../sass/component/_hero.scss";
 
 export default function Hero() {

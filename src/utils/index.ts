@@ -60,7 +60,11 @@ type DateValidation = (
   currentMonth: "august" | "september"
 ) => boolean;
 
-const dateValitation: DateValidation = (startDate, endDate, currentMoth) => {
+export const dateValitation: DateValidation = (
+  startDate,
+  endDate,
+  currentMoth
+) => {
   return (
     new Date().getDate() >= startDate &&
     new Date().getDate() <= endDate &&
@@ -71,8 +75,10 @@ const dateValitation: DateValidation = (startDate, endDate, currentMoth) => {
 
 const privateSaleVerification = (): boolean =>
   !dateValitation(24, 31, "august");
+
 const earlyBirdVerification = (): boolean =>
   !dateValitation(1, 10, "september");
+
 const realPriceVerification = (): boolean =>
   !dateValitation(11, 20, "september");
 
