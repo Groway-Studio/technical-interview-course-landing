@@ -28,9 +28,28 @@ const PaymentCard = ({ image, title, message, type }: Props) => {
             Cuéntale a tus amigos sobre este curso!
           </p>
           <div className="social-media">
-            <FiFacebook />
-            <FiTwitter />
-            <FaWhatsapp />
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://aprendepython.groway.studio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FiFacebook />
+            </a>
+
+            <a
+              href="http://twitter.com/share?text=Si quieres aprender Python de la mano de un experto, te invito a que ingreses al siguiente enlace&url=https://aprendepython.groway.studio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FiTwitter />
+            </a>
+            <a
+              href="whatsapp://send?text=Si quieres aprender Python de la mano de un experto, te invito a que ingreses al siguiente enlace https://aprendepython.groway.studio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaWhatsapp />
+            </a>
           </div>
         </>
       )}
