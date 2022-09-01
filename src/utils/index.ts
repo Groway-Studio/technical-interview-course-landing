@@ -106,7 +106,7 @@ export const timeline: Timeline[] = [
     month: "Agosto",
     typeOfSale: "Venta Privada",
     description:
-      "Este curso está pensado para todos aquellos programadores con poca o ninguna experiencia.",
+      "Venta privada especial para socios, colaboradores, referidos, amigos y clientes de la empresa.",
     price: "49 USD",
     until: "31 de Agosto",
     ribbon: true,
@@ -117,7 +117,7 @@ export const timeline: Timeline[] = [
     month: "Septiembre",
     typeOfSale: "Early Bird Sale",
     description:
-      "Este curso está pensado para todos aquellos programadores con poca o ninguna experiencia.",
+      "Primera venta publica abierta a todo publico con un descuento por pronta compra.",
     price: "99 USD",
     until: "10 de Septiembre",
     disabled: earlyBirdVerification(),
@@ -127,7 +127,7 @@ export const timeline: Timeline[] = [
     month: "Septiembre",
     typeOfSale: "Precio General",
     description:
-      "Este curso está pensado para todos aquellos programadores con poca o ninguna experiencia.",
+      "Ultimo periodo de venta publica",
     price: "150 USD",
     until: "20 de Septiembre",
     disabled: realPriceVerification(),
