@@ -45,6 +45,8 @@ const Payment = () => {
               event: "purchase",
               value: getParameterByName("amount"),
             });
+          } else {
+            navigate("/server-error");
           }
           localStorage.removeItem(keystore.USER_DATA);
           // }
