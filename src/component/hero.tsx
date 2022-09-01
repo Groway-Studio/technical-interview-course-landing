@@ -9,7 +9,7 @@ import hours from "./../assets/hours.svg";
 import price from "./../assets/price.svg";
 
 import { useUserInfo } from "../hooks";
-import { RedirectMP, getCurrentPrice } from "../utils";
+import { RedirectMP, getCurrentPrice, dateValitation } from "../utils";
 import "./../sass/component/_hero.scss";
 
 export default function Hero() {
@@ -95,9 +95,20 @@ export default function Hero() {
           </article>
         </div>
         <aside className="formInfo-hero">
-          <div className="formInfo-hero__ribbon">67% OFF</div>
+          {(dateValitation(25, 31, "august") ||
+            dateValitation(1, 10, "september")) && (
+            <div className="formInfo-hero__ribbon">
+              {dateValitation(25, 31, "august") ? 67 : 34}% OFF
+            </div>
+          )}
           <h2>
-            Early Bird <span>Sale!</span>
+            {dateValitation(25, 31, "august")
+              ? "Private "
+              : dateValitation(1, 10, "september")
+              ? "Early Bird "
+              : "Precio General"}
+            {(dateValitation(25, 31, "august") ||
+              dateValitation(1, 10, "september")) && <span>Sale!</span>}
           </h2>
           <p>
             ¡Aprovecha la venta anticipada para adquirir tu lugar en el curso
