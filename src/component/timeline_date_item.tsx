@@ -18,7 +18,7 @@ const TimelineDateItem = ({
       {ribbon && (
         <div className="ribbon">
           <span>Sold Out</span>
-          <small>67% Off</small>
+          <small>33% Off</small>
         </div>
       )}
       <small className="timeline__item-limit">Desde el</small>
