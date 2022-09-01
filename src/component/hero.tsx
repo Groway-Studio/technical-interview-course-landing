@@ -9,7 +9,7 @@ import hours from "./../assets/hours.svg";
 import price from "./../assets/price.svg";
 
 import { useUserInfo } from "../hooks";
-import { RedirectMP } from "../utils";
+import { RedirectMP, getCurrentPrice } from "../utils";
 import "./../sass/component/_hero.scss";
 
 export default function Hero() {
@@ -153,7 +153,9 @@ export default function Hero() {
               </div>
             </div>
 
-            <Button type="submit">Comprar por USD 49.00</Button>
+            <Button type="submit">
+              Comprar por USD {getCurrentPrice()}.00
+            </Button>
           </Form>
         </aside>
       </div>
