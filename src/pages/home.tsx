@@ -13,14 +13,14 @@ import {
 } from "../component";
 import { Header, Footer } from "../component/shared";
 
-import { API } from "../api";
+// import { API } from "../api";
 
 export default function Home() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState<boolean>(true);
-  const [showOverlay, setShowOverlay] = useState<boolean>(false);
+  // const [showOverlay, setShowOverlay] = useState<boolean>(false);
 
-  const searchParams = new URLSearchParams(window.location.search);
+  // const searchParams = new URLSearchParams(window.location.search);
 
   useEffect(() => {
     (async () => {
