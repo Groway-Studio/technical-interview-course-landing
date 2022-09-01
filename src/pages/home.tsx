@@ -18,7 +18,7 @@ import { Header, Footer } from "../component/shared";
 export default function Home() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState<boolean>(true);
-  // const [showOverlay, setShowOverlay] = useState<boolean>(false);
+  const [showOverlay, setShowOverlay] = useState<boolean>(false);
 
   // const searchParams = new URLSearchParams(window.location.search);
 
@@ -40,7 +40,7 @@ export default function Home() {
         //   data === "Invalid invitation_code" ||
         //   data === "No invitation_code"
         // ) {
-        //   setShowOverlay(true);
+        setShowOverlay(false);
         //   setLoading(false);
         // }
 
