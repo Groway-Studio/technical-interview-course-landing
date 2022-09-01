@@ -109,7 +109,7 @@ export const timeline: Timeline[] = [
       "Venta privada especial para socios, colaboradores, referidos, amigos y clientes de la empresa.",
     price: "49 USD",
     until: "31 de Agosto",
-    ribbon: true,
+    ribbon: !privateSaleVerification(),
     disabled: privateSaleVerification(),
   },
   {
@@ -120,6 +120,7 @@ export const timeline: Timeline[] = [
       "Primera venta publica abierta a todo publico con un descuento por pronta compra.",
     price: "99 USD",
     until: "10 de Septiembre",
+    ribbon: !earlyBirdVerification(),
     disabled: earlyBirdVerification(),
   },
   {
