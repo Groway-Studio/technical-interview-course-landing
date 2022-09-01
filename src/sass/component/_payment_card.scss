@@ -65,7 +65,15 @@ p.failed {
 .social-media {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
+
+  a {
+    &,
+    &:active,
+    &:visited {
+      color: $neutral-color-600;
+    }
+  }
 
   svg {
     font-size: 2rem;
