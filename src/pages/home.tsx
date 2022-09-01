@@ -25,24 +25,24 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch(`${API}/invitation_code.py`, {
-          method: "POST",
-          body: searchParams.get("invitation_code")
-            ? JSON.stringify({
-                invitation_code: searchParams.get("invitation_code"),
-              })
-            : JSON.stringify({}),
-        });
+        // const response = await fetch(`${API}/invitation_code.py`, {
+        //   method: "POST",
+        //   body: searchParams.get("invitation_code")
+        //     ? JSON.stringify({
+        //         invitation_code: searchParams.get("invitation_code"),
+        //       })
+        //     : JSON.stringify({}),
+        // });
 
-        const data: string = await response.text();
+        // const data: string = await response.text();
 
-        if (
-          data === "Invalid invitation_code" ||
-          data === "No invitation_code"
-        ) {
-          setShowOverlay(true);
-          setLoading(false);
-        }
+        // if (
+        //   data === "Invalid invitation_code" ||
+        //   data === "No invitation_code"
+        // ) {
+        //   setShowOverlay(true);
+        //   setLoading(false);
+        // }
 
         setLoading(false);
       } catch (error: any) {
