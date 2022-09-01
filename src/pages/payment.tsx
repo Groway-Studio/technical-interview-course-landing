@@ -17,7 +17,7 @@ const Payment = () => {
 
   useEffect(() => {
     (async () => {
-      if (pathname === validPaths.success && !!user_data) {
+      if (pathname === validPaths.success) {
         try {
           const payload = JSON.parse(user_data || "");
 
