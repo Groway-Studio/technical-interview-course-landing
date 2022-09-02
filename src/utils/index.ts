@@ -109,7 +109,7 @@ export const timeline: Timeline[] = [
       "Venta privada especial para socios, colaboradores, referidos, amigos y clientes de la empresa.",
     price: "49 USD",
     until: "31 de Agosto",
-    ribbon: !privateSaleVerification(),
+    ribbon: true,
     disabled: privateSaleVerification(),
   },
   {
@@ -117,10 +117,9 @@ export const timeline: Timeline[] = [
     month: "Septiembre",
     typeOfSale: "Early Bird Sale",
     description:
-      "Primera venta publica abierta a todo publico con un descuento por pronta compra.",
+      "Primera venta pública abierta a todo público con un descuento por pronta compra.",
     price: "99 USD",
     until: "10 de Septiembre",
-    ribbon: !earlyBirdVerification(),
     disabled: earlyBirdVerification(),
   },
   {
@@ -128,7 +127,7 @@ export const timeline: Timeline[] = [
     month: "Septiembre",
     typeOfSale: "Precio General",
     description:
-      "Ultimas dos semanas de venta publica antes del inicio del curso.",
+      "Últimas dos semanas de venta pública antes del inicio del curso.",
     price: "150 USD",
     until: "20 de Septiembre",
     disabled: realPriceVerification(),
