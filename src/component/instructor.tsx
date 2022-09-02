@@ -16,7 +16,7 @@ export default function Instructor() {
         <p>
           Joel Ibaceta es un programador experimentado con más de 15 años de
           experiencia en la industria, ha trabajado en diversas empresas a lo
-          largo de la Latinoamérica, desde startups, corporaciones y unicornios.
+          largo de Latinoamérica, desde startups, corporaciones y unicornios.
         </p>
         <p>
           Actualmente es CTO de Kwema Inc. en los Estados Unidos, uno de sus
