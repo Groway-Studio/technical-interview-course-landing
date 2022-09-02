@@ -95,20 +95,9 @@ export default function Hero() {
           </article>
         </div>
         <aside className="formInfo-hero">
-          {(dateValitation(25, 31, "august") ||
-            dateValitation(1, 10, "september")) && (
-            <div className="formInfo-hero__ribbon">
-              {dateValitation(25, 31, "august") ? 67 : 34}% OFF
-            </div>
-          )}
+          <div className="formInfo-hero__ribbon">33% OFF</div>
           <h2>
-            {dateValitation(25, 31, "august")
-              ? "Private "
-              : dateValitation(1, 10, "september")
-              ? "Early Bird "
-              : "Precio General"}
-            {(dateValitation(25, 31, "august") ||
-              dateValitation(1, 10, "september")) && <span>Sale!</span>}
+            Early Bird <span>Sale!</span>
           </h2>
           <p>
             ¡Aprovecha la venta anticipada para adquirir tu lugar en el curso
