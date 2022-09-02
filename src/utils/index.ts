@@ -127,7 +127,7 @@ export const timeline: Timeline[] = [
     month: "Septiembre",
     typeOfSale: "Precio General",
     description:
-      "Ultimo periodo de venta publica",
+      "Ultimas dos semanas de venta publica antes del inicio del curso.",
     price: "150 USD",
     until: "20 de Septiembre",
     disabled: realPriceVerification(),
