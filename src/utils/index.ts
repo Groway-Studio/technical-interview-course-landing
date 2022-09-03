@@ -98,6 +98,7 @@ export interface Timeline {
   until: string;
   ribbon?: boolean;
   disabled: boolean;
+  discount?: number;
 }
 
 export const timeline: Timeline[] = [
@@ -111,6 +112,7 @@ export const timeline: Timeline[] = [
     until: "31 de Agosto",
     ribbon: true,
     disabled: privateSaleVerification(),
+    discount: 67,
   },
   {
     day: 1,
@@ -120,7 +122,9 @@ export const timeline: Timeline[] = [
       "Primera venta pública abierta a todo público con un descuento por pronta compra.",
     price: "99 USD",
     until: "10 de Septiembre",
+    ribbon: true,
     disabled: earlyBirdVerification(),
+    discount: 33,
   },
   {
     day: 11,
