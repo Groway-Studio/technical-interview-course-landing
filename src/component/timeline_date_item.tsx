@@ -12,13 +12,14 @@ const TimelineDateItem = ({
   ribbon,
   typeOfSale,
   until,
+  discount,
 }: Props) => {
   return (
     <li className={disabled ? "disabled" : "timeline__item"}>
       {ribbon && (
         <div className="ribbon">
-          <span>Sold Out</span>
-          <small>67% Off</small>
+          {disabled && <span>Sold Out</span>}
+          <small>{discount}% Off</small>
         </div>
       )}
       <small className="timeline__item-limit">Desde el</small>
