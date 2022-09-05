@@ -66,7 +66,7 @@ export default function Hero() {
               <figcaption>
                 <span>
                   <b>Inicio</b> <br />
-                  22 Septiembre
+                  24 Septiembre
                 </span>
                 <span>
                   <b>Duración</b> <br />4 semanas
