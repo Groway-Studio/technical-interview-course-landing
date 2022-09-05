@@ -19,7 +19,7 @@ export default function Faqs() {
 
           <FaqItem
             title="¿Cuándo inicia el curso?"
-            description="El inicio del curso está programado para el día 22 de Septiembre
+            description="El inicio del curso está programado para el día 24 de Septiembre
               de 2022."
           />
 
