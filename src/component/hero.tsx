@@ -95,14 +95,16 @@ export default function Hero() {
           </article>
         </div>
         <aside className="formInfo-hero">
-          <div className="formInfo-hero__ribbon">33% OFF</div>
+          {/* <div className="formInfo-hero__ribbon">33% OFF</div> */}
           <h2>
-            Early Bird <span>Sale!</span>
+            {/* Early Bird  */}
+            <span>Precio General</span>
+            {/* <span>Sale!</span> */}
           </h2>
-          <p>
-            ¡Aprovecha la venta anticipada para adquirir tu lugar en el curso
-            con un precio especial!
-          </p>
+          {/* <p>
+            ¡Aprovecha este curso para adquirir conocimientos en el lenguaje de
+            programación Python de la mano de un experto en el campo!
+          </p> */}
           <Form id="checkoutForm" onSubmit={handleSubmit}>
             <FormGroup>
               <Label htmlFor="firstName">Nombre</Label>
@@ -146,12 +148,12 @@ export default function Hero() {
               />
             </FormGroup>
 
-            <div className="offer">
+            {/* <div className="offer">
               <div>
                 <small>USD</small>
                 <span>150</span>
               </div>
-            </div>
+            </div> */}
 
             <Button type="submit">
               Comprar por USD {getCurrentPrice()}.00
