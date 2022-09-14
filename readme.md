@@ -1,4 +1,4 @@
-# Python
+# Curso de Python
 
 ```mermaid
 sequenceDiagram
