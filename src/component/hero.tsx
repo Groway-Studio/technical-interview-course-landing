@@ -97,9 +97,8 @@ export default function Hero() {
         <aside className="formInfo-hero">
           {/* <div className="formInfo-hero__ribbon">33% OFF</div> */}
           <h2>
-            {/* Early Bird  */}
-            <span>Precio General</span>
-            {/* <span>Sale!</span> */}
+            Final
+            <span>Sale!</span>
           </h2>
           {/* <p>
             ¡Aprovecha este curso para adquirir conocimientos en el lenguaje de
