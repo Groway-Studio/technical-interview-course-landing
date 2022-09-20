@@ -60,7 +60,7 @@ const useUserInfo = () => {
         const response = await fetch(checkoutUrl, {
           method: "POST",
           body: JSON.stringify({
-            title: "Curso Python 1er batch",
+            title: "Precio general",
             success_url: `${pathnameOrigin}${"/#"}${validPaths.success}`,
             pending_url: `${pathnameOrigin}${"/#"}${validPaths.pending}`,
             failure_url: `${pathnameOrigin}${"/#"}${validPaths.failed}`,
