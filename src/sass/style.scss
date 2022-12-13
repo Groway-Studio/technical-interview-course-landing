@@ -27,7 +27,7 @@
 
   --paragraph-1: var(--size-2);
 
-  --cover-text: #{$size * 12};
+  --cover-text: #{$size * 9};
 }
 
 body {
@@ -78,6 +78,7 @@ h5 {
 }
 .fd-row {
   flex-direction: row;
+  align-items: center;
 }
 .jc-sb {
   justify-content: space-between;

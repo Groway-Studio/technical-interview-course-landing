@@ -14,7 +14,7 @@ export default function Modality() {
         <article className="item">
           <img src={icWifi} alt="wifi" draggable={false} />
           <span>
-            100% <br /> Online
+            Semi Presencial
           </span>
         </article>
         <article className="item">
@@ -27,15 +27,13 @@ export default function Modality() {
         <article className="item">
           <img src={icPlay} alt="play" draggable={false} />
           <span>
-            Clases <br />
-            grabadas
+            Sesiones Teoricas Grabadas
           </span>
         </article>
         <article className="item">
           <img src={icTutor} alt="tutos" draggable={false} />
           <span>
-            Acompañamiento <br />
-            de tutores
+            Sesiones Practicas en Vivo
           </span>
         </article>
       </aside>

@@ -41,8 +41,8 @@ export default function Hero() {
             <div className="dflex fd-row">
               <img src={python} className="imgPy" alt="python" />
               <div className="dflex fd-col title">
-                <h5>Aprende</h5>
-                <span className="cover-text">Python</span>
+                <h5>Preparate para </h5>
+                <span className="cover-text">Tu entrevista Técnica</span>
                 <small>como se debe...</small>
               </div>
             </div>
@@ -66,7 +66,7 @@ export default function Hero() {
               <figcaption>
                 <span>
                   <b>Inicio</b> <br />
-                  24 Septiembre
+                  15 Enero
                 </span>
                 <span>
                   <b>Duración</b> <br />4 semanas
@@ -88,7 +88,7 @@ export default function Hero() {
               <figcaption>
                 <span>Costo</span>
                 <h2>
-                  <b>USD 150.00</b>
+                  <b>USD 29.00</b>
                 </h2>
               </figcaption>
             </figure>
@@ -97,7 +97,7 @@ export default function Hero() {
         <aside className="formInfo-hero">
           {/* <div className="formInfo-hero__ribbon">33% OFF</div> */}
           <h2>
-            Final <span>Sale!</span>
+            Early Bird <span>Sale!</span>
           </h2>
           {/* <p>
             ¡Aprovecha este curso para adquirir conocimientos en el lenguaje de

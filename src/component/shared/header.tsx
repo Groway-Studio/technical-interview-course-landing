@@ -28,7 +28,7 @@ const Header: FC<Props> = ({ image = false }) => {
   }, []);
 
   return (
-    <>
+    <div>
       <img
         src={width < 700 ? headerMobile : headerBg}
         className="headerBg"
@@ -60,7 +60,7 @@ const Header: FC<Props> = ({ image = false }) => {
           />
         </Link>
       </Box>
-    </>
+    </div>
   );
 };
 
