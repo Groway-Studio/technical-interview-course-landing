@@ -68,7 +68,7 @@ export default function Home() {
           <Hero />
           <Modality />
           <Calendar />
-          <Timeline />
+          {/* <Timeline /> */}
           <Instructor />
           <Faqs />
           <Footer />
