@@ -49,8 +49,8 @@ export default function Hero() {
             <p>
               Aprendiste Python de forma autodidacta y ¿Sientes que te va mal en las entreivstas tecnicas
               por que te falta profundizar en los fundamentos de programacion?, En Groway Academy diseñamos 
-              este curso para ayudarte a prepararte para tu entrevista tecnica backend y repasar todos los 
-              conceptos que necesitaras para mejorar tu perfil profesional.
+              este curso para ayudarte a prepararte para tu entrevista tecnica backend aprendiendo todos los 
+              conceptos que necesitaras para mejorar tu perfil profesional y llevar adelante una entrevista exitosa.
             </p>
             <p>
               Aprende sobre Estructuras de Datos, Principios SOLID, Patrones de
