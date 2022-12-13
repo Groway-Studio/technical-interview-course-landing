@@ -47,13 +47,10 @@ export default function Hero() {
               </div>
             </div>
             <p>
-              <b>En Groway</b> diseñamos este curso de Python basado en la
-              experiencia acumulada de nuestros expertos para que puedas
-              introducir y repasar los fundamentos de programación a través de{" "}
-              <b>Python</b> de una forma sencilla, eficiente y divertida,
-              recuerda que las bases son siempre importantes para crear
-              conocimiento sólido y prepararte para trabajar en tu crecimiento
-              profesional.
+              Aprendiste Python de forma autodidacta y ¿Sientes que te va mal en las entreivstas tecnicas
+              por que te falta profundizar en los fundamentos de programacion?, En Groway Academy diseñamos 
+              este curso para ayudarte a prepararte para tu entrevista tecnica backend y repasar todos los 
+              conceptos que necesitaras para mejorar tu perfil profesional.
             </p>
             <p>
               Aprende sobre Estructuras de Datos, Principios SOLID, Patrones de
@@ -88,7 +85,7 @@ export default function Hero() {
               <figcaption>
                 <span>Costo</span>
                 <h2>
-                  <b>USD 29.00</b>
+                  <b>USD 99.00</b>
                 </h2>
               </figcaption>
             </figure>
@@ -146,12 +143,12 @@ export default function Hero() {
               />
             </FormGroup>
 
-            {/* <div className="offer">
+            <div className="offer">
               <div>
                 <small>USD</small>
-                <span>150</span>
+                <span>99</span>
               </div>
-            </div> */}
+            </div>
 
             <Button type="submit">
               Comprar por USD {getCurrentPrice()}.00

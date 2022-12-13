@@ -84,10 +84,10 @@ const realPriceVerification = (): boolean =>
 
 export const getCurrentPrice = (): number =>
   dateValitation(25, 31, "august")
-    ? 49
+    ? 29
     : dateValitation(1, 10, "september")
-    ? 99
-    : 150;
+    ? 49
+    : 99;
 
 export interface Timeline {
   day: number;
