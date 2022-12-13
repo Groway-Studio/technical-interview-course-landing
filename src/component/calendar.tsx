@@ -49,116 +49,80 @@ export default function Calendar() {
           <article className="courses">
             <div className="week-days">
               <div className="dayOne">
-                <div className="item-2">
-                  Bienvenida y repaso de conceptos básicos de programación{" "}
-                </div>
-                <div className="item-1">Zen de Python y PEP8</div>
-                <div className="item-1">El Intérprete de Python</div>
-                <div className="item-2">Variables y Tipos de Datos</div>
+                <div className="item-3">Fundamentos de programacion</div>
+                <div className="item-3 highlights">Resolviendo ejercicos basicos de entrevista tecnica</div>
               </div>
               <div className="dayOne">
-                <div className="item-2">Operadores, Expresiones, I/O</div>
-                <div className="item-2">
-                  <span className="calendar__titles_highlights">
-                    Programación estructurada:
-                  </span>
-                  <p>Condicionales, Bucles, Iteradores</p>
-                </div>
-                <div className="item-2">
-                  <span className="calendar__titles_highlights">
-                    Estructuras de datos:
-                  </span>
-                  <p>Listas, Tuplas, Diccionarios</p>
-                </div>
+                <div className="item-1 ">Notacion Big(O)</div>
+                <div className="item-1 ">Diseño de algoritmos</div>
+                <div className="item-1 ">Algoritmos Utiles</div>
+                <div className="item-3 highlights">Resolviendo ejercicios algoritmicos</div>
               </div>
             </div>
             <div className="week-days">
               <div className="dayOne">
-                <div className="item-1">Manejo de errores y Debugging</div>
-                <div className="item-3 highlights">
-                  <span className="calendar__titles_highlights">
-                    Programación modular:
-                  </span>
-                  <p>Funciones, Argumentos, Paquetes, etc</p>
-                </div>
-                <div className="item-2">
-                  La biblioteca estándar de Python, Entornos Virtuales, PIP y
-                  Bibliotecas de terceros
-                </div>
+                <div className="item-2">Listas, Tuplas, Diccionarios</div>
+                <div className="item-1">Estructuras de datos avanzadas</div>
+                <div className="item-3 highlights">Resolviendo ejercicos con estructuras de datos</div>
               </div>
               <div className="dayOne">
-                <div className="item-3 highlights">
-                  <span className="calendar__titles_highlights">
-                    Estructuras de datos Avanzado:
-                  </span>
-                  <p>Pilas, Colas, Listas enlazadas, Arboles, etc.</p>
-                </div>
-                <div className="item-2">
-                  Algoritmos con estructuras de datos avanzadas
-                </div>
-                <div className="item-1">Principios de diseño de algoritmos</div>
+                <div className="item-1">Programación orientada a objetos</div>
+                <div className="item-1">Pensando en objetos</div>
+                <div className="item-1">Principios de la orientación a objetos</div>
+                <div className="item-3 highlights">Resolviendo ejercicios con POO</div>
               </div>
             </div>
             <div className="week-days">
               <div className="dayOne">
-                <div className="item-4 highlights">
+                <div className="item-2">Patrones de Diseño</div>
+                <div className="item-1">Principios SOLID</div>
+                <div className="item-3 highlights">
                   <span className="calendar__titles_highlights">
-                    Algoritmos Útiles:
+                    Proyecto:
                   </span>
                   <p>
-                    Búsqueda, Ordenamiento, Grafos, Programación Dinámica, etc
+                    Construyendo un MicroFramework Web MVC
                   </p>
                 </div>
-
-                <div className="item-2">
-                  Análisis de complejidad Algorítmica
-                </div>
               </div>
               <div className="dayOne">
+                <div className="item-1">Testing</div>
+                <div className="item-1">TDD</div>
+                <div className="item-1">Analisis Estatico</div>
                 <div className="item-3 highlights">
                   <span className="calendar__titles_highlights">
-                    Programación Orientada a Objetos:
-                  </span>
-                  <p>Clases, Herencia, Encapsulamiento, Polimorfismo, etc</p>
-                </div>
-                <div className="item-3 highlights">
-                  <span className="calendar__titles_highlights">
-                    Patrones de diseño:
+                    Proyecto:
                   </span>
                   <p>
-                    Factory, Builder, Adapter, Facade, Strategy, Observer, etc
+                    Blog usando Flask y TDD
                   </p>
                 </div>
               </div>
             </div>
             <div className="week-days">
               <div className="dayOne">
-                <div className="item-4 highlights">
+                <div className="item-1">Hilos y Concurrencia</div>
+                <div className="item-2">Programación Reactiva</div>
+                <div className="item-3 highlights">
                   <span className="calendar__titles_highlights">
-                    Programación Funcional:
+                    Proyecto:
                   </span>
                   <p>
-                    Cálculo Lambda, Funciones de Orden Superior, Transparencia
-                    referencial, etc
+                    Chat en tiempo real
                   </p>
-                </div>
-                <div className="item-2 highlights">
-                  <span className="calendar__titles_highlights">
-                    Buenas prácticas de programación:
-                  </span>
-                  <p>Principios SOLID / KISS / DRY, Antipatrones</p>
                 </div>
               </div>
               <div className="dayOne">
+                <div className="item-1">Compiladores e Interpretes</div>
+                <div className="item-1">Python Internals</div>
+                <div className="item-1">Metaprogramación</div>
                 <div className="item-3 highlights">
-                  <span className="calendar__titles_highlights">Testing:</span>
-                  <p>Test unitarios, Fixtures, Github CI, Coverage</p>
-                </div>
-                <div className="item-3">
                   <span className="calendar__titles_highlights">
-                    Tópicos Avanzados:
+                    Proyecto:
                   </span>
-                  <p>Metaprogramación, Concurrencia, Reactividad</p>
+                  <p>
+                    Construyendo un DSL
+                  </p>
                 </div>
               </div>
             </div>
